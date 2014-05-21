@@ -1,0 +1,215 @@
+{% load i18n compress %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="{{ LANGUAGE_CODE|default:"ru" }}" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="{{ LANGUAGE_CODE|default:"ru" }}" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="{{ LANGUAGE_CODE|default:"ru" }}" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="{{ LANGUAGE_CODE|default:"ru" }}" class="no-js"> <!--<![endif]-->
+    <head>
+        <title>{% if display_version %}[{% trans "Build" %} {{ version }}] {% endif %}{% block title %}Интернет магазин цветов.  Доставка букетов цветов на заказ. Заказ букетов и доставка цветов пермь. Цветы большого города.{% endblock %}</title>
+
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <meta name="created" content="{% now "jS M Y h:i" %}" />
+        <meta name="description" content="{% block description %}Интернет магазин цветов.  Доставка букетов цветов на заказ. Заказ букетов и доставка цветов Пермь{% endblock %}" />
+        <meta name="keywords" content="{% block keywords %}доставка{% endblock %}" />
+        <meta name="viewport" content="{% block viewport %}width=device-width, initial-scale=1.0{% endblock %}">
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Styles -->
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+		<!-- Favicon -->
+        {% block favicon %}
+            <link rel="shortcut icon" href="{% static   "flowers/favicon.ico" %}" />
+        {% endblock %}
+       <!-- Styles -->
+        {% block mainstyles %}
+            {% comment %}
+            We use an inner block to work-around the fact that django-compressor doesn't work with
+            template inheritance.  Ie, we can't just wrap the {% block mainstyles %} with compress tags and
+            expect it to compress CSS files added in child templates.
+            {% endcomment %}
+            {% block styles %}
+                {% comment %}
+                If you are developing Oscar's CSS, or overriding Oscar's CSS
+                files in your project, then set USE_LESS = True in your
+                settings file.  You will also need to ensure that the 'lessc'
+                executable is available and you have COMPRESS_PRECOMPILERS specified
+                correctly.
+                {% endcomment %}
+                {% compress css %}
+                    {% if use_less %}
+
+                         <link rel="stylesheet"   href="{% static "flowers/css/less-style.css" %}"/>
+                     <!-- Custom CSS -->
+
+                    {% else %}
+
+
+                    {% endif %}
+                {% endcompress %}
+            {% endblock %}
+        {% endblock %}
+
+        {# Additional CSS - specific to certain pages #}
+        {% block extrastyles %}
+
+               <link rel="stylesheet"   href="{% static "flowers/css/prettyPhoto.css" %}"/>
+               <link rel="stylesheet"   href="{% static "flowers/css/custom.css" %}"/>
+               <link rel="stylesheet" media="screen"  href="{% static "flowers/css/flexslider.css" %}"/>
+               <link rel="stylesheet" type="text/css" href="{% static "flowers/css/bootstrap.min.css" %}"/>
+               <link rel="stylesheet" type="text/css" href="{% static "flowers/css/settings.css" %}"/>
+
+                <!-- Font awesome CSS -->
+                <link rel="stylesheet"  href="{% static "flowers/css/font-awesome.min.css" %}"/>
+           	    <!-- Custom Less -->
+
+                 <!-- Custom CSS -->
+           	    <link rel="stylesheet"    href="{% static "flowers/css/style.css" %}"/>
+                <!--[if IE]><link rel="stylesheet" href="{% static "flowers/css/ie-style.css" %}"/><![endif]-->
+
+
+        {% endblock %}
+
+        {% block extrahead %}{% endblock %}
+    </head>
+
+    <body id="{% block body_id %}default{% endblock %}" class="{% block body_class %}default{% endblock %}">
+        {# Main content goes in this 'layout' block #}
+        {% block layout %}{% endblock %}
+
+        {% block tracking %}
+            {# Default to using Google analytics #}
+            {% include "partials/google_analytics.html" %}
+        {% endblock %}
+
+        {% comment %}
+        Scripts loaded from a CDN.  These can't be wrapped by the 'compress' tag and so we
+        use a separate block for them.
+        {% endcomment %}
+        {% block cdn_scripts %}
+            <!-- jQuery -->
+
+
+
+
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+            <script>window.jQuery || document.write('<script src="{% static "oscar/js/jquery/jquery-1.9.1.min.js" %}"><\/script>')</script>
+        {% endblock %}
+
+        {# Local scripts #}
+        {% block scripts %}
+            {% compress js %}
+         <!-- Oscar -->
+            <!-- Twitter Bootstrap -->
+    <script type="text/javascript" src="{% static "oscar/js/bootstrap/bootstrap.min.js" %}"></script>
+
+         <script src="{% static "oscar/js/oscar/ui.js" %}" type="text/javascript" charset="utf-8" ></script>
+            {% endcompress %}
+        {% endblock %}
+
+        {# Additional JS scripts #}
+        {% block extrascripts %}
+<!-- Javascript files -->
+
+		<!-- jQuery -->
+
+		<!-- Bootstrap JS -->
+
+		 <script src="{% static "flowers/js/bootstrap.min.js" %}"></script>
+		<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+		<script type="text/javascript" src="{% static "flowers/js/jquery.themepunch.plugins.min.js"%}" ></script>
+		<script type="text/javascript" src="{% static "flowers/js/jquery.themepunch.revolution.min.js"%}"></script>
+		<!-- FLEX SLIDER SCRIPTS  -->
+		<script defer src="{% static "flowers/js/jquery.flexslider-min.js" %}" ></script>
+		<!-- Pretty Photo JS -->
+		<script src="{% static "flowers/js/jquery.prettyPhoto.js" %}"></script>
+		<!-- Respond JS for IE8 -->
+		<script src="{% static "flowers/js/respond.min.js"%}" ></script>
+		<!-- HTML5 Support for IE -->
+		<script src="{% static "flowers/js/html5shiv.js" %}" ></script>
+		<!-- Custom JS -->
+		<script src="{% static "flowers/js/custom.js" %}"></script>
+		<!-- JS code for this page -->
+		<script>
+		/* ******************************************** */
+		/*  JS for SLIDER REVOLUTION  */
+		/* ******************************************** */
+				jQuery(document).ready(function() {
+					   jQuery('.tp-banner').revolution(
+						{
+							delay:9000,
+							startheight:500,
+
+							hideThumbs:10,
+
+							navigationType:"bullet",
+
+							hideArrowsOnMobile:"on",
+
+							touchenabled:"on",
+							onHoverStop:"on",
+
+							navOffsetHorizontal:0,
+							navOffsetVertical:20,
+
+							stopAtSlide:-1,
+							stopAfterLoops:-1,
+
+							shadow:0,
+
+							fullWidth:"on",
+							fullScreen:"off"
+						});
+				});
+		/* ******************************************** */
+		/*  JS for FlexSlider  */
+		/* ******************************************** */
+
+			$(window).load(function(){
+				$('.flexslider-recent').flexslider({
+					animation:		"fade",
+					animationSpeed:	1000,
+					controlNav:		true,
+					directionNav:	false
+				});
+				$('.flexslider-testimonial').flexslider({
+					animation: 		"fade",
+					slideshowSpeed:	5000,
+					animationSpeed:	1000,
+					controlNav:		true,
+					directionNav:	false
+				});
+			});
+
+		/* Gallery */
+
+		jQuery(".gallery-img-link").prettyPhoto({
+		   overlay_gallery: false, social_tools: false
+		});
+
+		</script>
+
+
+        {% endblock %}
+
+        {# Block for body onload functions #}
+        <script type="text/javascript">
+            $(function() {
+                oscar.init();
+                {% block onbodyload %}{% endblock %}
+            });
+        </script>
+
+        {# Page meta-data - this is populated by the 'metadata' template context processor #}
+        <!-- {% trans "Version:" %} {{ version }} -->
+    </body>
+</html>

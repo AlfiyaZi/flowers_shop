@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load compress %}
+{% load promotion_tags %}
+
+{% block layout %}
+
+  <div class="wrapper">
+
+			<!-- Header Start -->
+
+			<div class="header">
+				<div class="container">
+					<!-- Header top area content -->
+					<div class="header-top">
+                         {# Top-horizontal bar with account, notifictions, dashboard links #}
+                            {% include "partials/nav_accounts.html" %}
+
+                    <div class="row">
+
+                      <div class="col-md-4 col-sm-4"> <div class="header-contact">
+									<!-- Contact number -->
+								<!--	<span> <i class="fa fa-phone red"></i>+7(342)212-75-99</span>-->
+								</div>
+						</div>
+                  <div class="col-md-4 col-sm-4">
+                  	<!-- Link -->
+							<a href="index.html">
+								<!-- Logo area -->
+								<div class="logo">
+									<img class="img-responsive" src="{% static "flowers/img/logo.png" %}" alt="Цветы большого города" />
+
+									<!-- Heading -->
+									<h1></h1>
+									<!-- Paragraph -->
+									<p>Магазин-студия флористики</p>
+								</div>
+							</a>
+
+
+
+                  </div>
+                     <div class="col-md-4 col-sm-4">
+                {# Mini-basket wrapped in a block so some templates can now display it #}
+                {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}
+						</div>
+                    </div>
+                    </div>
+
+
+   <div class="row">
+
+       <div class="col-md-12 col-sm-12">
+							  <nav class="navbar navbar-default " role="navigation">
+								<div class="container-fluid">
+									<!-- Brand and toggle get grouped for better mobile display -->
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+											<span class="sr-only">Toggle navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+									</div>
+
+									<!-- Collect the nav links, forms, and other content for toggling -->
+									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+										<ul class="nav navbar-nav">
+
+										<li> <a href="items.html">Услуги</a></li>
+										<li> <a href="gallery.html">Школа </a></li>
+											<li> <a href="gallery.html">Мероприятия</a></li>
+
+
+										</ul>
+
+
+										<ul class="nav navbar-nav navbar-right">
+
+										<li> <a href="items.html">Каталог</a></li>
+										<li> <a href="blog.html">Блог</a></li>
+
+											<li><a href="/florists/"> Флористы</a></li>
+                                        </ul>
+
+
+
+
+
+									</div><!-- /.navbar-collapse -->
+								</div><!-- /.container-fluid -->
+							</nav>
+
+						</div>
+
+
+					</div> <!-- end row-->
+				</div> <!-- / .container -->
+			</div>
+
+        {% block navigation %}
+            {% include "partials/nav_primary.html" %}
+        {% endblock %}
+			<!-- Header End -->
+
+
+			<!-- Inner Content -->
+
+
+			<div class="inner-page padd">
+
+                 {% block breadcrumbs %}{% endblock %}
+                {% block header %}<h3>{% block headertext %}{% endblock %}</h3>
+                {% endblock %}
+
+                {% include "partials/alert_messages.html" %}
+                {% block subnavigation %}{% endblock %}
+				<!-- Shopping Start -->
+
+				<div class="shopping">
+
+                     {% block subheader %}{% endblock subheader %}
+
+
+                    {# Render promotions #}
+
+                        {% for promotion in promotions_page %}
+                            {% render_promotion promotion %}
+                        {% endfor %}
+
+
+                    {# Div exists for AJAX updates to entire content section #}
+                   {% block content %}{% endblock %}
+
+
+
+
+			<!-- Main Content
+			<div class="main-content">-->
+			<!-- Shopping items content -->
+				 <div class="shopping-content">
+			<div class="row">
+
+
+              <form class="content container " >
+
+
+
+<!-- start navigation -->
+<input class="nav-menu" id="all" type="radio" name="filter" checked="checked"/>
+<label for="all">Все</label>
+
+<input class="nav-menu" id="buckets" type="radio" name="filter"/>
+<label for="buckets">Букеты</label>
+
+<input class="nav-menu" id="compositions" type="radio" name="filter"/>
+<label for="compositions">Композиции</label>
+
+<input class="nav-menu" id="baskets" type="radio" name="filter"/>
+<label for="baskets">Корзины</label>
+
+<input class="nav-menu" id="potted" type="radio" name="filter"/>
+<label for="potted">Горшечные растения</label>
+
+
+<input class="nav-menu" id="cards" type="radio" name="filter"/>
+<label for="cards">Открытки</label>
+
+<input class="nav-menu" id="jwels" type="radio" name="filter"/>
+<label for="jwels">Украшения </label>
+
+<input class="nav-menu" id="packaging" type="radio" name="filter"/>
+<label for="packaging">Картины</label>
+<input class="nav-menu" id="svadbas" type="radio" name="filter"/>
+<label for="svadbas">Свадьба</label>
+
+<input class="nav-menu" id="seasons" type="radio" name="filter"/>
+<label for="seasons">Сезонные предложения</label>
+
+<input class="nav-menu" id="packaging" type="radio" name="filter"/>
+<label for="packaging">Новинки</label>
+
+
+<!-- end navigation -->
+
+<!-- start portfolio -->
+
+
+
+
+
+
+<!-- end portfolio -->
+</form>
+
+			<!-- Pagination -->
+							<div class="shopping-pagination">
+								<ul class="pagination">
+									<li class="disabled"><a href="items.html#">&laquo;</a></li>
+									<li class="active"><a href="items.html#">1 <span class="sr-only">(current)</span></a></li>
+									<li><a href="items.html#">2</a></li>
+									<li><a href="items.html#">3</a></li>
+									<li><a href="items.html#">4</a></li>
+									<li><a href="items.html#">5</a></li>
+									<li><a href="items.html#">&raquo;</a></li>
+								</ul>
+							</div>
+				<!-- Pagination end-->
+
+
+
+
+<!-- end  form container -->
+
+    </div>    <!--end row-->
+
+       </div>
+
+
+
+				</div>
+				</div>
+
+
+
+			</div><!-- / Main Content End -->
+<!-- Footer Start -->
+
+{% include "partials/footer.html" %}
+
+	<!-- Footer End -->
+
+
+		 </div><!-- / Wrapper End -->
+		<!-- Scroll to top -->
+		<span class="totop"><a href="index.html#"><i class="fa fa-angle-up"></i></a></span>
+
+{% endblock %}
