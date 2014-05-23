@@ -43,7 +43,7 @@
                     {% purchase_info_for_line request line as session %}
                     <div class="basket-items">
                         <div class="row">
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 {{ form.id }}
                                 {% with image=product.primary_image %}
                                     {% thumbnail image.original "100x100" upscale=False as thumb %}
@@ -53,7 +53,7 @@
                                     {% endthumbnail %}
                                 {% endwith %}
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <h4><a href="{{ product.get_absolute_url }}">{{ line.description }}</a></h4>
                                 <p class="availability {{ session.availability.code }}">{{ session.availability.message }}</p>
                             </div>
@@ -110,7 +110,7 @@
                 <div class="sub-header">
                     <h2>{% trans "Voucher/promo code" %}</h2>
                 </div>
-                <p id="voucher_form_link"><a href="#voucher" class="btn btn-full">{% trans "I have a voucher code..." %}</a></p>
+                <p id="voucher_form_link"><a href="#voucher" class="btn btn-info">{% trans "I have a voucher code..." %}</a></p>
 
                 <div id="voucher_form_container" style="display:none">
                     <h4>{% trans "Voucher code" %}</h4>
@@ -138,8 +138,8 @@
     {% block formactions %}
         <div class="form-actions clearfix">
             <div class="row">
-                <div class="col-md-4 offset8">
-                    <a href="{% url 'checkout:index' %}" class="btn btn-lg btn-primary ">{% trans "Proceed to checkout" %}</a>
+                <div class="col-md-4 pull-right">
+                    <a href="{% url 'checkout:index' %}" class="btn btn-default   ">{% trans "Proceed to checkout" %}</a>
                 </div>
             </div>
         </div>

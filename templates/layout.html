@@ -102,6 +102,23 @@
 {% block content_wrapper %}
 
 
+ <!--{% include "partials/extend_head.html" %}-->
+
+                <div class="container">
+
+                {% block header %}
+                    <div class="page-header">
+                        <h1>{% block headertext %}{% endblock %}</h1>
+                    </div>
+                {% endblock %}
+                {% include "partials/alert_messages.html" %}
+                {% block subnavigation %}{% endblock %}
+
+                    {% block subheader %}{% endblock subheader %}
+
+
+
+                    </div>
 
 
 
@@ -113,20 +130,6 @@
 
 
 
-      <div class="banner padd">
-				<div class="container">
-					<!-- Image -->
-
-					<!-- Heading -->
-                    <h2 class="white">{% block headertext %}{% endblock %}</h2>
-
-					{% block breadcrumbs %}{% endblock %}
-
-
-
-					<div class="clearfix"></div>
-				</div>
-			</div>
 
 
  <!-- Inner Content -->

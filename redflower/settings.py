@@ -63,7 +63,9 @@ INSTALLED_APPS = [
     'treebeard',
     'template_timings_panel',
     'south',
-    'compressor',  
+    'compressor',
+    'pagination',
+    'bootstrap_pagination',
 
    
  ]
@@ -84,6 +86,7 @@ MIDDLEWARE_CLASSES = (
     'oscar.apps.basket.middleware.BasketMiddleware',
     'django.middleware.transaction.TransactionMiddleware',  
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+
     
 )
 
@@ -390,7 +393,7 @@ if not os.path.exists(LOG_ROOT):
 # Oscar settings
 from oscar.defaults import *
 
-OSCAR_PRODUCTS_PER_PAGE = 4
+OSCAR_PRODUCTS_PER_PAGE = 2
 
 OSCAR_RECENTLY_VIEWED_PRODUCTS = 20
 OSCAR_ALLOW_ANON_CHECKOUT = True

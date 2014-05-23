@@ -60,7 +60,7 @@
                 {% for tree_category, info in tree_categories %}
                     <li>
                     {% if tree_category.pk == category.pk %}
-                        <strong>{{ tree_category.name }}</strong>
+
                     {% else %}
                         <a href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a>
                     {% endif %}
