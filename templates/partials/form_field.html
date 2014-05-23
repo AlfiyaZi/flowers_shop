@@ -1,5 +1,5 @@
-{% block control_group %}
-    <div class="control-group {% if field.errors %}error{% endif %}">
+{% block form_group %}
+    <div class="form-group {% if field.errors %}error{% endif %}">
 
         {% block label %}
             {% if not nolabel %}
@@ -10,13 +10,13 @@
             {% endif %}
         {% endblock %}
 
-        {% block controls %}
-            <div class="controls">
-                {% block widget %}{{ field }}{% endblock %}
+        {% block form-control %}
+           <div class="form-control ">
+                {% block widget  %}{{ field }}{% endblock %}
 
                 {% block errors %}
                     {% for error in field.errors %}
-                        <span class="help-block"><i class="icon-exclamation-sign"></i> {{ error }}</span>
+                        <span class="help-block"><i class="fa fa-exclamation"></i> {{ error }}</span>
                     {% endfor %}
                 {% endblock %}
 

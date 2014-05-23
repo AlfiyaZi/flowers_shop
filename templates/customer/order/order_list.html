@@ -1,5 +1,4 @@
 {% extends "customer/baseaccountpage.html" %}
-{% load url from future %}
 {% load i18n %}
 {% load currency_filters %}
 {% load staticfiles %}
@@ -7,7 +6,7 @@
 {% block breadcrumbs %}
     <ul class="breadcrumb">
         <li>
-            <a href="{% url 'promotions:home' %}">{% trans 'Home' %}</a>
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
             <span class="divider">/</span>
         </li>
         <li>
@@ -49,11 +48,10 @@
                 </tr>
             {% endfor %}
         </table>
+        {% include "partials/pagination.html" %}
     {% else %}
         <p>{% trans "You haven't placed any orders." %}</p>
     {% endif %}
-
-    {% include "partials/pagination.html" %}
 
 {% endblock tabcontent %}
 

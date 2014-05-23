@@ -498,3 +498,28 @@ a:hover {
 .totop a i {
   background: #eb2029;
 }
+
+
+.breadcrumb.nav-accounts {
+  padding: -8px 8px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #ffffff;
+  border-radius: 4px;
+  color:#bbbbbb;
+
+}
+.breadcrumb.nav-accounts > li {
+  display: inline-block;
+  color:#bbbbbb;
+  font-family: 'Open Sans ', sans-serif;
+  font-size:12px;
+}
+.breadcrumb.nav-accounts > li + li:before {
+  content: "|\00a0";
+  padding: 0 5px;
+  color:#bbbbbb;
+}
+.breadcrumb.nav-accounts > .active {
+  color: #bbbbbb;
+}

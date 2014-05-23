@@ -1,6 +1,5 @@
 {% extends "layout.html" %}
 
-{% load url from future %}
 {% load history_tags %}
 {% load currency_filters %}
 {% load reviews_tags %}
@@ -20,15 +19,15 @@
 
 {% block breadcrumbs %}
 <ul class="breadcrumb">
-	<li>
-		<a href="{% url 'promotions:home' %}">{% trans "Home" %}</a>
-        <span class="divider">/</span>
+    <li>
+        <a href="{{ homepage_url }}">{% trans "Home" %}</a>
+
     </li>
     {% with category=product.categories.all.0 %}
         {% for c in category.get_ancestors %}
         <li>
             <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
-            <span class="divider">/</span>
+
         </li>
         {% endfor %}
         <li class="active">{{ product.title }}</li>
@@ -37,7 +36,7 @@
         {% if backbutton %}
             <li class="pull-right">
                 <a href="{{ backbutton.url }}">
-                    <i class="icon-arrow-left"></i> {{ backbutton.title }}
+                    <i class="fa fa-arrow-left"></i>  {{ backbutton.title }}
                 </a>
             </li>
         {% endif %}
@@ -52,22 +51,22 @@
 
 <article class="product_page"><!-- Start of product page -->
 
-    <div class="row-fluid">
+    <div class="row">
 
         {% block product_gallery %}
-        <div class="span6">
+        <div class="col-md-6">
             {% include "catalogue/partials/gallery.html" %}
         </div>
         {% endblock %}
 
         {% block product_main %}
-        <div class="span6">
+        <div class="col-md-6">
             {% comment %} 
             This is a but clunky here.  Better to have some kind of JS-driven dashboard menu that 
             pops out when clicked.  A bit like the Django-Debug-Toolbar button
             {% endcomment %}
             {% if user.is_authenticated and user.is_staff %}
-                <a class="pull-right hidden-phone" href="{% url 'dashboard:catalogue-product' pk=product.id %}"><small><i class="icon-edit"></i> {% trans "Edit this product" %}</small></a>
+                <a class="pull-right hidden-sm" href="{% url 'dashboard:catalogue-product' pk=product.id %}"><small><i class="icon-edit"></i> {% trans "Edit this product" %}</small></a>
             {% endif %}
             <h1>{{ product.get_title }}</h1>
 
@@ -78,14 +77,14 @@
             {% iffeature "reviews" %}
                 {% if product.rating != None %}
                     <h4 class="star-rating {{ product.rating|as_stars }}">
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
 
                         <small><a href="{% url 'catalogue:reviews-list' product_slug=product.slug product_pk=product.id %}">
-                            {% blocktrans count reviews|length as num_reviews %}
+                            {% blocktrans count product.num_approved_reviews as num_reviews %}
                             1 customer review
                             {% plural %}
                             {{ num_reviews }} customer reviews
@@ -133,7 +132,7 @@
         </tr>
         {% endif %}
         <tr>
-            <th>{% trans "Product class" %}</th><td>{{ product.get_product_class.name }}</td>
+            <th>{% trans "Product Type" %}</th><td>{{ product.get_product_class.name }}</td>
         </tr>
 
         {% purchase_info_for_product request product as session %}
@@ -162,8 +161,8 @@
         {% endfor %}
         {% iffeature "reviews" %}
             <tr>
-                <th>{% trans "Num reviews" %}</th>
-                <td>{{ reviews.count|default:0 }}</td>
+                <th>{% trans "Number of reviews" %}</th>
+                <td>{{ product.num_approved_reviews }}</td>
             </tr>
         {% endiffeature %}
         <tr>
@@ -177,17 +176,17 @@
         {% block product_review %}
         <section>
             <div id="reviews" class="sub-header">
-                {% if reviews|length > 3 %}
+                {% if product.num_approved_reviews > 3 %}
                     <a href="{% url 'catalogue:reviews-list' product_slug=product.slug product_pk=product.id %}" class="btn pull-right">{% trans "See all reviews" %}</a>
                 {% endif %}
                 <h2>{% trans "Customer Reviews" %}</h2>
             </div>
 
-            {% if not reviews %}
+            {% if product.num_approved_reviews == 0 %}
                 <p>
                     {% if product|is_review_permitted:user %}
                         {% url 'catalogue:reviews-add' product_slug=product.slug product_pk=product.id as add_review_url %}
-                            {% blocktrans %}This product does not have any reviews yet" -
+                            {% blocktrans %}This product does not have any reviews yet -
                             <a href="{{ add_review_url }}#addreview">be the first to write one</a>.
                         {% endblocktrans %}
                     {% else %}
@@ -212,9 +211,9 @@
             <div class="sub-header">
                 <h2>{% trans "Related items" %}</h2>
             </div>
-            <ul class="row-fluid">
+            <ul class="row">
                 {% for product in related_products %}
-                <li class="span2 {% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">
+                <li class="col-md-2{% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">
                     {% render_product product %}
                 </li>
                 {% endfor %}
@@ -227,9 +226,9 @@
             <div class="sub-header">
                 <h2>{% trans "Recommended items" %}</h2>
             </div>
-            <ul class="row-fluid">
+            <ul class="row">
                 {% for product in recommended_products %}
-                <li class="span2 {% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">
+                <li class="col-md-2 {% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">
                     {% render_product product %}
                 </li>
                 {% endfor %}

@@ -11,7 +11,7 @@
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
         <meta name="created" content="{% now "jS M Y h:i" %}" />
         <meta name="description" content="{% block description %}Интернет магазин цветов.  Доставка букетов цветов на заказ. Заказ букетов и доставка цветов Пермь{% endblock %}" />
-        <meta name="keywords" content="{% block keywords %}доставка{% endblock %}" />
+        <meta name="keywords" content="{% block keywords %}доставка букетов, заказ букетов доставка, доставка букетов цветов, доставка букетов пермь, заказ цветов доставка букетов, доставка букетов, школа флористики,флористы, флористы пермь.{% endblock %}" />
         <meta name="viewport" content="{% block viewport %}width=device-width, initial-scale=1.0{% endblock %}">
 
         <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -48,7 +48,7 @@
                 {% compress css %}
                     {% if use_less %}
 
-                         <link rel="stylesheet"   href="{% static "flowers/css/less-style.css" %}"/>
+
                      <!-- Custom CSS -->
 
                     {% else %}
@@ -61,13 +61,14 @@
 
         {# Additional CSS - specific to certain pages #}
         {% block extrastyles %}
+             <!-- <link rel="stylesheet" type="text/css" href="{% static "oscar/css/styles.css" %}" />-->
 
                <link rel="stylesheet"   href="{% static "flowers/css/prettyPhoto.css" %}"/>
                <link rel="stylesheet"   href="{% static "flowers/css/custom.css" %}"/>
                <link rel="stylesheet" media="screen"  href="{% static "flowers/css/flexslider.css" %}"/>
                <link rel="stylesheet" type="text/css" href="{% static "flowers/css/bootstrap.min.css" %}"/>
                <link rel="stylesheet" type="text/css" href="{% static "flowers/css/settings.css" %}"/>
-
+                <link rel="stylesheet"   href="{% static "flowers/css/less-style.css" %}"/>
                 <!-- Font awesome CSS -->
                 <link rel="stylesheet"  href="{% static "flowers/css/font-awesome.min.css" %}"/>
            	    <!-- Custom Less -->
@@ -98,9 +99,6 @@
         {% block cdn_scripts %}
             <!-- jQuery -->
 
-
-
-
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
             <script>window.jQuery || document.write('<script src="{% static "oscar/js/jquery/jquery-1.9.1.min.js" %}"><\/script>')</script>
         {% endblock %}
@@ -110,9 +108,10 @@
             {% compress js %}
          <!-- Oscar -->
             <!-- Twitter Bootstrap -->
-    <script type="text/javascript" src="{% static "oscar/js/bootstrap/bootstrap.min.js" %}"></script>
 
-         <script src="{% static "oscar/js/oscar/ui.js" %}" type="text/javascript" charset="utf-8" ></script>
+     <script src="{% static "flowers/js/bootstrap.min.js" %}"></script>
+     <script src="{% static "flowers/js/ui.js" %}" type="text/javascript" charset="utf-8"></script>
+
             {% endcompress %}
         {% endblock %}
 
@@ -124,7 +123,7 @@
 
 		<!-- Bootstrap JS -->
 
-		 <script src="{% static "flowers/js/bootstrap.min.js" %}"></script>
+
 		<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
 		<script type="text/javascript" src="{% static "flowers/js/jquery.themepunch.plugins.min.js"%}" ></script>
 		<script type="text/javascript" src="{% static "flowers/js/jquery.themepunch.revolution.min.js"%}"></script>

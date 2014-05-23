@@ -1,36 +1,36 @@
 {% load i18n %}
 
-<div id="top_page" class="navbar navbar-static-top accounts">
-    <div class="navbar-inner">
+<div id="top_page" class="navbar navbar-static-top accounts navbar-default">
+    <div class="container">
 
         {# This is used in mobile view #}
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".account-collapse">
+        <a class="btn btn-navbar btn-default" data-toggle="collapse" data-target=".account-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </a>
 
-        <div class="nav-collapse account-collapse collapse">
+        <div class="account-collapse collapse navbar-collapse">
             <div class="container-fluid">
-                {% if LANGUAGES|length > 1 %}
+                {% if LANGUAGES|length &gt; 1 %}
                     <form id="language_selector" class="pull-left navbar-form" action="{% url 'set_language' %}" method="post">
                         {% csrf_token %}
-                        <input name="next" type="hidden" value="{{ language_neutral_url_path }}" />
+                        <input class="form-control" name="next" value="{{ language_neutral_url_path }}" type="hidden">
                         <select name="language">
                             {% get_language_info_list for LANGUAGES as languages %}
                             {% for language in languages %}
-                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE%} selected="selected"{% endif %}>
+                                <option value="{{ language.code }}" {%="" if="" language.code="=" language_code%}="" selected="selected" endif="" %}="">
                                     {{ language.name_local }}
                                 </option>
                             {% endfor %}
                         </select>
-                        <button class="btn" type="submit">{% trans "Go" %}</button>
+                        <button class="btn btn-default" type="submit">{% trans "Go" %}</button>
                     </form>
                 {% endif %}
-                <ul class="nav pull-right">
+                <ul class="nav pull-right navbar-nav">
                     {% if user.is_authenticated %}
                         <li>
-                            {% if num_unread_notifications > 0 %}
+                            {% if num_unread_notifications &gt; 0 %}
                                 {# If user has new notifications - we change account link to go to inbox #}
                                 <a href="{% url 'customer:notifications-inbox' %}">
                                     <i class="icon-user"></i>

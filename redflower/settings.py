@@ -390,6 +390,8 @@ if not os.path.exists(LOG_ROOT):
 # Oscar settings
 from oscar.defaults import *
 
+OSCAR_PRODUCTS_PER_PAGE = 4
+
 OSCAR_RECENTLY_VIEWED_PRODUCTS = 20
 OSCAR_ALLOW_ANON_CHECKOUT = True
 
@@ -397,7 +399,7 @@ OSCAR_SHOP_NAME = 'flowers'
 OSCAR_SHOP_TAGLINE = ''
 
 
-USE_LESS = True
+#USE_LESS = True
 COMPRESS_ENABLED = False
 COMPRESS_PRECOMPILERS = (
     ('text/less', 'lessc {infile} {outfile}'),
@@ -423,7 +425,7 @@ OSCAR_REQUIRED_ADDRESS_FIELDS = ('first_name', 'last_name', 'line1',)
 # ====
 
 THUMBNAIL_DEBUG = True
-THUMBNAIL_KEY_PREFIX = 'oscar-sandbox'
+THUMBNAIL_KEY_PREFIX = 'florgreen'
 
 # Use a custom KV store to handle integrity error
 THUMBNAIL_KVSTORE = 'oscar.sorl_kvstore.ConcurrentKVStore'
