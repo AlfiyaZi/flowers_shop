@@ -36,38 +36,6 @@
 {% endblock breadcrumbs %}
 
 {% block content %}
-          <div class="banner padd">
-				<div class="container">
-
-
-			<!-- Banner End -->
-        {% category_tree as tree_categories %}
-              {% if tree_categories %}
-
-            <ul class="nav nav-pills">
-                <li class="active"><a href="#">{% trans "Browse categories" %}</a></li>
-
-                {% for tree_category, info in tree_categories %}
-                    <li>
-                    {% if tree_category.pk == category.pk %}
-
-                    {% else %}
-                        <a href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a>
-                    {% endif %}
-
-                    {% if info.has_children %}<ul>{% else %}</li>{% endif %}
-                    {% for n in info.num_to_close %}
-                        </ul></li>
-                    {% endfor %}
-                {% endfor %}
-            </ul>
-
-    {% endif %}
-
-
-					<div class="clearfix"></div>
-				</div>
-			</div>
 
 
 

@@ -337,22 +337,26 @@ a:hover {
 /*************/
 /* Nav Pills */
 /*************/
+
+
 .nav-pills li a {
-  background: #f9f9f9;
-  border: 1px solid #eeeeee;
+ border-radius: 3px;
+ padding: 5px 10px;
+  border: 1px solid #fff;
+
 }
 .nav-pills li a:hover {
-  background: #f75353;
+  background: #EB2029;
   color: #ffffff;
-  border-color: #f75353;
+  border-color:#EB2029;
 }
 .nav-pills li.active a {
-  background-color: #f75353;
-  border-color: #f75353;
+  background-color: #EB2029;
+  border-color:#EB2029;
   color: #ffffff;
 }
 .nav-pills li.active a:hover {
-  background-color: #ed4747;
+  background-color: #EB2029;
 }
 /****************/
 /* Progress bar */

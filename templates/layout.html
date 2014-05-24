@@ -98,36 +98,7 @@
 			</div>
 			<!-- Header End -->
 
-
 {% block content_wrapper %}
-
-
- <!--{% include "partials/extend_head.html" %}-->
-
-                <div class="container">
-
-                {% block header %}
-                    <div class="page-header">
-                        <h1>{% block headertext %}{% endblock %}</h1>
-                    </div>
-                {% endblock %}
-                {% include "partials/alert_messages.html" %}
-                {% block subnavigation %}{% endblock %}
-
-                    {% block subheader %}{% endblock subheader %}
-
-
-
-                    </div>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -148,63 +119,39 @@
 				 <div class="shopping-content">
 			<div class="row">
 
+                <div class="content container">
 
 
-              <form class="content container " >
+            {% include "partials/nav_primary_pills.html" %}
+                <div class="coll-md-12">
 
+                <!-- {% block header %}
+                    <div class="page-header">
+                        <h1>{% block headertext %}{% endblock %}</h1>
+                    </div>
+                {% endblock %}-->
+                {% include "partials/alert_messages.html" %}
+                {% block subnavigation %}{% endblock %}
 
-<!-- start navigation -->
-<input class="nav-menu" id="all" type="radio" name="filter" checked="checked"/>
-<label for="all">Все</label>
+                    {% block subheader %}{% endblock subheader %}
+                </div>
 
-<input class="nav-menu" id="buckets" type="radio" name="filter"/>
-<label for="buckets">Букеты</label>
-
-<input class="nav-menu" id="compositions" type="radio" name="filter"/>
-<label for="compositions">Композиции</label>
-
-<input class="nav-menu" id="baskets" type="radio" name="filter"/>
-<label for="baskets">Корзины</label>
-
-<input class="nav-menu" id="potted" type="radio" name="filter"/>
-<label for="potted">Горшечные растения</label>
-
-
-<input class="nav-menu" id="cards" type="radio" name="filter"/>
-<label for="cards">Открытки</label>
-
-<input class="nav-menu" id="jwels" type="radio" name="filter"/>
-<label for="jwels">Украшения </label>
-
-<input class="nav-menu" id="packaging" type="radio" name="filter"/>
-<label for="packaging">Картины</label>
-<input class="nav-menu" id="svadbas" type="radio" name="filter"/>
-<label for="svadbas">Свадьба</label>
-
-<input class="nav-menu" id="seasons" type="radio" name="filter"/>
-<label for="seasons">Сезонные предложения</label>
-
-<input class="nav-menu" id="packaging" type="radio" name="filter"/>
-<label for="packaging">Новинки</label>
 
 
 <!-- end navigation -->
 
 
 <!-- start portfolio -->
-
-
-
-<!-- end portfolio -->
-</form>
+<section class="portfolio">
 
 
                     {# Div exists for AJAX updates to entire content section #}
                  {% block content %}{% endblock %}
+<!-- end portfolio -->
 
-
+</section>
 <!-- end  form container -->
-
+</div>
     </div>    <!--end row-->
 
        </div>
