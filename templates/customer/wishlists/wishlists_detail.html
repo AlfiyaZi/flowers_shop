@@ -1,12 +1,11 @@
 {% extends "customer/baseaccountpage.html" %}
 {% load thumbnail %}
 {% load i18n %}
-{% load url from future %}
 
 {% block breadcrumbs %}
     <ul class="breadcrumb">
         <li>
-            <a href="{% url 'promotions:home' %}">{% trans 'Home' %}</a>
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
             <span class="divider">/</span>
         </li>
         <li>
@@ -36,8 +35,8 @@
                         <th>{% trans 'Action' %}</th>
                     </tr>
 
-                    {% for form in form %}
-                        {% with line=form.instance product=form.instance.product %}
+                    {% for subform in form %}
+                        {% with line=subform.instance product=subform.instance.product %}
                             <tr>
                                 <td>
                                     {% if product %}
@@ -58,10 +57,10 @@
                                     {% endif %}
                                 </td>
                                 <td>
-                                    {% for field in form %}
+                                    {% for field in subform %}
                                         {{ field }}
                                         {% for error in field.errors %}
-                                            <ul class="help-block">
+                                            <ul class="error-block">
                                                 <li>{{ error }}</li>
                                             </ul>
                                         {% endfor %}

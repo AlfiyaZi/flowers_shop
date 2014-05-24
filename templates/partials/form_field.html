@@ -10,7 +10,7 @@
             {% endif %}
         {% endblock %}
         {% block form-control %}
-          <div class="form-control ">
+          <div class="form-control">
              {% block widget  %}{{ field }}{% endblock %}
                 {% block errors %}
                     {% for error in field.errors %}

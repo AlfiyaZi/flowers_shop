@@ -1,8 +1,7 @@
 {% extends 'dashboard/layout.html' %}
-{% load url from future %}
 {% load i18n %}
 
-{% block body_class %}create-page{% endblock %}
+{% block body_class %}{{ block.super }} create-page{% endblock %}
 
 {% block title %}
     {% blocktrans with name=range.name %}Products in range '{{ name }}'{% endblocktrans %} | {{ block.super }}
@@ -15,7 +14,7 @@
             <span class="divider">/</span>
         </li>
         <li>
-            <a href="{% url 'dashboard:range-list' %}">{% trans "Range management" %}</a>
+            <a href="{% url 'dashboard:range-list' %}">{% trans "Ranges" %}</a>
             <span class="divider">/</span>
         </li>
         <li>

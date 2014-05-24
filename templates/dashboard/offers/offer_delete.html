@@ -1,13 +1,10 @@
 {% extends 'dashboard/layout.html' %}
-{% load url from future %}
 {% load i18n %}
 
-{% block body_class %}
-    create-page
-{% endblock %}
+{% block body_class %}{{ block.super }} create-page{% endblock %}
 
 {% block title %}
-    {% trans "Delete offer" %} | {% trans "Offer management" %} | {{ block.super }}
+    {% trans "Delete offer" %} | {% trans "Offers" %} | {{ block.super }}
 {% endblock %}
 
 {% block breadcrumbs %}
@@ -17,7 +14,7 @@
             <span class="divider">/</span>
         </li>
         <li>
-            <a href="{% url 'dashboard:offer-list' %}">{% trans "Offer management" %}</a>
+            <a href="{% url 'dashboard:offer-list' %}">{% trans "Offers" %}</a>
             <span class="divider">/</span>
         </li>
         <li>

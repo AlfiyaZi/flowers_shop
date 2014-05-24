@@ -1,12 +1,11 @@
 {% extends 'dashboard/layout.html' %}
-{% load url from future %}
 {% load category_tags %}
 {% load i18n %}
 
-{% block body_class %}catalogue{% endblock %}
+{% block body_class %}{{ block.super }} catalogue{% endblock %}
 
 {% block title %}
-    {% trans "Category management" %} | {{ block.super }}
+    {% trans "Categories" %} | {{ block.super }}
 {% endblock %}
 
 {% block breadcrumbs %}
@@ -22,7 +21,7 @@
 {% block header %}
     <div class="page-header">
         <a href="{% url 'dashboard:catalogue-category-create' %}" class="btn btn-primary btn-large pull-right"><i class="icon-plus"></i> {% trans "Create new category" %}</a>
-        <h1>{% trans "Category management" %}</h1>
+        <h1>{% trans "Categories" %}</h1>
     </div>
 {% endblock header %}
 
@@ -64,10 +63,31 @@
                                         <span class="caret"></span>
                                     </a>
                                     <ul class="nav dropdown-menu pull-right">
-                                        <li><a href="{% url 'dashboard:catalogue-category-update' pk=category.id %}">{% trans "Edit category" %}</a></li>
-                                        <li class="{% if not category.has_children %}disabled{% endif %}"><a href="{% url 'dashboard:catalogue-category-detail-list' pk=category.pk %}">{% trans "Edit children" %}</a></li>
-                                        <li><a href="{{ category.get_absolute_url }}">{% trans "View on site" %}</a></li>
-                                        <li><a href="{% url 'dashboard:catalogue-category-delete' pk=category.id %}">{% trans "Delete" %}</a></li>
+                                        <li>
+                                            <a href="{% url 'dashboard:catalogue-category-update' pk=category.id %}">
+                                                {% trans "Edit category" %}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'dashboard:catalogue-category-create-child' parent=category.pk %}">
+                                                {% trans "Add child category" %}
+                                            </a>
+                                        </li>
+                                        <li{% if not category.has_children %} class="disabled"{% endif %}>
+                                            <a href="{% url 'dashboard:catalogue-category-detail-list' pk=category.pk %}">
+                                                {% trans "Edit children" %}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ category.get_absolute_url }}">
+                                                {% trans "View on site" %}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'dashboard:catalogue-category-delete' pk=category.id %}">
+                                                {% trans "Delete" %}
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
