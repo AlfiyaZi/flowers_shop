@@ -393,7 +393,7 @@ if not os.path.exists(LOG_ROOT):
 # Oscar settings
 from oscar.defaults import *
 
-OSCAR_PRODUCTS_PER_PAGE = 4
+#OSCAR_PRODUCTS_PER_PAGE = 4
 
 OSCAR_RECENTLY_VIEWED_PRODUCTS = 20
 OSCAR_ALLOW_ANON_CHECKOUT = True

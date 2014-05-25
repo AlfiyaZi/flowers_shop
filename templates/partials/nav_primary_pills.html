@@ -3,8 +3,8 @@
 {% load category_tags %}
 {% load i18n %}
 
-<div class="col-md-12">
-<ul class="nav nav-pills">
+
+<ul class="nav nav-pills container">
     {% category_tree depth=2 as tree_categories %}
   <li><a tabindex="-1" href="{% url 'catalogue:index' %}">{% trans "All products" %}</a></li>
      {% if tree_categories %}
@@ -16,12 +16,25 @@
                             {% endif %}
 
       {% block nav_dropdown_extra_items %}
-                                <li><a href="{% url 'offer:list' %}">{% trans "Offers" %}</a></li>
+                                <li class="pull-right"><a href="{% url 'offer:list' %}">{% trans "Offers" %}</a></li>
                             {% endblock %}
+
+
+                <!-- {% block header %}
+                    <div class="page-header">
+                        <h1>{% block headertext %}{% endblock %}</h1>
+                    </div>
+                {% endblock %}
+                {% include "partials/alert_messages.html" %}
+                {% block subnavigation %}{% endblock %}
+
+                    {% block subheader %}{% endblock subheader %}-->
+
+
 
 </ul>
 
-</div>
+
 
 
 
