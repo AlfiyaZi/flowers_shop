@@ -6,38 +6,57 @@
 {% load staticfiles %}
 
 {% block product %}
+ <div class="portfolio">
+      {% block product_image %}
 
-        {% block product_image %}
-<div class="portfolio">
 
-<figure class=" all bucket" data-category="">
-		{% with image=product.primary_image %}
+          <figure >
+	     	    {% with image=product.primary_image %}
                     {% thumbnail image.original  "480x480" crop="center" as thumb %}
                     <a href="{{ product.get_absolute_url }}"><img src="{{ thumb.url }}"  width="{{ im.width }}" height="{{ im.height }}" alt="{{ product.get_title }}"  ></a>
                     {% endthumbnail %}
-                {% endwith %}
-		<figcaption>
-			<h4>
-{% endblock %}
-
-        {% block product_title %}
-            <h4><a href="{{ product.get_absolute_url }}">{{ product.get_title|truncatewords:4 }}</a></h4>
-        {% endblock %}
+                 {% endwith %}
 
 
 
-            </h4>
-			 <p> 2625,00 руб<p>
-			<p>Состав: тюльпан, клематис, примула, гвоздика, писташ.</p>
-			<br/>
-            <button class="btn btn-rose" type="button">Купить</button>
-
-		</figcaption>
-	</figure>
+		      <figcaption>
 
 
 
-</div>
+                    {% block product_title %}
+                     <h4 style="color:#ffffff;"><a href="{{ product.get_absolute_url }}">{{ product.get_title|truncatewords:4 }}</a></h4>
+                    {% endblock %}
+
+
+
+
+			         <p>
+                            {% block product_price %}
+                              <div class="product_price">
+                                   {% include "catalogue/partials/stock_record.html" %}
+
+                              </div>
+                             {% endblock %}
+
+
+
+                      <p>
+			          <p>Состав: тюльпан, клематис, примула, гвоздика, писташ.</p>
+			          <br/>
+                                 {% if not product.is_group %}
+                                       {% include "catalogue/partials/add_to_basket_form_compact.html" %}
+                                     {% endif %}
+
+
+		       </figcaption>
+	    </figure>
+     {% endblock %}
+
+
+
+
+
+ </div>
 {% endblock %}
 
 

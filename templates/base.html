@@ -209,7 +209,10 @@
         $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
            });
 
-
+          <!-- needed to work Isotope -->
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+        <!-- Isotope -->
+        <script type="text/javascript"  src="{% static "flowers/js/jquery.isotope.min.js"%}" ></script>
 
 		</script>
 

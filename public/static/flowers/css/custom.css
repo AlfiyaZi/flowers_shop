@@ -61,8 +61,21 @@ margin-left:15px;
 	transition: all 350ms;
 }
 .portfolio figcaption h4 {
-	color: #fff;
+	color: #ffffff;
 }
+
+.portfolio figcaption h4 a {
+	color: #ffffff;
+}
+
+
+.portfolio figcaption h4 a:hover,a:focus{
+	color:red;
+
+}
+
+
+
 .portfolio figcaption p {
 	font-size: 0.929em;
 	color: #fff;
