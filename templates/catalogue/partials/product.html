@@ -1,24 +1,24 @@
 {% load reviews_tags %}
 {% load thumbnail %}
+{% load category_tags %}
 {% load i18n %}
 {% load display_tags %}
 {% load staticfiles %}
 
 {% block product %}
-    <article class="product_pod">
+
         {% block product_image %}
+<div class="portfolio">
 
-
-
-            <div class="image_container">
-                {% with image=product.primary_image %}
-                    {% thumbnail image.original  "x480" upscale=False as thumb %}
-                    <a href="{{ product.get_absolute_url }}"><img src="{{ thumb.url }}" alt="{{ product.get_title }}" class="thumbnail" ></a>
+<figure class=" all bucket" data-category="">
+		{% with image=product.primary_image %}
+                    {% thumbnail image.original  "480x480" crop="center" as thumb %}
+                    <a href="{{ product.get_absolute_url }}"><img src="{{ thumb.url }}"  width="{{ im.width }}" height="{{ im.height }}" alt="{{ product.get_title }}"  ></a>
                     {% endthumbnail %}
                 {% endwith %}
-            </div>
-        {% endblock %}
-
+		<figcaption>
+			<h4>
+{% endblock %}
 
         {% block product_title %}
             <h4><a href="{{ product.get_absolute_url }}">{{ product.get_title|truncatewords:4 }}</a></h4>
@@ -26,7 +26,18 @@
 
 
 
-    </article>
+            </h4>
+			 <p> 2625,00 руб<p>
+			<p>Состав: тюльпан, клематис, примула, гвоздика, писташ.</p>
+			<br/>
+            <button class="btn btn-rose" type="button">Купить</button>
+
+		</figcaption>
+	</figure>
+
+
+
+</div>
 {% endblock %}
 
 

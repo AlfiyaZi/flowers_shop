@@ -3,8 +3,8 @@
 {% load category_tags %}
 {% load i18n %}
 
-
-<ul class="nav nav-pills container">
+<div class="container">
+<ul class="nav nav-pills ">
     {% category_tree depth=2 as tree_categories %}
   <li><a tabindex="-1" href="{% url 'catalogue:index' %}">{% trans "All products" %}</a></li>
      {% if tree_categories %}
@@ -34,7 +34,7 @@
 
 </ul>
 
-
+</div>
 
 
 
