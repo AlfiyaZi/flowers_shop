@@ -1,14 +1,23 @@
-{% extends "layout.html" %}
-{% load i18n %}
+{% extends "layout_l.html" %}
+{% load i18n%}
+{% load staticfiles %}
+
 
 {% block navigation %}
-    {% include "partials/nav_primary.html"  %}
+
 {% endblock %}
 
 {% block header %}{% endblock %}
 
-{% block column_left %}
-{% endblock %}
+
 
 {% block content %}
+        <a href="/catalogue/">
+	<div id="bg">
+
+	</div>
+</a>
+
+
+
 {% endblock content %}

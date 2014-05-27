@@ -36,12 +36,10 @@
                                    {% include "catalogue/partials/stock_record.html" %}
 
                               </div>
-                             {% endblock %}
+                             {% endblock %}</p>
 
 
-
-                      <p>
-			          <p>Состав: тюльпан, клематис, примула, гвоздика, писташ.</p>
+			          <p>{{product.description|striptags}}</p>
 			          <br/>
                                  {% if not product.is_group %}
                                        {% include "catalogue/partials/add_to_basket_form_compact.html" %}

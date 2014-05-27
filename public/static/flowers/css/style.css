@@ -1,3 +1,4 @@
+ * { margin:0; padding:0; }
 
 /*
  * Fonts
@@ -168,9 +169,9 @@ table { background: #fff; }
 }
 
 .breadcrumb.nav-accounts >li > a {
-  color: #bbbbbb;
 
-font-family: 'Roboto Condensed', sans-serif;
+
+
 }
 
 .breadcrumb.nav-accounts > .active {
@@ -294,10 +295,14 @@ font-family: 'Roboto Condensed', sans-serif;
 }
 
 .header .logo p{
-	margin-left: 80px;
+	margin-left:82px;
 	margin-top: -6px;
 	font-size: 13px;
-	color: #bbb;
+	color: #bbb;display: inline-block;
+
+
+
+
 }
 
 .header .navbar-default{
@@ -1315,7 +1320,7 @@ div.ppt { display:none !important; }
  * Shopping, On-line Order Page
  */
  
-.inner-page .shopping { margin-top: 40px; margin-bottom: 20px; }
+.inner-page .shopping {  margin-bottom: 20px; }
 .inner-page .shopping .shopping-item { 
 	position: relative;
 	max-width: 400px;

@@ -6,7 +6,7 @@
 <div class="container">
 <ul class="nav nav-pills ">
     {% category_tree depth=2 as tree_categories %}
-  <li><a tabindex="-1" href="{% url 'catalogue:index' %}">{% trans "All products" %}</a></li>
+  <li><a tabindex="-1" href="{% url 'catalogue:index' %}">Все</a></li>
      {% if tree_categories %}
         {% for tree_category, info in tree_categories %}
 
@@ -16,7 +16,7 @@
                             {% endif %}
 
       {% block nav_dropdown_extra_items %}
-                                <li class="pull-right"><a href="{% url 'offer:list' %}">{% trans "Offers" %}</a></li>
+                                <li><a href="{% url 'offer:list' %}">{% trans "Offers" %}</a></li>
                             {% endblock %}
 
 

@@ -8,7 +8,8 @@ import os
 import sys
 from oscar import get_core_apps
 from oscar import OSCAR_MAIN_TEMPLATE_DIR
-
+from django.utils.translation import ugettext_lazy as _
+from django.core.urlresolvers import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
@@ -390,10 +391,9 @@ if not os.path.exists(LOG_ROOT):
     os.mkdir(LOG_ROOT)
 
 
-# Oscar settings
+
 from oscar.defaults import *
 
-#OSCAR_PRODUCTS_PER_PAGE = 4
 
 OSCAR_RECENTLY_VIEWED_PRODUCTS = 20
 OSCAR_ALLOW_ANON_CHECKOUT = True

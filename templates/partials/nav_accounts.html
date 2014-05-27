@@ -2,7 +2,7 @@
 
 
 
-    <ul class="breadcrumb pull-right nav-accounts">
+    <ul class="breadcrumb pull-right nav-accounts hidden-sm hidden-xs">
         {% if user.is_authenticated %}
             <li>
                 <a href="{% url "customer:summary" %}">{% trans "Account" %}</a>
