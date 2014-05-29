@@ -116,7 +116,23 @@
 <!-- end navigation -->
   <div class="page_inner">
 
+  {% block breadcrumbs %}{% endblock %}
+       {% block header %}
 
+                        <h1>{% block headertext %}{% endblock %}</h1>
+
+                {% endblock %}
+                {% include "partials/alert_messages.html" %}
+                {% block subnavigation %}{% endblock %}
+                <div class="content">
+                    {% block subheader %}{% endblock subheader %}
+
+                    {# Render promotions #}
+                    <div id="promotions">
+                        {% for promotion in promotions_page %}
+                            {% render_promotion promotion %}
+                        {% endfor %}
+                    </div>
 
 <!-- start portfolio -->
 

@@ -189,13 +189,7 @@ label {
 }
 
 
-label {
-	padding: 5px 10px;
-	color: #3a3f43;
-	margin-left: 12px;
-	cursor: pointer;
-	display: inline-block;
-}
+
 .nav-menu:checked + label {
 	color: #fff;
 	background-color: #eb2029;
