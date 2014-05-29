@@ -36,7 +36,8 @@
                         </div>
                      <div class="col-md-4 col-sm-4">
                           {% include "partials/nav_accounts.html" %}
-                       <!--   {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}-->
+   {# Mini-basket wrapped in a block so some templates can now display it #}
+                {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}
 
 
 						</div>

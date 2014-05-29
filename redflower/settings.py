@@ -67,6 +67,7 @@ INSTALLED_APPS = [
     'compressor',
     'pagination',
     'bootstrap_pagination',
+    'widget_tweaks',
 
    
  ]

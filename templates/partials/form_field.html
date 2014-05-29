@@ -1,32 +1,59 @@
-{% block form_group %}
-    <div class="form-group {% if field.errors %}error{% endif %}">
+{% load form_tags %}
+{% load widget_tweaks %}
 
-        {% block label %}
-            {% if not nolabel %}
-                <label for="{{ field.auto_id }}" class="control-label{% if field.field.required %} required{% endif %}">
-                    {{ field.label|safe }}
-                    {% if field.field.required %} <span>*</span>{% endif %}
-                </label>
-            {% endif %}
-        {% endblock %}
-        {% block form-control %}
-          <div class="form-control">
-             {% block widget  %}{{ field }}{% endblock %}
-                {% block errors %}
-                    {% for error in field.errors %}
-                        <span class="help-block"><i class="fa fa-exclamation"></i> {{ error }}</span>
-                    {% endfor %}
-                {% endblock %}
+{% if field.is_hidden %}
+    {{ field }}
+{% else %}
+    {% comment %}
+        Make the field widget type available to templates so we can mark-up
+        checkboxes differently to other widgets.
+    {% endcomment %}
+    {% annotate_form_field field %}
 
-                {% block help_text %}
-                    {% if field.help_text %}
-                        <span class='help-block'>
-                            {# We allow HTML within form help fields #}
-                            {{ field.help_text|safe }}
-                        </span>
-                    {% endif %}
-                {% endblock %}
-            </div>
-        {% endblock %}
-    </div>
-{% endblock %}
+    {% block control_group %}
+        <div class="form-group {% if field.errors %}error{% endif %}">
+
+            {% block label %}
+                {% if not nolabel and field.widget_type != 'CheckboxInput' %}
+                    <label for="{{ field.auto_id }}" >
+                        {{ field.label|safe }}
+                        {% if field.field.required %} <span>*</span>{% endif %}
+                    </label>
+                {% endif %}
+            {% endblock %}
+
+
+                <div >
+                    {% block widget %}
+                        {% if field.widget_type == 'CheckboxInput' %}
+                            <div class="checkbox">
+                            <label>
+                                {{ field.label|safe }}{% if field.field.required %} <span>*</span>{% endif %}
+                                {{ field }}
+                            </label>
+                             </div>
+                        {% else %}
+                            {{ field | add_class:"form-control" }}
+                        {% endif %}
+
+
+                    {% block errors %}
+                        {% for error in field.errors %}
+                            <span class="error-block"><i class="icon-exclamation-sign"></i> {{ error }}</span>
+                        {% endfor %}
+                    {% endblock %}
+
+                    {% block help_text %}
+                        {% if field.help_text %}
+                            <span class='help-block'>
+                                {# We allow HTML within form help fields #}
+                                {{ field.help_text|safe }}
+                            </span>
+                        {% endif %}
+                    {% endblock %}
+                </div>
+            {% endblock %}
+        </div>
+    {% endblock %}
+{% endif %}
+

@@ -18,9 +18,10 @@
 {% block header %}{% endblock %}
 
 {% block content %}
-
-    <div class="row-fluid">
-        <div class="span6 login_form">
+<br/>
+      <br/>
+    <div class="row">
+        <div class="col-md-6 login_form">
             <form id="login_form" action="{{ request.get_full_path }}" method="post" class="well" >
                 <h2>{% trans 'Log In' %}</h2>
                 {% csrf_token %}
@@ -29,7 +30,7 @@
                 <button name="login_submit" type="submit" value="Log In" class="btn btn-large btn-primary js-disable-on-click" data-loading-text="{% trans "Logging in..." %}">{% trans 'Log In' %}</button>
             </form>
         </div>
-        <div class="span6 register_form">
+        <div class="col-md-6 register_form">
             <form id="register_form" action="{{ request.get_full_path }}" method="post" class="well">
                 <h2>{% trans 'Register' %}</h2>
                 {% csrf_token %}

@@ -12,14 +12,18 @@
 
 
 
-    <div class="btn-group">
-      <a class="btn btn-default" href="{% url 'basket:summary' %}">{% trans "View basket" %}</a>
+  <div class="btn-group">
+  <button type="button" class="btn btn-default"> <a  href="{% url 'basket:summary' %}">{% trans "View basket" %}</a></button>
+
+
+  <div class="btn-group">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+
       <span class="caret"></span>
     </button>
-
-        <ul class="dropdown-menu pull-right">
-            <li>{% include "basket/partials/basket_quick.html" %}</li>
-        </ul>
-    </div>
+    <ul class="dropdown-menu pull-right">
+       <li>{% include "basket/partials/basket_quick.html" %}</li>
+    </ul>
+  </div>
+</div>
 </div>
