@@ -538,3 +538,8 @@ a:hover {
 .breadcrumb.nav-accounts > .active {
   color: #bbbbbb;
 }
+
+
+/*****************/
+
+ul li  p {visibility: hidden}

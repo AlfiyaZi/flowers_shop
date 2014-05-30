@@ -25,68 +25,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layout.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/layout.html">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/redflower/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="0" selection-start="3255" selection-end="3255" vertical-scroll-proportion="-7.3846154" vertical-offset="1882" max-vertical-offset="2992">
+            <state line="186" column="40" selection-start="4615" selection-end="4615" vertical-scroll-proportion="3.733108" vertical-offset="867" max-vertical-offset="7837">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="browse.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/catalogue/browse.html">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/redflower/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="391" selection-end="391" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="731">
-              <folding>
-                <element signature="n#style#0;n#ol#0;n#section#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/catalogue/detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="16" selection-start="222" selection-end="222" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="3876">
-              <folding>
-                <element signature="n#style#0;n#ol#0;n#section#0;n#article#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="review_detail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/catalogue/reviews/review_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="442">
+            <state line="2" column="40" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1173">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="review_product.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/catalogue/reviews/review_product.html">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="24" selection-start="599" selection-end="599" vertical-scroll-proportion="0.5432331" vertical-offset="0" max-vertical-offset="986">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/product.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="24" selection-start="69" selection-end="69" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="1139">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static/flowers/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2357" column="1" selection-start="46238" selection-end="46238" vertical-scroll-proportion="0.0" vertical-offset="39787" max-vertical-offset="44846">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
               <folding />
             </state>
           </provider>
@@ -102,39 +62,24 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/basket/partials/basket_content.html" />
-        <option value="$PROJECT_DIR$/templates/banner_padd.html" />
-        <option value="$PROJECT_DIR$/templates/partials/nav_checkout.html" />
-        <option value="$PROJECT_DIR$/templates/partials/extend_head.html" />
-        <option value="$PROJECT_DIR$/templates/layout_1_col.html" />
-        <option value="$PROJECT_DIR$/templates/partials/pagination.html" />
-        <option value="$PROJECT_DIR$/templates/layout_2_col.html" />
-        <option value="$PROJECT_DIR$/templates/customer/baseaccountpage.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard/catalogue/product_list.html" />
-        <option value="$PROJECT_DIR$/templates/partials/form_portfolio.html" />
-        <option value="$PROJECT_DIR$/public/static/flowers/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/templates/partials/nav_primary.html" />
         <option value="$PROJECT_DIR$/dev/catalogue/partials/product.html" />
         <option value="$PROJECT_DIR$/templates/catalogue/partials/add_to_basket_form_compact.html" />
-        <option value="$PROJECT_DIR$/templates/catalogue/partials/product.html" />
         <option value="$PROJECT_DIR$/templates/partials/nav_primary_pills.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/public/static/flowers/css/landing.css" />
         <option value="$PROJECT_DIR$/templates/layout_l.html" />
         <option value="$PROJECT_DIR$/templates/layout_la.html" />
         <option value="$PROJECT_DIR$/templates/promotions/home.html" />
-        <option value="$PROJECT_DIR$/templates/catalogue/partials/stock_record.html" />
         <option value="$PROJECT_DIR$/dev/layout.html" />
         <option value="$PROJECT_DIR$/templates/basket/partials/basket_quick.html" />
         <option value="$PROJECT_DIR$/templates/partials/nav_accounts.html" />
         <option value="$PROJECT_DIR$/dev/partials/mini_basket.html" />
-        <option value="$PROJECT_DIR$/templates/partials/mini_basket.html" />
         <option value="$PROJECT_DIR$/dev/basket/basket.html" />
         <option value="C:/Python27/Lib/site-packages/oscar/apps/customer/forms.py" />
         <option value="$PROJECT_DIR$/templates/customer/registration.html" />
         <option value="$PROJECT_DIR$/templatetags/extratags.py" />
         <option value="$PROJECT_DIR$/templatetags/extra_tags.py" />
-        <option value="$PROJECT_DIR$/redflower/settings.py" />
         <option value="$PROJECT_DIR$/templates/partials/form_fields.html" />
         <option value="$PROJECT_DIR$/templates/partials/form_field.html" />
         <option value="$PROJECT_DIR$/public/static/flowers/css/custom.css" />
@@ -143,16 +88,31 @@
         <option value="$PROJECT_DIR$/dev/customer/registration.html" />
         <option value="$PROJECT_DIR$/dev/customer/baseaccountpage.html" />
         <option value="$PROJECT_DIR$/templates/customer/login_registration.html" />
-        <option value="$PROJECT_DIR$/templates/promotions/baseproductlist.html" />
-        <option value="$PROJECT_DIR$/templates/layout.html" />
         <option value="$PROJECT_DIR$/templates/customer/address/address_form.html" />
-        <option value="$PROJECT_DIR$/templates/catalogue/browse.html" />
-        <option value="$PROJECT_DIR$/public/static/flowers/css/less-style.css" />
         <option value="$PROJECT_DIR$/templates/catalogue/reviews/review_list.html" />
         <option value="$PROJECT_DIR$/templates/catalogue/reviews/review_detail.html" />
-        <option value="$PROJECT_DIR$/templates/catalogue/detail.html" />
-        <option value="$PROJECT_DIR$/public/static/flowers/css/style.css" />
         <option value="$PROJECT_DIR$/templates/catalogue/reviews/review_product.html" />
+        <option value="$PROJECT_DIR$/templates/customer/history/recently_viewed_products.html" />
+        <option value="$PROJECT_DIR$/templates/catalogue/browse.html" />
+        <option value="$PROJECT_DIR$/templates/catalogue/partials/product.html" />
+        <option value="$PROJECT_DIR$/public/static/flowers/css/less-style.css" />
+        <option value="$PROJECT_DIR$/templates/partials/mini_basket.html" />
+        <option value="$PROJECT_DIR$/public/static/flowers/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/flatpages/default.html" />
+        <option value="$PROJECT_DIR$/templates/promotions/baseproductlist.html" />
+        <option value="$PROJECT_DIR$/templates/catalogue/partials/gallery.html" />
+        <option value="$PROJECT_DIR$/templates/catalogue/partials/stock_record.html" />
+        <option value="$PROJECT_DIR$/templates/catalogue/detail.html" />
+        <option value="$PROJECT_DIR$/templates/catalogue/partials/add_to_wishlist.html" />
+        <option value="$PROJECT_DIR$/templates/catalogue/partials/add_to_basket_form.html" />
+        <option value="$PROJECT_DIR$/templates/flatpages/florists.html" />
+        <option value="$PROJECT_DIR$/templates/flatpages/about.html" />
+        <option value="$PROJECT_DIR$/templates/partials/footer.html" />
+        <option value="$PROJECT_DIR$/templates/blog/blog.html" />
+        <option value="$PROJECT_DIR$/templates/layout.html" />
+        <option value="$PROJECT_DIR$/redflower/urls.py" />
+        <option value="$PROJECT_DIR$/pages/urls.py" />
+        <option value="$PROJECT_DIR$/redflower/settings.py" />
       </list>
     </option>
   </component>
@@ -216,7 +176,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="redflower" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -230,135 +190,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalogue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalogue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reviews" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalogue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flowers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flowers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -368,7 +200,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="C:/Python27/Lib/site-packages/oscar/apps/customer/forms.py" />
+    <property name="last_opened_file_path" value="C:/Python27/Lib/site-packages/zinnia" />
     <property name="options.lastSelected" value="pyconsole" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -550,6 +382,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20514883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -559,7 +392,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -586,185 +418,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dev/partials/mini_basket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="69" selection-start="407" selection-end="471" vertical-scroll-proportion="0.37431192" vertical-offset="0" max-vertical-offset="545">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/oscar/apps/customer/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="279" column="0" selection-start="10585" selection-end="10585" vertical-scroll-proportion="4.1978984" vertical-offset="2346" max-vertical-offset="7089">
-          <folding>
-            <element signature="e#0#13#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/partials/mini_basket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="116" selection-start="540" selection-end="540" vertical-scroll-proportion="0.4678899" vertical-offset="0" max-vertical-offset="578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/partials/nav_accounts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="228" selection-end="228" vertical-scroll-proportion="0.24954128" vertical-offset="0" max-vertical-offset="545">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/basket/basket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="12" selection-start="613" selection-end="613" vertical-scroll-proportion="0.7809187" vertical-offset="0" max-vertical-offset="782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redflower/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="571">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/customer/registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="28" selection-start="659" selection-end="659" vertical-scroll-proportion="0.79927665" vertical-offset="0" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/partials/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="592">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redflower/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="20" selection-start="1761" selection-end="1761" vertical-scroll-proportion="0.0" vertical-offset="734" max-vertical-offset="7769">
-          <folding>
-            <element signature="e#50#59#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/partials/form_fields.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/partials/form_field.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="31" selection-start="22" selection-end="2234" vertical-scroll-proportion="-10.653846" vertical-offset="403" max-vertical-offset="1037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="0" selection-start="3311" selection-end="3311" vertical-scroll-proportion="0.0" vertical-offset="3184" max-vertical-offset="3791">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/partials/form_fields_inline.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="179" selection-end="179" vertical-scroll-proportion="0.1559633" vertical-offset="0" max-vertical-offset="545">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/partials/form_field_checkbox.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="10" selection-start="263" selection-end="263" vertical-scroll-proportion="0.3119266" vertical-offset="0" max-vertical-offset="545">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/partials/form_field.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="20" selection-start="798" selection-end="798" vertical-scroll-proportion="-12.423077" vertical-offset="102" max-vertical-offset="1105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/customer/registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="105" selection-start="837" selection-end="837" vertical-scroll-proportion="-11.307693" vertical-offset="182" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/customer/baseaccountpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="9.807693" vertical-offset="255" max-vertical-offset="1088">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/catalogue/browse.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/partials/form_fields.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.06390978" vertical-offset="0" max-vertical-offset="782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/promotions/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="322" selection-end="322" vertical-scroll-proportion="0.9266917" vertical-offset="0" max-vertical-offset="1785">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/promotions/image.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/promotions/baseproductlist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="18" selection-start="230" selection-end="230" vertical-scroll-proportion="0.34311926" vertical-offset="0" max-vertical-offset="545">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/add_to_basket_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/add_to_wishlist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/gallery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="54" selection-start="530" selection-end="532" vertical-scroll-proportion="-7.8461537" vertical-offset="34" max-vertical-offset="1037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/customer/login_registration.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="134" selection-end="134" vertical-scroll-proportion="0.18444847" vertical-offset="0" max-vertical-offset="697">
@@ -856,13 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/stock_record.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="571">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dev/catalogue/partials/gallery.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
@@ -870,9 +516,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/css/less-style.css">
+    <entry file="file://$PROJECT_DIR$/templates/partials/alert_messages.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="16" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="9265">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/checkout/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/checkout/gateway.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/reviews/review_product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="50" selection-start="1000" selection-end="1000" vertical-scroll-proportion="-0.05451128" vertical-offset="454" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/customer/history/recently_viewed_products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="50" selection-start="280" selection-end="280" vertical-scroll-proportion="0.287594" vertical-offset="0" max-vertical-offset="532">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/reviews/review_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="0.24954128" vertical-offset="0" max-vertical-offset="545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/reviews/review_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="203" selection-end="203" vertical-scroll-proportion="-0.14678898" vertical-offset="250" max-vertical-offset="816">
           <folding />
         </state>
       </provider>
@@ -884,69 +572,211 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/reviews/review_list.html">
+    <entry file="file://$PROJECT_DIR$/public/static/flowers/css/less-style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="203" selection-end="203" vertical-scroll-proportion="0.3119266" vertical-offset="0" max-vertical-offset="816">
+        <state line="544" column="3" selection-start="9436" selection-end="9436" vertical-scroll-proportion="0.0" vertical-offset="8452" max-vertical-offset="9350">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/review.html">
+    <entry file="file://$PROJECT_DIR$/templates/dashboard/catalogue/category_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="39" selection-start="179" selection-end="227" vertical-scroll-proportion="-0.75751877" vertical-offset="539" max-vertical-offset="1173">
+        <state line="13" column="76" selection-start="330" selection-end="396" vertical-scroll-proportion="0.40550458" vertical-offset="0" max-vertical-offset="680">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/reviews/review_detail.html">
+    <entry file="file://$PROJECT_DIR$/templates/dashboard/pages/delete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="442">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/partials/google_analytics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="571">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/flowers/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2369" column="0" selection-start="46302" selection-end="46302" vertical-scroll-proportion="6.8641305" vertical-offset="37747" max-vertical-offset="45050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard/pages/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.9230769" vertical-offset="102" max-vertical-offset="1683">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/promotions/automaticproductlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="368">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/partials/google_analytics_transaction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="571">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/promotions/baseproductlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="45" selection-start="257" selection-end="257" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="476">
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#section#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/partials/nav_accounts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="550">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/add_to_wishlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="470" selection-end="470" vertical-scroll-proportion="-2.0" vertical-offset="186" max-vertical-offset="1139">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/partials/mini_basket.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="399" selection-end="857" vertical-scroll-proportion="-11.807693" vertical-offset="33" max-vertical-offset="578">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/catalogue/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="16" selection-start="222" selection-end="222" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="3876">
+        <state line="93" column="17" selection-start="2963" selection-end="2969" vertical-scroll-proportion="-60.807693" vertical-offset="0" max-vertical-offset="3995">
           <folding>
-            <element signature="n#style#0;n#ol#0;n#section#0;n#article#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ol#0;n#section#0;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#ul#0;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#ul#1;n#article#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/css/style.css">
+    <entry file="file://$PROJECT_DIR$/templates/flatpages/florists.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2357" column="1" selection-start="46238" selection-end="46238" vertical-scroll-proportion="0.0" vertical-offset="39787" max-vertical-offset="44846">
+        <state line="1" column="0" selection-start="29" selection-end="51" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="187">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/product.html">
+    <entry file="file://$PROJECT_DIR$/templates/flatpages/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="24" selection-start="69" selection-end="69" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="1139">
+        <state line="14" column="66" selection-start="264" selection-end="324" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/catalogue/browse.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="391" selection-end="391" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="731">
-          <folding>
-            <element signature="n#style#0;n#ol#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="25" column="56" selection-start="425" selection-end="450" vertical-scroll-proportion="-14.384615" vertical-offset="51" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/basket/basket.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.9230769" vertical-offset="102" max-vertical-offset="765">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="0" selection-start="3255" selection-end="3255" vertical-scroll-proportion="-7.3846154" vertical-offset="1882" max-vertical-offset="2992">
+        <state line="77" column="62" selection-start="2473" selection-end="2473" vertical-scroll-proportion="1.7894737" vertical-offset="357" max-vertical-offset="2992">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/reviews/review_product.html">
+    <entry file="file://$PROJECT_DIR$/templates/partials/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="24" selection-start="599" selection-end="599" vertical-scroll-proportion="0.5432331" vertical-offset="0" max-vertical-offset="986">
+        <state line="53" column="45" selection-start="1278" selection-end="1278" vertical-scroll-proportion="1.1184211" vertical-offset="306" max-vertical-offset="2108">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="63" selection-start="319" selection-end="363" vertical-scroll-proportion="0.31954888" vertical-offset="0" max-vertical-offset="1853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/add_to_basket_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="50" selection-start="499" selection-end="499" vertical-scroll-proportion="0.37431192" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="51" selection-start="1209" selection-end="1209" vertical-scroll-proportion="1.2603978" vertical-offset="0" max-vertical-offset="1139">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/review.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="4" selection-start="0" selection-end="26" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/stock_record.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="26" selection-start="248" selection-end="251" vertical-scroll-proportion="0.27031803" vertical-offset="0" max-vertical-offset="566">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/gallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="56" selection-start="532" selection-end="532" vertical-scroll-proportion="0.43037975" vertical-offset="0" max-vertical-offset="1037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/flatpages/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="57" selection-start="81" selection-end="141" vertical-scroll-proportion="0.18021202" vertical-offset="0" max-vertical-offset="566">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="592">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redflower/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="40" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redflower/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="186" column="40" selection-start="4615" selection-end="4615" vertical-scroll-proportion="3.733108" vertical-offset="867" max-vertical-offset="7837">
           <folding />
         </state>
       </provider>

@@ -2349,13 +2349,25 @@ input[type="number"][id*="quantity"] {
 }
 
 
-.image_container {
-  width: 100%;
-  min-height: 165px;
-  overflow: hidden;
-  text-align: center;
-  position: relative;
+.pull-right {
+  float: right;
 }
+.pull-left {
+  float: left;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
+.affix {
+  position: fixed;
+}
+
 
 
 

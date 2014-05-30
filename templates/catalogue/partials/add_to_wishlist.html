@@ -8,10 +8,18 @@
         {% wishlists_containing_product wishlists product as product_wishlists %}
         {% if wishlists %}
 
-            <div class="btn-group btn-wishlist">
-                <a class="btn btn-large dropdown-toggle" data-toggle="dropdown" href="#">{% trans "Add to wish list" %} <span class="caret"></span></a>
-                <ul class="dropdown-menu pull-right">
-                    {% for wishlist in wishlists %}
+         <div class="btn-group">
+           <button type="button" class="btn btn-default"> <a  href="#">{% trans "Add to wish list" %}</a></button>
+
+
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+
+              <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu pull-right">
+
+                     {% for wishlist in wishlists %}
                         {% if wishlist not in product_wishlists %}
 	                        <li>
 	                                <a href="{% url 'customer:wishlists-add-product' key=wishlist.key product_pk=product.pk %}">
@@ -23,8 +31,13 @@
 						{% endif %}
                     {% endfor %}
                     <li><a href="{% url 'customer:wishlists-create-with-product' product_pk=product.pk %}">{% trans 'Create a new wishlist' %}</a></li>
-                </ul>
+
+              </ul>
             </div>
+         </div>
+
+
+
         {% else %}
             {# 1 or no existing wishlists - show a simple button #}
             <form id="add_to_wishlist_form" action="{% url 'customer:wishlists-add-product' product_pk=product.pk %}" method="post" class="btn-wishlist">

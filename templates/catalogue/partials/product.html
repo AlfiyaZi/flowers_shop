@@ -32,14 +32,14 @@
 
 			         <p>
                             {% block product_price %}
-                              <div class="product_price">
+                              <div class="product_price ">
                                    {% include "catalogue/partials/stock_record.html" %}
 
                               </div>
                              {% endblock %}</p>
 
 
-			          <p>{{product.description|striptags}}</p>
+			          <p class="hidden-sm hidden-xs">{{product.description|striptags}}</p>
 			          <br/>
                                  {% if not product.is_group %}
                                        {% include "catalogue/partials/add_to_basket_form_compact.html" %}

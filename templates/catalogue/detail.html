@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-
+{% load url from future %}
 {% load history_tags %}
 {% load currency_filters %}
 {% load reviews_tags %}
@@ -48,15 +48,22 @@
             pops out when clicked.  A bit like the Django-Debug-Toolbar button
             {% endcomment %}
             {% if user.is_authenticated and user.is_staff %}
-                <a class="pull-right hidden-sm" href="{% url 'dashboard:catalogue-product' pk=product.id %}"><small><i class="icon-edit"></i> {% trans "Edit this product" %}</small></a>
+                <a class="hidden-sm" href="{% url 'dashboard:catalogue-product' pk=product.id %}"><i class="fa fa-pencil-square-o"></i> {% trans "Edit this product" %}</a>
             {% endif %}
             <h1>{{ product.get_title }}</h1>
+ {% purchase_info_for_product request product as session %}
+            {% if session.price.exists %}
 
-            {% block product_stock_record %}
-                {% include "catalogue/partials/stock_record.html" with verbose=1 %}
-            {% endblock %}
 
-            {% iffeature "reviews" %}
+            {% if session.price.is_tax_known %}
+
+                  <h2> {{ session.price.incl_tax|currency:session.price.currency }}</h2>
+
+
+            {% endif %}
+            {% endif %}
+
+             {% iffeature "reviews" %}
             {% if product.rating != None %}
                 <h4 class="star-rating {{ product.rating|as_stars }}">
                         <i class="fa fa-star"></i>
@@ -73,16 +80,16 @@
                             {% endblocktrans %}
                     </a></small>
                     &nbsp;
-                {% else %}
-                    <h4>
-                {% endif %}
-                {% if product|is_review_permitted:user %}
-                    <a id="write_review" href="{% url 'catalogue:reviews-add' product_slug=product.slug product_pk=product.id %}#addreview" class="btn btn-success btn-small">
-                        {% trans "Write a review" %}
-                    </a>
-                {% endif %}
-                </h4>
-            {% endiffeature %}
+            {% else %}
+                <h4>
+            {% endif %}
+            {% if product|is_review_permitted:user %}
+                <a id="write_review" href="{% url 'catalogue:reviews-add' product_slug=product.slug product_pk=product.id %}#addreview" class="btn btn-success btn-sm">
+                    {% trans "Write a review" %}
+                </a>
+            {% endif %}
+            </h4>
+        {% endiffeature %}
 
             <hr/>
 
@@ -187,9 +194,9 @@
             <div class="sub-header">
                 <h2>{% trans "Related items" %}</h2>
             </div>
-            <ul class="row">
+            <ul class="row"  style="list-style: none;">
                 {% for product in related_products %}
-                <li class="col-md-2{% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">
+                <li class="col-md-2 {% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">
                     {% render_product product %}
                 </li>
                 {% endfor %}
@@ -202,7 +209,7 @@
             <div class="sub-header">
                 <h2>{% trans "Recommended items" %}</h2>
             </div>
-            <ul class="row">
+            <ul class="row"  style="list-style: none;">
                 {% for product in recommended_products %}
                 <li class="col-md-2 {% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">
                     {% render_product product %}

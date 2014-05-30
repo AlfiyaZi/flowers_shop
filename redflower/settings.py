@@ -68,6 +68,12 @@ INSTALLED_APPS = [
     'pagination',
     'bootstrap_pagination',
     'widget_tweaks',
+    'tagging',
+    'mptt',
+    'zinnia',
+    'django.contrib.sitemaps',
+    'django.contrib.comments',
+
 
    
  ]
@@ -177,6 +183,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'oscar.apps.checkout.context_processors.checkout',
     'oscar.apps.customer.notifications.context_processors.notifications',
     'oscar.core.context_processors.metadata',
+    'django.contrib.auth.context_processors.auth',
+    'zinnia.context_processors.version',
+
 )
 
 
