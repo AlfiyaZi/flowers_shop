@@ -68,11 +68,14 @@ INSTALLED_APPS = [
     'pagination',
     'bootstrap_pagination',
     'widget_tweaks',
-    'tagging',
-    'mptt',
-    'zinnia',
-    'django.contrib.sitemaps',
-    'django.contrib.comments',
+    'blog',
+    'florists',
+    'events',
+    'about',
+    'school',
+    'portfolio',
+    'pages',
+
 
 
    
@@ -157,9 +160,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 
+# Haystack settings
 HAYSTACK_CONNECTIONS = {
     'default': {
-        'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
     },
 }
 
@@ -184,7 +189,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'oscar.apps.customer.notifications.context_processors.notifications',
     'oscar.core.context_processors.metadata',
     'django.contrib.auth.context_processors.auth',
-    'zinnia.context_processors.version',
+
 
 )
 
@@ -431,7 +436,7 @@ OSCAR_FROM_EMAIL = 'florgreen@bk.ru'
 
 
 # Address settings
-OSCAR_REQUIRED_ADDRESS_FIELDS = ('first_name', 'last_name', 'line1',)
+OSCAR_REQUIRED_ADDRESS_FIELDS = ('first_name', 'last_name', )
 
 
 # Sorl

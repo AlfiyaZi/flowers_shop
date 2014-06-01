@@ -18,8 +18,23 @@
 
                       <div class="col-md-4 col-sm-4"> <div class="header-contact">
 									<!-- Contact number -->
+                           {% include "partials/search.html" %}
+
 								<!--	<span> <i class="fa fa-phone red"></i>+7(342)212-75-99</span>-->
 			 					 </div>
+
+                          <div class=" header-search">
+									<form class="form" role="form">
+										<div class="input-group">
+										  <input type="text" class="form-control" placeholder="Search...">
+										  <span class="input-group-btn">
+											<button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+										  </span>
+										</div>
+									</form>
+								</div>
+
+
 					   </div>
                        <div class="col-md-4 col-sm-4">
                   	<!-- Link -->
@@ -36,8 +51,9 @@
                         </div>
                      <div class="col-md-4 col-sm-4">
                           {% include "partials/nav_accounts.html" %}
-   {# Mini-basket wrapped in a block so some templates can now display it #}
-                {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}
+
+
+
 
 
 						</div>
@@ -75,9 +91,13 @@
 										<ul class="nav navbar-nav navbar-right">
 
 										<li> <a href="/catalogue/">Каталог</a></li>
-										<li> <a href="/weblog/">Блог</a></li>
+										<li> <a href="#">Блог</a></li>
 
 											<li><a href="/florists/"> Флористы</a></li>
+
+
+
+
                                         </ul>
 
 
@@ -109,10 +129,6 @@
 		<div class="container">
 
 
-			<div class="row">
-
-   {% include "partials/nav_primary_pills.html" %}
-                </div>
 <!-- end navigation -->
   <div class="page_inner">
 

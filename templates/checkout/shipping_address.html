@@ -22,10 +22,10 @@
         {% if addresses %}
             <h3>{% trans "An address from your addressbook?" %}</h3>
             <div class="choose-block">
-                <ul class="row-fluid unstyled">
+                <ul class="row unstyled">
                     {% for address in addresses %}
                         {% block select_address_form %}
-                            <li class="span6">
+                            <li class="col-md-6">
                                 <div class="well">
                                     <address>
                                         {% block select_address_fields %}
@@ -50,7 +50,7 @@
                             </li>
                             {% if forloop.counter|divisibleby:2 %}
                                 </ul>
-                                {% if not forloop.last %}<ul class="row-fluid">{% endif %}
+                                {% if not forloop.last %}<ul class="row">{% endif %}
                             {% endif %}
                         {% endblock %}
                     {% endfor %}

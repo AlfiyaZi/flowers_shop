@@ -343,7 +343,7 @@ a:hover {
  .nav-pills li a {
  border-radius: 3px;
  padding: 5px  10px;
- margin-left:10px;
+
 }
 .nav-pills li a:hover {
   background: #EB2029;
@@ -479,6 +479,23 @@ a:hover {
 /************/
 
 
+.badge{
+	display:inline-block;
+	min-width:10px;
+	padding:3px 7px;
+	font-size:12px;
+
+	font-family: 'Open Sans Condensed', sans-serif;
+
+	color: #bbb;
+	color:#fff;
+	line-height:1;
+	vertical-align:baseline;
+	white-space:nowrap;
+	text-align:center;
+	background-color:#E9544E;
+	border-radius:10px
+}
 
 
 

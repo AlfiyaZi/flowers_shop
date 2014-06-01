@@ -1,4 +1,4 @@
-{% extends "layout_2_col.html" %}
+{% extends "layout.html" %}
 
 {% load url from future %}
 {% load currency_filters %}
@@ -10,19 +10,7 @@
     "{{ query }}" | {{ block.super }}
 {% endblock %}
 
-{% block breadcrumbs %}
-    <ul class="breadcrumb">
-        <li>
-            <a href="{% url 'promotions:home' %}">{% trans "Home" %}</a>
-            <span class="divider">/</span>
-        </li>
-        <li>
-            {% trans "Search" %}
-            <span class="divider">/</span>
-        </li>
-        <li class="active">"{{ query }}"</li>
-    </ul>
-{% endblock %}
+
 
 {% block column_left %}
     {% if has_facets %}
@@ -53,9 +41,9 @@
         <section>
             <div class="mod">
                 {% include "search/partials/pagination.html" %}
-                <ol class="row-fluid">
+                <ol class="row" style="list-style: none;">
                     {% for result in page.object_list %}
-                        <li class="span3 {% if forloop.counter0|divisibleby:"4" %}no-margin{% endif %}">{% render_product result.object %}</li>
+                        <li class="col-md-3 col-sm-6 {% if forloop.counter0|divisibleby:"4" %}no-margin{% endif %}">{% render_product result.object %}</li>
                     {% endfor %}
                 </ol>
                 {% include "search/partials/pagination.html" %}
