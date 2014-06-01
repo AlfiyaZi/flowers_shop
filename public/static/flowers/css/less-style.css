@@ -343,6 +343,14 @@ a:hover {
  .nav-pills li a {
  border-radius: 3px;
  padding: 5px  10px;
+ font-size: 14px;
+	font-family: 'Open Sans Condensed', sans-serif;
+
+	color: #bbb;
+	text-transform: uppercase;
+
+
+
 
 }
 .nav-pills li a:hover {

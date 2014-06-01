@@ -174,6 +174,9 @@
 							fullScreen:"off"
 						});
 				});
+
+			</script>
+        <script>
 		/* ******************************************** */
 		/*  JS for FlexSlider  */
 		/* ******************************************** */
@@ -193,25 +196,27 @@
 					directionNav:	false
 				});
 			});
-
+        </script>
 		/* Gallery */
-
+        <script>
 		jQuery(".gallery-img-link").prettyPhoto({
 		   overlay_gallery: false, social_tools: false
 		});
-
+         </script>
 
 		/*active*/
+        <script>
 		 $(document).ready(function () {
         $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
            });
+           </script>
 
           <!-- needed to work Isotope -->
         <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
         <!-- Isotope -->
         <script type="text/javascript"  src="{% static "flowers/js/jquery.isotope.min.js"%}" ></script>
 
-		</script>
+
 
 
         {% endblock %}

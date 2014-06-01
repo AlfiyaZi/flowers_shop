@@ -1,7 +1,21 @@
 {% load url from future %}
 {% load i18n %}
+{% load form_tags %}
+{% load widget_tweaks %}
 
-<form method="get" action="{% url 'search:search' %}" class="navbar-form navbar-right">
-    {{ search_form.q }}
-    <input type="submit" value="{% trans "Search" %}" class="btn btn-default-sm" />
-</form>
+
+
+ <div class=" header-search pull-right hidden-sm">
+				<form method="get" action="{% url 'search:search' %}" class="form" role="form">
+							<div class="input-group">
+
+
+							  {{ search_form.q | add_class:"form-control"}}
+
+								  <span class="input-group-btn">
+											<button class="btn btn-default" type="submit" value="{% trans "Search" %}"><i class="fa fa-search"></i></button>
+								  </span>
+							</div>
+				</form>
+ </div>
+
