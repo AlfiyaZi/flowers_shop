@@ -406,9 +406,7 @@ if not os.path.exists(LOG_ROOT):
     os.mkdir(LOG_ROOT)
 
 
-
 from oscar.defaults import *
-
 
 OSCAR_RECENTLY_VIEWED_PRODUCTS = 20
 OSCAR_ALLOW_ANON_CHECKOUT = True
@@ -436,7 +434,7 @@ OSCAR_FROM_EMAIL = 'florgreen@bk.ru'
 
 
 # Address settings
-OSCAR_REQUIRED_ADDRESS_FIELDS = ('first_name', 'last_name', )
+OSCAR_REQUIRED_ADDRESS_FIELDS = ('first_name', 'last_name')
 
 
 # Sorl
