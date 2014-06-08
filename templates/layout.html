@@ -81,7 +81,7 @@
 										<ul class="nav navbar-nav navbar-right">
 
 										<li> <a href="/catalogue/">Каталог</a></li>
-										<li> <a href="#">Блог</a></li>
+										<li> <a href="/blog/">Блог</a></li>
 
 											<li><a href="/florists/"> Флористы</a></li>
 
@@ -127,7 +127,8 @@
   {% block breadcrumbs %}{% endblock %}
        {% block header %}
 
-                        <h1>{% block headertext %}{% endblock %}</h1>
+
+                       {% block headertext %}{% endblock %}
 
                 {% endblock %}
 
@@ -148,15 +149,15 @@
        {% block content %}{% endblock %}
 <!-- end portfolio -->
 
-
+ {% include "catalogue/partials/modal.html" %}
 
       <!--end row-->
 
+                   </div>
 
-
-
+</div>
 				</div><!--end  container-->
-
+              </div>
 
 			</div><!-- /Inner page pad -->
 

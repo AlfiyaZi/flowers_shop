@@ -1,3 +1,5 @@
+
+
 {% load reviews_tags %}
 {% load thumbnail %}
 {% load category_tags %}
@@ -39,7 +41,16 @@
                              {% endblock %}</p>
 
 
-			          <p class="hidden-sm hidden-xs">{{product.description|striptags}}</p>
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+
+
+
+
+
+			        <!--  <p class="hidden-sm hidden-xs">{{product.description|striptags}}</p>-->
 			          <br/>
                                  {% if not product.is_group %}
                                        {% include "catalogue/partials/add_to_basket_form_compact.html" %}
@@ -48,6 +59,8 @@
 
 		       </figcaption>
 	    </figure>
+
+
      {% endblock %}
 
 

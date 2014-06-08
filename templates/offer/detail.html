@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout_catalogue.html" %}
 
 {% load url from future %}
 
@@ -9,19 +9,7 @@
 {{ offer.name }} | {{ block.super }}
 {% endblock %}
 
-{% block breadcrumbs %}
-<ul class="breadcrumb">
-    <li>
-	<a href="{% url 'promotions:home' %}">{% trans "Home" %}</a>
-        <span class="divider">/</span>
-    </li>
-    <li>
-        <a href="#">{% trans "Offers" %}</a>
-        <span class="divider">/</span>
-    </li>
-    <li class="active">{{ offer.name }}</li>
-</ul>
-{% endblock %}
+{
 
 {% block headertext %}{{ offer.name }}{% endblock %}
 
@@ -34,7 +22,7 @@
     {% if upsell_message %}
     <div class="well">
         {% if offer.description %}
-            <p>{{ offer.description|safe }}</p>
+            <p >{{ offer.description|safe }}</p>
             <hr/>
         {% endif %}
         <h3><i class="icon-exclamation-sign icon-large"></i> {% trans "What you need to do" %}</h3>
@@ -46,9 +34,9 @@
         <section>
             <div class="mod">
                 {% include "partials/pagination.html" %}
-                <ol class="row-fluid">
+                <ol class="row" style="list-style: none;">
                     {% for product in products %}
-                    <li class="span2 {% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">{% render_product product %}</li>
+                    <li class="col-md-2 {% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">{% render_product product %}</li>
                     {% endfor %}
                 </ol>
                 {% include "partials/pagination.html" %}

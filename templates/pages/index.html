@@ -1,312 +1,45 @@
-{% extends "base.html" %}
-{% load staticfiles %}
-{% load compress %}
-{% load promotion_tags %}
+{% extends "pages/base.html" %}
+
+{% block title %}Welcome to Rango!{% endblock %}
+
+{% block body_block %}
+<div class="hero-unit">
+    <h1>Ready to Rango</h1>
+
+    <p>Find, Add, Share and Rango useful links and resources.</p>
+</div>
+
+<div class="row-fluid">
+    <div class="span6">
+        <h2>Top Five Categories</h2>
+        {% if categories %}
+        <ul>
+            {% for category in categories %}
+            <li><a href="/pages/category/{{ category.url }}">{{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <strong>No categories at present.</strong>
+        {% endif %}
+
+    </div>
+    <!--/span-->
+    <div class="span6">
+        <h2>Top Five Pages</h2>
+        {% if pages %}
+        <ul>
+            {% for page in pages %}
+            <li><a href="{{ page.url}}">{{ page.title }}</a> - {{ page.category}} ({{ page.views }} view(s))</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <strong>No pages at present.</strong>
+        {% endif %}
+
+    </div>
+    <!--/span-->
+</div><!--/row-->
 
-{% block layout %}
-
-  <div class="wrapper">
-
-			<!-- Header Start -->
-
-			<div class="header">
-				<div class="container">
-					<!-- Header top area content -->
-					<div class="header-top">
-
-                    <div class="row">
-
-                      <div class="col-md-4 col-sm-4"> <div class="header-contact">
-									<!-- Contact number -->
-								<!--	<span> <i class="fa fa-phone red"></i>+7(342)212-75-99</span>-->
-			 					 </div>
-					   </div>
-                       <div class="col-md-4 col-sm-4">
-                  	<!-- Link -->
-							<a href="/catalogue/">
-								<!-- Logo area -->
-								<div class="logo">
-									<img class="img-responsive" src="{% static "flowers/img/logo.png" %}" alt="Цветы большого города" />
-
-
-									<!-- Paragraph -->
-									<p>Магазин-студия флористики </p>
-								</div>
-							</a>
-                        </div>
-                     <div class="col-md-4 col-sm-4">
-                          {% include "partials/nav_accounts.html" %}
-   {# Mini-basket wrapped in a block so some templates can now display it #}
-                {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}
-
-
-						</div>
-                    </div>
-                    </div>
-
-
-   <div class="row">
-
-       <div class="col-md-12 col-sm-12">
-							  <nav class="navbar navbar-default " role="navigation">
-								<div class="container-fluid">
-									<!-- Brand and toggle get grouped for better mobile display -->
-									<div class="navbar-header">
-										<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-											<span class="sr-only">Toggle navigation</span>
-											<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-										</button>
-									</div>
-
-									<!-- Collect the nav links, forms, and other content for toggling -->
-									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-										<ul class="nav navbar-nav">
-
-										<li> <a href="items.html">Услуги</a></li>
-										<li> <a href="gallery.html">Школа </a></li>
-											<li> <a href="gallery.html">Мероприятия</a></li>
-
-
-										</ul>
-
-
-										<ul class="nav navbar-nav navbar-right">
-
-										<li> <a href="/catalogue/">Каталог</a></li>
-										<li> <a href="#">Блог</a></li>
-
-											<li><a href="/florists/"> Флористы</a></li>
-                                        </ul>
-
-
-
-
-
-									</div><!-- /.navbar-collapse -->
-								</div><!-- /.container-fluid -->
-							</nav>
-
-						</div>
-
-
-					</div> <!-- end row-->
-				</div> <!-- / .container -->
-			</div>
-			<!-- Header End -->
-
-{% block content_wrapper %}
-
-
-
-
- <!-- Inner Content -->
-	<div class="inner-page padd">
-	<!-- Shopping Start -->
-
-	<div class="shopping">
-		<div class="container">
-
-
-			<div class="row">
-
-   {% include "partials/nav_primary_pills.html" %}
-                </div>
-<!-- end navigation -->
-  <div class="page_inner">
-
-  {% block breadcrumbs %}{% endblock %}
-       {% block header %}
-
-                        <h1>{% block headertext %}{% endblock %}</h1>
-
-                {% endblock %}
-
-                {% block subnavigation %}{% endblock %}
-                <div class="content">
-                    {% block subheader %}{% endblock subheader %}
-
-                    {# Render promotions #}
-                    <div id="promotions">
-                        {% for promotion in promotions_page %}
-                            {% render_promotion promotion %}
-                        {% endfor %}
-                    </div>
-
-<!-- start portfolio -->
-
-      {# Div exists for AJAX updates to entire content section #}
-       {% block content %}
-
-                      <!-- About company -->
-				<div class="about-company padd">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6">
-								<!-- About Compnay Item -->
-								<div class="about-company-item">
-									<!-- About Company Image -->
-									<img class="img-responsive img-thumbnail" src="img/chef/about-1.jpg" width="400px"  height="600" halt="" />
-								</div>
-							</div>
-							<div class="col-md-6">
-								<!-- About Compnay Item -->
-								<div class="about-company-item">
-									<!-- Heading -->
-									<h3>О нашем магазине </h3>
-									<!-- Paragraph -->
-
-
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alio consequat.</p>
-									<br /><!--/ Line break -->
-									<div class="row">
-										<div class="col-md-6 col-sm-6 col-xs-6">
-											<!-- About company inner items -->
-											<div class="about-company-inner">
-												<!-- Paragraph with icon -->
-
-											</div>
-										</div>
-										<div class="col-md-6 col-sm-6 col-xs-6">
-											<!-- About company inner items -->
-											<div class="about-company-inner">
-												<!-- Paragraph with icon -->
-
-											</div>
-										</div>
-										<div class="clearfix visible-xs"></div>
-										<div class="col-md-6 col-sm-6 col-xs-6">
-											<!-- About company inner items -->
-											<div class="about-company-inner">
-												<!-- Paragraph with icon -->
-
-										</div>
-										<div class="col-md-6 col-sm-6 col-xs-6">
-											<!-- About company inner items -->
-											<div class="about-company-inner">
-												<!-- Paragraph with icon -->
-
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Chefs Start -->
-
-				<div class="chefs padd">
-					<div class="container">
-						<!-- Default Heading -->
-						<div class="default-heading">
-							<!-- Crown image -->
-							<img class="img-responsive" src="img/crown.png" alt="" />
-							<!-- Heading -->
-							<h2>Наши флористы</h2>
-							<!-- Paragraph -->
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-4 col-sm-4">
-								<!-- Chef Member -->
-								<div class="chefs-member">
-									<!-- Chefs member header -->
-									<div class="chefs-head">
-										<!-- Member background image -->
-										<img class="chefs-back img-responsive" src="img/chef/c-back2.jpg" alt="" />
-										<!-- chef member image -->
-										<img class="chefs-img img-responsive" src="img/chef/4.jpg" alt="" />
-									</div>
-									<!--Name / Heading -->
-									<h3><a href="aboutus.html#">Анна Иванова</a></h3>
-									<!-- Member designation -->
-									<span>Lorem ipsum</span>
-									<!-- Social media links -->
-									<div class="social">
-									<p>Lorem ipsum dolore set amen</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-4">
-								<!-- Chef Member -->
-								<div class="chefs-member">
-									<!-- Chefs member header -->
-									<div class="chefs-head">
-										<!-- Member background image -->
-										<img class="chefs-back img-responsive" src="img/chef/c-back1.jpg" alt="" />
-										<!-- chef member image -->
-										<img class="chefs-img img-responsive" src="img/chef/7.jpg" alt="" />
-									</div>
-									<!--Name / Heading -->
-									<h3><a href="aboutus.html#">Татьна Кузнецова</a></h3>
-									<!-- Member designation -->
-									<span>Lrorem ipsum</span>
-									<!-- Social media links -->
-									<div class="social">
-										<p>Loerm ipsum dolore set amen </p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-4">
-								<!-- Chef Member -->
-								<div class="chefs-member">
-									<!-- Chefs member header -->
-									<div class="chefs-head">
-										<!-- Member background image -->
-										<img class="chefs-back img-responsive" src="img/chef/c-back3.jpg" alt="" />
-										<!-- chef member image -->
-										<img class="chefs-img img-responsive" src="img/chef/2.jpg" alt="" />
-									</div>
-									<!--Name / Heading -->
-									<h3><a href="aboutus.html#">Юлия Ермакова</a></h3>
-									<!-- Member designation -->
-									<span>Lorem Ipsum </span>
-									<!-- Social media links -->
-									<div class="social">
-										<p>Lorem ipsum dolore set amen</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-
-
-                    {% endblock %}
-<!-- end portfolio -->
-
-
-
-      <!--end row-->
-
-
-
-
-				</div><!--end  container-->
-
-
-			</div><!-- /Inner page pad -->
-
-
- {% endblock %}
-
-<!-- Footer Start -->
-
-
-{% include "partials/footer.html" %}
-
-	<!-- Footer End -->
-
-
-		 </div><!-- / Wrapper End -->
-		<!-- Scroll to top -->
-		<span class="totop"><a href="index.html#"><i class="fa fa-angle-up"></i></a></span>
 
 {% endblock %}
-
 

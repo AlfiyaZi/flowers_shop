@@ -25,7 +25,7 @@
 
                 <ol class="row " style="list-style: none;">
                     {% for product in products %}
-                        <li class="col-md-3 col-sm-6  ">{% render_product product %}</li>
+                        <li class="col-md-3 col-sm-6 click  ">{% render_product product %}</li>
                     {% endfor %}
                 </ol>
                 {% include "partials/pagination.html" %}
@@ -34,4 +34,6 @@
     {% else %}
         <p class="nonefound">{% trans "No products found." %}</p>
     {% endif %}
+
+
 {% endblock content %}

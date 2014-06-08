@@ -16,13 +16,14 @@ def index(request):
     # Return a rendered response to send to the client.
     # We make use of the shortcut function to make our lives easier.
     # Note that the first parameter is the template we wish to use.
-    return render_to_response('pages/index.html', context_dict, context)
+    return render_to_response('about/index.html', context_dict, context)
 
 
-def about(request):
+
+def delivery(request):
     # Request the context.
     context = RequestContext(request)
 
 
     # Return and render the response, ensuring the count is passed to the template engine.
-    return render_to_response('pages/about.html',  context)
+    return render_to_response('about/delivery.html',  context)

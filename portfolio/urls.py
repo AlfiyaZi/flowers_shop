@@ -1,12 +1,42 @@
-___author__ = 'alya'
+from django.conf.urls import patterns
 
-from django.conf.urls import patterns, url
-from pages import views
+from surlex.dj import surl
+
+from .views import (
+    HomeView,
+    ArtworkDetailView, ArtworkListView,
+    CollectionListView, CollectionDetailView,
+    CategoryListView, CategoryDetailView
+)
+
 
 urlpatterns = patterns('',
-        url(r'^$', views.index, name='index'),
-        url(r'^about/', views.about, name='about'),
+    # Home view
+    surl(r'^$', HomeView.as_view(),
+        name='portfolio_home'
+    ),
 
+    # Collection views
+    surl(r'^collections/$', CollectionListView.as_view(),
+        name='collection_list'
+    ),
+    surl(r'^collections/<slug:s>/', CollectionDetailView.as_view(),
+        name='collection_detail'
+    ),
 
+    # Artwork views
+    surl(r'^works/$', ArtworkListView.as_view(),
+        name='artwork_list'
+    ),
+    surl(r'^works/<pk:#>/$', ArtworkDetailView.as_view(),
+        name='artwork_detail'
+    ),
 
+    # Category views
+    surl(r'^category/$', CategoryListView.as_view(),
+        name='category_list'
+    ),
+    surl(r'^category/<slug:s>/', CategoryDetailView.as_view(),
+        name='category_detail'
+    )
 )

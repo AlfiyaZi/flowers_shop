@@ -3,6 +3,8 @@
 {% load i18n %}
 {% load purchase_info_tags %}
 
+
+
 {% purchase_info_for_product request product as session %}
 
 {% if session.availability.is_available_to_buy %}

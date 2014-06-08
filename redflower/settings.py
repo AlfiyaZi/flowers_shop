@@ -73,12 +73,28 @@ INSTALLED_APPS = [
     'events',
     'about',
     'school',
-    'portfolio',
+
     'pages',
+    'factory',
+    'mcbv',
+
+    'contact',
+    'cms',  # django CMS itself
+    'mptt',  # utilities for implementing a modified pre-order traversal tree
+    'menus',  # helper for model independent hierarchical website navigation
+    'south',  # intelligent schema and data migrations
+    'sekizai',  # for javascript and css management
+    'djangocms_admin_style',  # for the admin skin. You **must** add 'djangocms_admin_style' in the list before 'django.contrib.admin'.
+    'adminsortable',
+    'sorl.thumbnail',
+    'portfolio',
 
 
 
-   
+    #'robokassa',
+
+
+
  ]
 
 from oscar import get_core_apps
@@ -97,9 +113,46 @@ MIDDLEWARE_CLASSES = (
     'oscar.apps.basket.middleware.BasketMiddleware',
     'django.middleware.transaction.TransactionMiddleware',  
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'cms.middleware.page.CurrentPageMiddleware',
+    'cms.middleware.user.CurrentUserMiddleware',
+    'cms.middleware.toolbar.ToolbarMiddleware',
+    'cms.middleware.language.LanguageCookieMiddleware',
 
     
 )
+
+RQ_QUEUES = {
+    'default': {
+        'HOST': 'localhost',
+        'PORT': 6379,
+        'DB': 0,
+        'PASSWORD': '',
+    },
+}
+
+
+
+SMSAERO_USER = 'flowerBigCity@yandex.ru'
+SMSAERO_PASSWORD = '246fbT47t'
+SMSAERO_PASSWORD_MD5 = ''
+
+
+
+
+
+
+ROBOKASSA_LOGIN ='flowerBigCity'
+ROBOKASSA_PASSWORD1 ='MsR843Ig71'
+
+
+ROBOKASSA_PASSWORD2 =''
+ROBOKASSA_USE_POST = True
+ROBOKASSA_STRICT_CHECK= False
+ROBOKASSA_TEST_MODE = True
+ROBOKASSA_EXTRA_PARAMS = True
+
+
+
 
 ROOT_URLCONF = 'redflower.urls'
 
@@ -169,7 +222,7 @@ HAYSTACK_CONNECTIONS = {
 }
 
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/catalogue/'
 APPEND_SLASH = True
 
 
@@ -189,6 +242,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'oscar.apps.customer.notifications.context_processors.notifications',
     'oscar.core.context_processors.metadata',
     'django.contrib.auth.context_processors.auth',
+    'cms.context_processors.cms_settings',
+    'sekizai.context_processors.sekizai',
+
 
 
 )
@@ -206,6 +262,12 @@ TEMPLATE_DIRS = (
     TEMPLATE_PATH,
    # OSCAR_MAIN_TEMPLATE_DIR,
 )
+
+CMS_TEMPLATES = (
+    ('template_1.html', 'Template One'),
+    ('template_2.html', 'Template Two'),
+)
+
 
 
 # List of callables that know how to import templates from various sources.

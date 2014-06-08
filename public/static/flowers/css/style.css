@@ -30,7 +30,7 @@ h1,h2,h3,h4,h5,h6{
 p{
 	margin:0;
 	padding:0;
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 23px;
 }
 
@@ -607,6 +607,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 .default-heading h2{
 	margin: 0px;
+	margin-top: 5px;
 	margin-bottom: 10px;
 	font-family: 'Open Sans Condensed', sans-serif;
 	text-transform: uppercase;
@@ -1976,6 +1977,20 @@ div.ppt { display:none !important; }
 	color: #9a9a9a;
 	text-align: center;
 }
+/*
+* about pages*
+*/
+
+.about p{margin:0;
+	padding:0;
+	font-size: 13px;
+	line-height: 23px;
+
+	}
+
+
+
+
 
 /*
  * Scroll to top
@@ -2159,7 +2174,7 @@ div.ppt { display:none !important; }
 }
 input[type="text"][id*="quantity"],
 input[type="number"][id*="quantity"] {
-  width: 30px;
+
 }
 .checkout-quantity input {
   margin-right: 2px;

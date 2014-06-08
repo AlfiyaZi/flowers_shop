@@ -23,14 +23,20 @@ urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'', include(application.urls)),
     url(r'^catalogue/', include(catalogue_app.urls)),
+    url(r'^catalogue/contact', include('contact.urls')),
+     url(r'^catalogue/contact/add_contact/$', include('contact.urls')),
+    url(r'^contact/', include('contact.urls')),
     url(r'^dashboard/dashboard/catalogue/$',include(dashboard_app.urls)),
     url(r'^about/', include('about.urls')),
     url(r'^events/', include('events.urls')),
     url(r'^blog/', include('blog.urls')),
-    url(r'^florists/', include('florists.urls')),
     url(r'^portfolio/', include('portfolio.urls')),
+
+    url(r'^florists/', include('florists.urls')),
+
     url(r'^school/', include('school.urls')),
      url(r'^pages/', include('pages.urls')),
+      url(r'^reserve/', views.flatpage,{'url': '/reserve/'}, name='reserve' ),
 
     url(r'^admin/', include(admin.site.urls)),
 ]
@@ -38,6 +44,7 @@ urlpatterns = [
 urlpatterns += [
     url(r'^(?P<url>.*/)$', views.flatpage),
 ]
+
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

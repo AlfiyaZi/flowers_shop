@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout_catalogue.html" %}
 {% load url from future %}
 {% load basket_tags %}
 {% load promotion_tags %}
@@ -8,31 +8,33 @@
 {% load staticfiles %}
 
 {% block title %}
+
     {{ range.name }} | {{ block.super }}
+
 {% endblock %}
 
-{% block breadcrumbs %}
-    <ul class="breadcrumb">
-        <li>
-            <a href="{% url "promotions:home" %}">{% trans "Home" %}</a>
-            <span class="divider">/</span>
-        </li>
-        <li class="active">{{ range.name }}</li>
-    </ul>
-{% endblock breadcrumbs %}
 
-{% block headertext %}{{ range.name }}{% endblock %}
+
+{% block headertext %}
+   <div class="default-heading">
+
+      <h2>{{ range.name }}</h2>
+
+     </div>
+       {% endblock %}
 
 {% block content %}
+
     {% if range.description %}
         {{ range.description|safe }}
+
     {% endif %}
     {% if products %}
         <section>
             <div class="mod">
-                <ol class="row-fluid">
+                <ol class="row" style="list-style: none;" >
                     {% for product in products %}
-                        <li class="span2 {% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">{% render_product product %}</li>
+                        <li class="col-md-2{% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">{% render_product product %}</li>
                     {% endfor %}
                 </ol>
                 {% include "partials/pagination.html" %}

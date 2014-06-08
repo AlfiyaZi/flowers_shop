@@ -1,28 +1,48 @@
-from django.http import HttpResponse
-from django.template import RequestContext
-from django.shortcuts import render_to_response
+from django.views.generic import ListView, DetailView, RedirectView
+from django.core.urlresolvers import reverse
+
+from .models import Artwork, Category, Collection
 
 
+class HomeView(RedirectView):
+    """ Home view redirects to collection list. """
+    permanent = True
 
-def index(request):
-    # Request the context of the request.
-    # The context contains information such as the client's machine details, for example.
-    context = RequestContext(request)
-
-    # Construct a dictionary to pass to the template engine as its context.
-    # Note the key boldmessage is the same as {{ boldmessage }} in the template!
-    context_dict = {'boldmessage': "I am bold font from the context"}
-
-    # Return a rendered response to send to the client.
-    # We make use of the shortcut function to make our lives easier.
-    # Note that the first parameter is the template we wish to use.
-    return render_to_response('pages/index.html', context_dict, context)
+    def get_redirect_url(self, **kwargs):
+        return reverse('collection_list')
 
 
-def about(request):
-    # Request the context.
-    context = RequestContext(request)
+class ArtworkViewBase(object):
+    model = Artwork
 
 
-    # Return and render the response, ensuring the count is passed to the template engine.
-    return render_to_response('pages/about.html',  context)
+class ArtworkDetailView(ArtworkViewBase, DetailView):
+    pass
+
+
+class ArtworkListView(ArtworkViewBase, ListView):
+    pass
+
+
+class CollectionViewBase(object):
+    model = Collection
+
+
+class CollectionDetailView(CollectionViewBase, DetailView):
+    pass
+
+
+class CollectionListView(CollectionViewBase, ListView):
+    pass
+
+
+class CategoryViewBase(object):
+    model = Category
+
+
+class CategoryDetailView(CategoryViewBase, DetailView):
+    pass
+
+
+class CategoryListView(CategoryViewBase, ListView):
+    pass
