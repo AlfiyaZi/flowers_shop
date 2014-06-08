@@ -15,6 +15,7 @@ from oscar.views import handler500, handler404, handler403  # noqa
 
 
 
+
 admin.autodiscover()
 
 
@@ -23,8 +24,8 @@ urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'', include(application.urls)),
     url(r'^catalogue/', include(catalogue_app.urls)),
-    url(r'^catalogue/contact', include('contact.urls')),
-     url(r'^catalogue/contact/add_contact/$', include('contact.urls')),
+
+
     url(r'^contact/', include('contact.urls')),
     url(r'^dashboard/dashboard/catalogue/$',include(dashboard_app.urls)),
     url(r'^about/', include('about.urls')),
@@ -36,7 +37,7 @@ urlpatterns = [
 
     url(r'^school/', include('school.urls')),
      url(r'^pages/', include('pages.urls')),
-      url(r'^reserve/', views.flatpage,{'url': '/reserve/'}, name='reserve' ),
+    url(r'^reserve/', views.flatpage,{'url': '/reserve/'}, name='reserve' ),
 
     url(r'^admin/', include(admin.site.urls)),
 ]

@@ -1,23 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic);
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-}
+
 .about {
   margin: 70px auto 40px;
   padding: 8px;
@@ -69,52 +50,7 @@ time, mark, audio, video {
   margin: 0 -1px;
 }
 
-body {
-  font: 13px/20px 'Tahoma', Arial, sans-serif;
-  color: #404040;
-  background: #efefef url('../img/noise.png') repeat 0 0;
-}
-h1 {
-	font-size: 2.4em;
-	font-family: 'Open Sans', Calibri, Arial, sans-serif;
-	text-align: center;
-	text-shadow: 1px 1px #FFFFFF;
-	line-height: 1.3;
-	padding: 0 10px;
-	font-weight: 300;
-}
-
-h1 span {
-    display: block;
-    font-size: 60%;
-    margin: 0 auto;
-    opacity: 0.7;
-    padding: 0.2em 0.1em 0.6em;
-    width: 70%
-}
-h2 {
-	font-size: 1.4em;
-	font-family: 'Open Sans', Calibri, Arial, sans-serif;
-	text-align: center;
-	text-shadow: 1px 1px #FFFFFF;
-	line-height: 1.3;
-	padding: 10px 20px 20px;
-	font-weight: 300;
-}
-hr {
-    color: rgba(255, 255, 255, 0.65);
-    margin: 20px auto;
-    width: 70%;
-}
-.container {
-  margin: 30px auto;
-  width: 960px;
-  display: block;position: relative;
-}
-.container > .button {
-  margin: 12px;
-}
-/* Кнопки */
+/* пїЅпїЅпїЅпїЅпїЅпїЅ */
 .button {
   position: relative;
   display: inline-block;margin: 12px;
@@ -284,8 +220,8 @@ hr {
 	text-align: left;
 	text-shadow: 0 1px 3px rgba(0,0,0,.3);
 	}
-/* Базовые стили модального окна  */
-/* Слой затемнения */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ  */
+/* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 .overlay {
     background-color: rgba(0, 0, 0, 0.7);
     bottom: 0;
@@ -324,7 +260,7 @@ embed, iframe {
   margin: auto;
   top: 0; left: 0; bottom: 0; right: 0;
 }
-/* стили модального окна */
+/* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
 .popup { 
     min-width: 320px;
     max-width: 600px;
@@ -335,7 +271,7 @@ embed, iframe {
     left: 0; right: 0;
     opacity: 0;
     padding: 15px;
-/* фиксированное позиционирование, окно стабильно при прокрутке */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
     position: fixed;
 	font-size: 14px;
 	top: 0;
@@ -365,7 +301,7 @@ embed, iframe {
     opacity: 1;
     visibility: visible;
 }
-/* формируем кнопку закрытия */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 .close {
     background-color: rgba(0, 0, 0, 0.8);
     border: 2px solid #ccc;
@@ -399,7 +335,7 @@ embed, iframe {
 .popup p, .popup div {
     margin-bottom: 10px;
 }
-/* Планшет */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	.container {
 		width: 768px; 
@@ -411,7 +347,7 @@ embed, iframe {
 	font-size: 1.3em;
 	}
 }
-/* Мобильный - Примечание: Дизайн для ширины 320px*/
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ 320px*/
 @media only screen and (max-width: 767px) {
 	.container { 
 		width: 95%; 
@@ -428,7 +364,7 @@ embed, iframe {
 	font-size: 1.2em;
 	}
 }
-/* Мобильный - Примечание: Дизайн для ширины 480px */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ 480px */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	.container {
 		width: 70%;

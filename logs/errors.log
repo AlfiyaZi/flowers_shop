@@ -25727,3 +25727,455 @@ Traceback (most recent call last):
   File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
     return Database.Cursor.execute(self, query, params)
 OperationalError: no such table: portfolio_collection
+ERROR 2014-06-08 18:34:04,670 base Internal Server Error: /dashboard/catalogue/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 196, in render
+    nodelist.append(node.render(context))
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 298, in render
+    match = condition.eval(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 867, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 585, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 735, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 789, in _resolve_lookup
+    current = current()
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 514, in primary_image
+    'original': self.get_missing_image(),
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 493, in get_missing_image
+    return MissingProductImage()
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 1059, in __init__
+    self.symlink_missing_image(media_file_path)
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 1065, in symlink_missing_image
+    os.symlink(static_file_path, media_file_path)
+AttributeError: 'module' object has no attribute 'symlink'
+ERROR 2014-06-08 19:03:45,865 base Internal Server Error: /catalogue/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 39, in <module>
+    url(r'^reserve/', views.flatpage,{'url': '/reserve/'}, name='reserve' ),
+AttributeError: 'module' object has no attribute 'flatpage'
+ERROR 2014-06-08 19:03:46,678 base Internal Server Error: /catalogue/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 39, in <module>
+    url(r'^reserve/', views.flatpage,{'url': '/reserve/'}, name='reserve' ),
+AttributeError: 'module' object has no attribute 'flatpage'
+ERROR 2014-06-08 19:37:24,905 base Internal Server Error: /contact/add_contact/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "c:\DJango\redflower\redflower\contact\views.py", line 61, in add_contact
+    cli.send("+79526646699", umes )
+  File "c:\DJango\redflower\redflower\contact\smsru.py", line 164, in send
+    res = self._call("sms/send", args)
+  File "c:\DJango\redflower\redflower\contact\smsru.py", line 129, in _call
+    res = urllib2.urlopen(url).read().strip().split("\n")
+  File "C:\Python27\Lib\urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 400, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 418, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 378, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1207, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "C:\Python27\Lib\urllib2.py", line 1177, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+ERROR 2014-06-08 19:42:16,618 base Internal Server Error: /contact/add_contact/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "c:\DJango\redflower\redflower\contact\views.py", line 78, in add_contact
+    return render_to_response('contact/add_contact.html', context_dict, context)
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 254, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 360, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 577, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: ' add_class:"col-md-6"' from 'field |add_class:"form-control" add_class:"col-md-6"'
+ERROR 2014-06-08 20:25:53,664 base Internal Server Error: /contact/add_contact/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 29, in <module>
+    url(r'^contact/', include('contact.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\contact\urls.py", line 3, in <module>
+    from contact import views
+  File "c:\DJango\redflower\redflower\contact\views.py", line 13, in <module>
+    from contact.forms import ContactForm
+  File "c:\DJango\redflower\redflower\contact\forms.py", line 5
+SyntaxError: Non-ASCII character '\xd0' in file c:\DJango\redflower\redflower\contact\forms.py on line 5, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR 2014-06-08 20:25:54,507 base Internal Server Error: /contact/add_contact/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 29, in <module>
+    url(r'^contact/', include('contact.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\contact\urls.py", line 3, in <module>
+    from contact import views
+  File "c:\DJango\redflower\redflower\contact\views.py", line 13, in <module>
+    from contact.forms import ContactForm
+  File "c:\DJango\redflower\redflower\contact\forms.py", line 5
+SyntaxError: Non-ASCII character '\xd0' in file c:\DJango\redflower\redflower\contact\forms.py on line 5, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR 2014-06-08 20:31:40,503 base Internal Server Error: /contact/add_contact/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "c:\DJango\redflower\redflower\contact\views.py", line 78, in add_contact
+    return render_to_response('contact/add_contact.html', context_dict, context)
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 169, in render_to_string
+    return t.render(context_instance)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 196, in render
+    nodelist.append(node.render(context))
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 88, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 613, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "C:\Python27\lib\site-packages\widget_tweaks\templatetags\widget_tweaks.py", line 10, in wrapped
+    return fn(field, attr)
+  File "C:\Python27\lib\site-packages\widget_tweaks\templatetags\widget_tweaks.py", line 71, in add_class
+    return append_attr(field, 'class:' + css_class)
+  File "C:\Python27\lib\site-packages\widget_tweaks\templatetags\widget_tweaks.py", line 10, in wrapped
+    return fn(field, attr)
+  File "C:\Python27\lib\site-packages\widget_tweaks\templatetags\widget_tweaks.py", line 65, in append_attr
+    return _process_field_attributes(field, attr, process)
+  File "C:\Python27\lib\site-packages\widget_tweaks\templatetags\widget_tweaks.py", line 22, in _process_field_attributes
+    old_as_widget = field.as_widget
+AttributeError: 'unicode' object has no attribute 'as_widget'
+ERROR 2014-06-08 20:55:22,160 base Internal Server Error: /contact/add_contact/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "c:\DJango\redflower\redflower\contact\views.py", line 61, in add_contact
+    cli.send("+79526646699", umes )
+  File "c:\DJango\redflower\redflower\contact\smsru.py", line 164, in send
+    res = self._call("sms/send", args)
+  File "c:\DJango\redflower\redflower\contact\smsru.py", line 129, in _call
+    res = urllib2.urlopen(url).read().strip().split("\n")
+  File "C:\Python27\Lib\urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 400, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 418, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 378, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1207, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "C:\Python27\Lib\urllib2.py", line 1177, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+ERROR 2014-06-08 21:14:17,855 base Internal Server Error: /contact/add_contact/img/booking/table2.jpg/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 163, in disable_instrumentation
+    BlockNode.render = BlockNode.render.original
+AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-06-08 22:04:56,450 base Internal Server Error: /contact/add_contact/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 29, in <module>
+    url(r'^contact/', include('contact.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\contact\urls.py", line 3, in <module>
+    from contact import views
+  File "c:\DJango\redflower\redflower\contact\views.py", line 13, in <module>
+    from contact.forms import ContactForm
+  File "c:\DJango\redflower\redflower\contact\forms.py", line 14
+    class Meta:
+        ^
+SyntaxError: invalid syntax
+ERROR 2014-06-08 22:04:57,509 base Internal Server Error: /contact/add_contact/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 29, in <module>
+    url(r'^contact/', include('contact.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\contact\urls.py", line 3, in <module>
+    from contact import views
+  File "c:\DJango\redflower\redflower\contact\views.py", line 13, in <module>
+    from contact.forms import ContactForm
+  File "c:\DJango\redflower\redflower\contact\forms.py", line 14
+    class Meta:
+        ^
+SyntaxError: invalid syntax
