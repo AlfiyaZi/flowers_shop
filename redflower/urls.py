@@ -26,12 +26,15 @@ urlpatterns = [
     url(r'^catalogue/', include(catalogue_app.urls)),
 
 
-    url(r'^contact/', include('contact.urls')),
+
     url(r'^dashboard/dashboard/catalogue/$',include(dashboard_app.urls)),
     url(r'^about/', include('about.urls')),
     url(r'^events/', include('events.urls')),
     url(r'^blog/', include('blog.urls')),
     url(r'^portfolio/', include('portfolio.urls')),
+     url(r'^contact/', include('contact.urls')),
+    url(r'^robokassa/', include('robokassa.urls')),
+    url(r'^pay/', include('pay.urls')),
 
     url(r'^florists/', include('florists.urls')),
 

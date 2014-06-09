@@ -26179,3 +26179,2173 @@ Traceback (most recent call last):
     class Meta:
         ^
 SyntaxError: invalid syntax
+ERROR 2014-06-08 22:30:45,921 base Internal Server Error: /contact/add_contact/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 29, in <module>
+    url(r'^contact/', include('contact.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\contact\urls.py", line 3, in <module>
+    from contact import views
+  File "c:\DJango\redflower\redflower\contact\views.py", line 67
+    return href='/catalogue/'
+               ^
+SyntaxError: invalid syntax
+ERROR 2014-06-08 22:30:46,838 base Internal Server Error: /contact/add_contact/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 29, in <module>
+    url(r'^contact/', include('contact.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\contact\urls.py", line 3, in <module>
+    from contact import views
+  File "c:\DJango\redflower\redflower\contact\views.py", line 67
+    return href='/catalogue/'
+               ^
+SyntaxError: invalid syntax
+ERROR 2014-06-08 22:31:45,154 base Internal Server Error: /contact/add_contact/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 96, in process_response
+    if hasattr(request, 'user') and request.user.is_staff and response.status_code != 500:
+AttributeError: 'str' object has no attribute 'status_code'
+ERROR 2014-06-08 22:31:59,214 base Internal Server Error: /contact/add_contact/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 96, in process_response
+    if hasattr(request, 'user') and request.user.is_staff and response.status_code != 500:
+AttributeError: 'str' object has no attribute 'status_code'
+ERROR 2014-06-08 22:33:28,180 base Internal Server Error: /contact/add_contact/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "c:\DJango\redflower\redflower\contact\views.py", line 67, in add_contact
+    return index(request)
+  File "c:\DJango\redflower\redflower\contact\views.py", line 33, in index
+    return render_to_response('/catalogue/',  context)
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: /catalogue/
+ERROR 2014-06-09 01:11:28,871 base Internal Server Error: /catalogue/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 32, in wrapper
+    result = func(*args)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\robokassa\views.py", line 7, in <module>
+    from robokassa.conf import USE_POST
+  File "c:\DJango\redflower\redflower\robokassa\conf.py", line 25, in <module>
+    EXTRA_PARAMS = sorted(getattr(settings, 'ROBOKASSA_EXTRA_PARAMS', []))
+TypeError: 'bool' object is not iterable
+ERROR 2014-06-09 01:11:38,595 base Internal Server Error: /catalogue/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 114, in process_response
+    toolbar_content = toolbar.render_toolbar()
+  File "C:\Python27\lib\site-packages\debug_toolbar\toolbar.py", line 67, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 32, in wrapper
+    result = func(*args)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\robokassa\views.py", line 7, in <module>
+    from robokassa.conf import USE_POST
+  File "c:\DJango\redflower\redflower\robokassa\conf.py", line 25, in <module>
+    EXTRA_PARAMS = sorted(getattr(settings, 'ROBOKASSA_EXTRA_PARAMS', []))
+TypeError: 'bool' object is not iterable
+ERROR 2014-06-09 01:51:14,838 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 35, in <module>
+    url(r'^robokassa/', include('robokassa.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+ImportError: No module named urls
+ERROR 2014-06-09 01:51:14,881 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 35, in <module>
+    url(r'^robokassa/', include('robokassa.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+ImportError: No module named urls
+ERROR 2014-06-09 01:51:17,029 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 35, in <module>
+    url(r'^robokassa/', include('robokassa.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+ImportError: No module named urls
+ERROR 2014-06-09 01:51:17,073 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 35, in <module>
+    url(r'^robokassa/', include('robokassa.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+ImportError: No module named urls
+ERROR 2014-06-09 01:53:19,974 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 114, in process_response
+    toolbar_content = toolbar.render_toolbar()
+  File "C:\Python27\lib\site-packages\debug_toolbar\toolbar.py", line 67, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 267, in _populate
+    for pattern in reversed(self.url_patterns):
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 369, in url_patterns
+    raise ImproperlyConfigured("The included urlconf %s doesn't have any patterns in it" % self.urlconf_name)
+ImproperlyConfigured: The included urlconf <module 'robokassa.urls' from 'c:\DJango\redflower\redflower\robokassa\urls.py'> doesn't have any patterns in it
+ERROR 2014-06-09 01:54:53,355 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 35, in <module>
+    url(r'^robokassa/', include('robokassa.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\robokassa\urls.py", line 3
+    from robokassa urls  import *
+                      ^
+SyntaxError: invalid syntax
+ERROR 2014-06-09 01:54:54,026 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 35, in <module>
+    url(r'^robokassa/', include('robokassa.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\robokassa\urls.py", line 3
+    from robokassa urls  import *
+                      ^
+SyntaxError: invalid syntax
+ERROR 2014-06-09 01:55:38,299 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 114, in process_response
+    toolbar_content = toolbar.render_toolbar()
+  File "C:\Python27\lib\site-packages\debug_toolbar\toolbar.py", line 67, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 267, in _populate
+    for pattern in reversed(self.url_patterns):
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 369, in url_patterns
+    raise ImproperlyConfigured("The included urlconf %s doesn't have any patterns in it" % self.urlconf_name)
+ImproperlyConfigured: The included urlconf <module 'robokassa.urls' from 'c:\DJango\redflower\redflower\robokassa\urls.py'> doesn't have any patterns in it
+ERROR 2014-06-09 01:58:33,262 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 114, in process_response
+    toolbar_content = toolbar.render_toolbar()
+  File "C:\Python27\lib\site-packages\debug_toolbar\toolbar.py", line 67, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 263, in _populate
+    lookups = MultiValueDict()
+RuntimeError: maximum recursion depth exceeded
+ERROR 2014-06-09 02:10:03,943 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 114, in process_response
+    toolbar_content = toolbar.render_toolbar()
+  File "C:\Python27\lib\site-packages\debug_toolbar\toolbar.py", line 67, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 32, in wrapper
+    result = func(*args)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\robokassa\views.py", line 7, in <module>
+    from robokassa.conf import USE_POST
+  File "c:\DJango\redflower\redflower\robokassa\conf.py", line 25, in <module>
+    EXTRA_PARAMS = sorted(getattr(settings, 'ROBOKASSA_EXTRA_PARAMS', []))
+TypeError: 'bool' object is not iterable
+ERROR 2014-06-09 02:10:36,677 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 114, in process_response
+    toolbar_content = toolbar.render_toolbar()
+  File "C:\Python27\lib\site-packages\debug_toolbar\toolbar.py", line 67, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 32, in wrapper
+    result = func(*args)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\robokassa\views.py", line 8, in <module>
+    from robokassa.forms import ResultURLForm, SuccessRedirectForm, FailRedirectForm
+  File "c:\DJango\redflower\redflower\robokassa\forms.py", line 8, in <module>
+    from robokassa.conf import STRICT_CHECK, FORM_TARGET, EXTRA_PARAMS
+ImportError: cannot import name EXTRA_PARAMS
+ERROR 2014-06-09 02:11:12,214 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 114, in process_response
+    toolbar_content = toolbar.render_toolbar()
+  File "C:\Python27\lib\site-packages\debug_toolbar\toolbar.py", line 67, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 32, in wrapper
+    result = func(*args)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\robokassa\views.py", line 7, in <module>
+    from robokassa.conf import USE_POST
+  File "c:\DJango\redflower\redflower\robokassa\conf.py", line 25, in <module>
+    EXTRA_PARAMS = sorted(getattr(settings, 'ROBOKASSA_EXTRA_PARAMS', []))
+TypeError: 'bool' object is not iterable
+ERROR 2014-06-09 02:14:54,286 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 114, in process_response
+    toolbar_content = toolbar.render_toolbar()
+  File "C:\Python27\lib\site-packages\debug_toolbar\toolbar.py", line 67, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 32, in wrapper
+    result = func(*args)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\robokassa\views.py", line 7, in <module>
+    from robokassa.conf import USE_POST
+  File "c:\DJango\redflower\redflower\robokassa\conf.py", line 25, in <module>
+    EXTRA_PARAMS = sorted(getattr(settings, 'ROBOKASSA_EXTRA_PARAMS', []))
+TypeError: 'bool' object is not iterable
+ERROR 2014-06-09 02:22:14,401 base Internal Server Error: /robokassa/pay_with_robokassa/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: pay_with_robokassa() takes exactly 2 arguments (1 given)
+ERROR 2014-06-09 02:23:45,194 base Internal Server Error: /robokassa/pay_with_robokassa/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: pay_with_robokassa() takes exactly 2 arguments (1 given)
+ERROR 2014-06-09 02:24:42,359 base Internal Server Error: /robokassa/fail/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 58, in resolve_template
+    return loader.get_template(template)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: robokassa/error.html
+ERROR 2014-06-09 02:27:56,683 base Internal Server Error: /robokassa/pay_with_robokassa/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: pay_with_robokassa() takes exactly 2 arguments (1 given)
+ERROR 2014-06-09 02:28:05,502 base Internal Server Error: /robokassa/pay_with_robokassa/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: pay_with_robokassa() takes exactly 2 arguments (1 given)
+ERROR 2014-06-09 02:31:28,703 base Internal Server Error: /robokassa/pay_with_robokassa/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: pay_with_robokassa() takes exactly 2 arguments (1 given)
+ERROR 2014-06-09 02:43:33,351 base Internal Server Error: /robokassa/pay_with_robokassa/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: pay_with_robokassa() takes exactly 2 arguments (1 given)
+ERROR 2014-06-09 03:29:31,015 base Internal Server Error: /robokassa/pay_with_robokassa/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: pay_with_robokassa() takes exactly 2 arguments (1 given)
+ERROR 2014-06-09 03:45:18,013 base Internal Server Error: /pay/pay_with_robokassa/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: pay_with_robokassa() takes exactly 2 arguments (1 given)
+ERROR 2014-06-09 03:46:10,769 base Internal Server Error: /pay/pay_with_robokassa/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: pay_with_robokassa() takes exactly 2 arguments (1 given)
+ERROR 2014-06-09 03:56:52,407 base Internal Server Error: /pay/pay_with_robokassa/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: pay_with_robokassa() takes exactly 2 arguments (1 given)
+ERROR 2014-06-09 03:58:57,601 base Internal Server Error: /pay/pay_with_robokassa/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "c:\DJango\redflower\redflower\pay\views.py", line 12, in pay_with_robokassa
+    order = get_object_or_404(Order, pk=order_id)
+NameError: global name 'Order' is not defined
+ERROR 2014-06-09 04:03:13,733 base Internal Server Error: /pay/pay_with_robokassa/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "c:\DJango\redflower\redflower\pay\views.py", line 15, in pay_with_robokassa
+    'OutSum': order.total,
+NameError: global name 'order' is not defined
+ERROR 2014-06-09 04:07:36,276 base Internal Server Error: /pay/pay_with_robokassa/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "c:\DJango\redflower\redflower\pay\views.py", line 24, in pay_with_robokassa
+    return render(request, 'pay_with_robokassa.html', {'form': form})
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: pay_with_robokassa.html
+ERROR 2014-06-09 04:07:52,232 base Internal Server Error: /pay/pay_with_robokassa/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "c:\DJango\redflower\redflower\pay\views.py", line 24, in pay_with_robokassa
+    return render(request, 'pay_with_robokassa.html', {'form': form})
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: pay_with_robokassa.html
+ERROR 2014-06-09 04:21:53,792 base Internal Server Error: /pay/pay_with_robokassa/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "c:\DJango\redflower\redflower\pay\views.py", line 24, in pay_with_robokassa
+    return render(request, '/pay/pay_with_robokassa.html', {'form': form})
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: /pay/pay_with_robokassa.html
+ERROR 2014-06-09 04:26:15,651 base Internal Server Error: /pay/pay/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "c:\DJango\redflower\redflower\pay\views.py", line 24, in pay
+    return render(request, 'pay/pay.html', {'form': form})
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 254, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 360, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 571, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 366, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+TemplateSyntaxError: Invalid filter: 'add_class'
+ERROR 2014-06-10 02:24:14,283 base Internal Server Error: /media/cache/0b/01/0b01b78dac4e7c7716ee86b3bed08880.jpg
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 163, in disable_instrumentation
+    BlockNode.render = BlockNode.render.original
+AttributeError: 'function' object has no attribute 'original'

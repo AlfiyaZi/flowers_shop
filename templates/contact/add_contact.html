@@ -18,13 +18,14 @@
 					<div class="container">
 						<div class="row">
 
-							<div class="col-md-5">
+							<div class="col-md-5 col-sm-4">
 								<!-- Booking form area -->
 								<div class="booking-form">
 									<!-- Heading -->
 									<h3>Экспресс заказ</h3>
 									<!-- Paragraph -->
-									<p>Заполните форму с контактными данными и наш менеджер перезвонит вам в течении нескольких минут</p>
+									<p>Заполните форму с контактными данными.<br/>
+                                        Наш менеджер перезвонит вам в течении нескольких минут</p>
 									<!-- Booking form -->
 									<form  method="post" action="/contact/add_contact/">
 
@@ -47,37 +48,18 @@
 								</div>
                             </div>
 
-                                <div class="col-md-7">
+                                <div class="col-md-7 col-sm-4">
                                       <br/>
                                     <br/>
 
 
 								<!-- Paragraph -->
 								<p></p>
+                                    <div id="carousel-example-generic" class="carousel slide" >
+                                    	<img class="img-responsive" src="{% static "flowers/img/02.jpg" %}" alt="Цветы большого города" />
+                                    </div>
 
-								<!-- Image Slider -->
-								<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-									<!-- Wrapper for slides -->
-									<div class="carousel-inner">
-										<div class="item active">
-											<img class="img-responsive" src="{% static "flowers/img/01.jpg" %}" alt="Цветы большого города" />
-										</div>
-										<div class="item">
-											<img class="img-responsive" src="{% static "flowers/img/02.jpg" %}" alt="Цветы большого города" />
-										</div>
-										<div class="item">
-											<img class="img-responsive" src="{% static "flowers/img/05.jpg" %}" alt="Цветы большого города"/>
-										</div>
-									</div>
 
-									<!-- Controls -->
-									<a class="left carousel-control" href="reserve-seats.html#carousel-example-generic" data-slide="prev">
-										<span class="fa fa-chevron-left"></span>
-									</a>
-									<a class="right carousel-control" href="reserve-seats.html#carousel-example-generic" data-slide="next">
-										<span class="fa fa-chevron-right"></span>
-									</a>
-								</div>
 							</div>
 
 

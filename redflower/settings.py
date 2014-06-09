@@ -88,10 +88,8 @@ INSTALLED_APPS = [
     'adminsortable',
     'sorl.thumbnail',
     'portfolio',
-
-
-
-    #'robokassa',
+    'robokassa',
+    'pay',
 
 
 
@@ -148,8 +146,8 @@ ROBOKASSA_PASSWORD1 ='MsR843Ig71'
 ROBOKASSA_PASSWORD2 =''
 ROBOKASSA_USE_POST = True
 ROBOKASSA_STRICT_CHECK= False
-ROBOKASSA_TEST_MODE = True
-ROBOKASSA_EXTRA_PARAMS = True
+ROBOKASSA_TEST_MODE = False
+ROBOKASSA_EXTRA_PARAMS = []
 
 
 
