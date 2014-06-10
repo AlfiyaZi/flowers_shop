@@ -3,7 +3,7 @@
 
 from django.shortcuts import get_object_or_404, render
 from django.contrib.auth.decorators import login_required
-
+from decimal import Decimal
 from robokassa.forms import *
 
 
@@ -13,7 +13,7 @@ def pay(request):
 
     form = RobokassaForm(initial={
                #'orderId': 7,
-               'OutSum': 100.00,
+               'OutSum': Decimal('10.00'),
                'InvId': 58,
                'Desc' : u'Холодильник "Бирюса"',
                'Email': request.user.email,
@@ -22,3 +22,23 @@ def pay(request):
            })
 
     return render(request, 'pay/pay.html', {'form': form})
+
+
+
+
+def pay1(request):
+    if request.method == 'POST': # If the form has been submitted...
+        # ContactForm was defined in the previous section
+        form = RobokassaForm(request.POST) # A form bound to the POST data
+        if form.is_valid():
+              form.save(commit=True)
+
+
+    else:
+        form = RobokassaForm() # An unbound form
+
+    return render(request, 'pay/pay1.html', {
+        'form': form,
+    })
+
+
