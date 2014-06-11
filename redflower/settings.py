@@ -96,8 +96,8 @@ INSTALLED_APPS = [
  ]
 
 from oscar import get_core_apps
-INSTALLED_APPS = INSTALLED_APPS + get_core_apps()
-
+INSTALLED_APPS = INSTALLED_APPS + get_core_apps(
+    ['apps.shipping'])
 SITE_ID = 1
 
 MIDDLEWARE_CLASSES = (

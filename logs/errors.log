@@ -29162,3 +29162,1151 @@ Traceback (most recent call last):
   File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 163, in disable_instrumentation
     BlockNode.render = BlockNode.render.original
 AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-06-11 19:09:29,358 base Internal Server Error: /checkout/preview/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\session.py", line 45, in dispatch
+    request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 430, in post
+    return self.handle_place_order_submission(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 446, in handle_place_order_submission
+    return self.submit(**self.build_submission())
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 616, in submit
+    order_total, **order_kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\mixins.py", line 113, in handle_order_placement
+    return self.handle_successful_order(order)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\mixins.py", line 235, in handle_successful_order
+    self.send_confirmation_message(order)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\mixins.py", line 295, in send_confirmation_message
+    event_type, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\customer\utils.py", line 39, in dispatch_order_messages
+    self.send_email_messages(order.guest_email, messages)
+  File "C:\Python27\lib\site-packages\oscar\apps\customer\utils.py", line 102, in send_email_messages
+    email.send()
+  File "C:\Python27\lib\site-packages\django\core\mail\message.py", line 274, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Python27\lib\site-packages\django\core\mail\backends\smtp.py", line 87, in send_messages
+    new_conn_created = self.open()
+  File "C:\Python27\lib\site-packages\django\core\mail\backends\smtp.py", line 48, in open
+    local_hostname=DNS_NAME.get_fqdn())
+  File "C:\Python27\Lib\smtplib.py", line 249, in __init__
+    (code, msg) = self.connect(host, port)
+  File "C:\Python27\Lib\smtplib.py", line 309, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "C:\Python27\Lib\smtplib.py", line 284, in _get_socket
+    return socket.create_connection((port, host), timeout)
+  File "C:\Python27\Lib\socket.py", line 571, in create_connection
+    raise err
+error: [Errno 10061] Подключение не установлено,
+ERROR 2014-06-11 20:41:42,161 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 3, in <module>
+    from oscar.app import application
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 14, in <module>
+    class Shop(Application):
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 19, in Shop
+    basket_app = get_class('basket.app', 'application')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 79, in get_classes
+    oscar_module = _import_module(oscar_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\app.py", line 4, in <module>
+    from oscar.apps.basket import views
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 25, in <module>
+    Repository = get_class('shipping.repository', ('Repository'))
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 91, in get_classes
+    local_module = _import_module(local_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "c:\DJango\redflower\redflower\apps\shipping\repository.py", line 15
+SyntaxError: Non-ASCII character '\xd0' in file c:\DJango\redflower\redflower\apps\shipping\repository.py on line 15, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR 2014-06-11 20:41:43,075 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 3, in <module>
+    from oscar.app import application
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 14, in <module>
+    class Shop(Application):
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 19, in Shop
+    basket_app = get_class('basket.app', 'application')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 79, in get_classes
+    oscar_module = _import_module(oscar_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\app.py", line 4, in <module>
+    from oscar.apps.basket import views
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 25, in <module>
+    Repository = get_class('shipping.repository', ('Repository'))
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 91, in get_classes
+    local_module = _import_module(local_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "c:\DJango\redflower\redflower\apps\shipping\repository.py", line 15
+SyntaxError: Non-ASCII character '\xd0' in file c:\DJango\redflower\redflower\apps\shipping\repository.py on line 15, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR 2014-06-11 22:44:07,618 base Internal Server Error: /dashboard/catalogue/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 196, in render
+    nodelist.append(node.render(context))
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 298, in render
+    match = condition.eval(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 867, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 585, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 735, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 789, in _resolve_lookup
+    current = current()
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 514, in primary_image
+    'original': self.get_missing_image(),
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 493, in get_missing_image
+    return MissingProductImage()
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 1059, in __init__
+    self.symlink_missing_image(media_file_path)
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 1065, in symlink_missing_image
+    os.symlink(static_file_path, media_file_path)
+AttributeError: 'module' object has no attribute 'symlink'
+ERROR 2014-06-11 22:44:16,382 base Internal Server Error: /dashboard/catalogue/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 196, in render
+    nodelist.append(node.render(context))
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 298, in render
+    match = condition.eval(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 867, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 585, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 735, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 789, in _resolve_lookup
+    current = current()
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 514, in primary_image
+    'original': self.get_missing_image(),
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 493, in get_missing_image
+    return MissingProductImage()
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 1059, in __init__
+    self.symlink_missing_image(media_file_path)
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 1065, in symlink_missing_image
+    os.symlink(static_file_path, media_file_path)
+AttributeError: 'module' object has no attribute 'symlink'
+ERROR 2014-06-12 01:01:16,905 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 3, in <module>
+    from oscar.app import application
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 14, in <module>
+    class Shop(Application):
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 23, in Shop
+    dashboard_app = get_class('dashboard.app', 'application')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 79, in get_classes
+    oscar_module = _import_module(oscar_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\app.py", line 8, in <module>
+    class DashboardApplication(Application):
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\app.py", line 16, in DashboardApplication
+    orders_app = get_class('dashboard.orders.app', 'application')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 79, in get_classes
+    oscar_module = _import_module(oscar_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\orders\app.py", line 4, in <module>
+    from oscar.apps.dashboard.orders import views
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\orders\views.py", line 34, in <module>
+    EventHandler = get_class('order.processing', 'EventHandler')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 91, in get_classes
+    local_module = _import_module(local_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "c:\DJango\redflower\redflower\apps\order\processing.py", line 1, in <module>
+    from datacash import models, facade, gateway
+ImportError: No module named datacash
+ERROR 2014-06-12 01:01:17,947 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 3, in <module>
+    from oscar.app import application
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 14, in <module>
+    class Shop(Application):
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 23, in Shop
+    dashboard_app = get_class('dashboard.app', 'application')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 79, in get_classes
+    oscar_module = _import_module(oscar_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\app.py", line 8, in <module>
+    class DashboardApplication(Application):
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\app.py", line 16, in DashboardApplication
+    orders_app = get_class('dashboard.orders.app', 'application')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 79, in get_classes
+    oscar_module = _import_module(oscar_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\orders\app.py", line 4, in <module>
+    from oscar.apps.dashboard.orders import views
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\orders\views.py", line 34, in <module>
+    EventHandler = get_class('order.processing', 'EventHandler')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 91, in get_classes
+    local_module = _import_module(local_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "c:\DJango\redflower\redflower\apps\order\processing.py", line 1, in <module>
+    from datacash import models, facade, gateway
+ImportError: No module named datacash
+ERROR 2014-06-12 01:01:19,421 base Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 3, in <module>
+    from oscar.app import application
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 14, in <module>
+    class Shop(Application):
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 23, in Shop
+    dashboard_app = get_class('dashboard.app', 'application')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 79, in get_classes
+    oscar_module = _import_module(oscar_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\app.py", line 8, in <module>
+    class DashboardApplication(Application):
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\app.py", line 16, in DashboardApplication
+    orders_app = get_class('dashboard.orders.app', 'application')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 79, in get_classes
+    oscar_module = _import_module(oscar_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\orders\app.py", line 4, in <module>
+    from oscar.apps.dashboard.orders import views
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\orders\views.py", line 34, in <module>
+    EventHandler = get_class('order.processing', 'EventHandler')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 91, in get_classes
+    local_module = _import_module(local_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "c:\DJango\redflower\redflower\apps\order\processing.py", line 1, in <module>
+    from datacash import models, facade, gateway
+ImportError: No module named datacash
+ERROR 2014-06-12 01:01:20,378 base Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 3, in <module>
+    from oscar.app import application
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 14, in <module>
+    class Shop(Application):
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 23, in Shop
+    dashboard_app = get_class('dashboard.app', 'application')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 79, in get_classes
+    oscar_module = _import_module(oscar_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\app.py", line 8, in <module>
+    class DashboardApplication(Application):
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\app.py", line 16, in DashboardApplication
+    orders_app = get_class('dashboard.orders.app', 'application')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 79, in get_classes
+    oscar_module = _import_module(oscar_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\orders\app.py", line 4, in <module>
+    from oscar.apps.dashboard.orders import views
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\orders\views.py", line 34, in <module>
+    EventHandler = get_class('order.processing', 'EventHandler')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 91, in get_classes
+    local_module = _import_module(local_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "c:\DJango\redflower\redflower\apps\order\processing.py", line 1, in <module>
+    from datacash import models, facade, gateway
+ImportError: No module named datacash
+ERROR 2014-06-12 01:02:49,292 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 9, in <module>
+    from apps.app import application
+  File "c:\DJango\redflower\redflower\apps\app.py", line 3, in <module>
+    from apps.checkout.app import application as checkout_app
+  File "c:\DJango\redflower\redflower\apps\checkout\app.py", line 3, in <module>
+    from apps.checkout import views
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 5, in <module>
+    from datacash.facade import Facade
+ImportError: No module named datacash.facade
+ERROR 2014-06-12 01:02:50,076 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 9, in <module>
+    from apps.app import application
+  File "c:\DJango\redflower\redflower\apps\app.py", line 3, in <module>
+    from apps.checkout.app import application as checkout_app
+  File "c:\DJango\redflower\redflower\apps\checkout\app.py", line 3, in <module>
+    from apps.checkout import views
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 5, in <module>
+    from datacash.facade import Facade
+ImportError: No module named datacash.facade
+ERROR 2014-06-12 01:05:14,237 base Internal Server Error: /checkout/shipping-address/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\session.py", line 45, in dispatch
+    request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 181, in post
+    request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\edit.py", line 170, in post
+    if form.is_valid():
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 129, in is_valid
+    return self.is_bound and not bool(self.errors)
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 121, in errors
+    self.full_clean()
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 273, in full_clean
+    self._clean_fields()
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 291, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "C:\Python27\lib\site-packages\oscar\views\generic.py", line 175, in clean_phone_number
+    country = self.fields['country'].queryset[0]
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 115, in __getitem__
+    return self._result_cache[k]
+IndexError: list index out of range
+ERROR 2014-06-12 01:06:18,898 base Internal Server Error: /checkout/shipping-address/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\session.py", line 45, in dispatch
+    request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 181, in post
+    request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\edit.py", line 170, in post
+    if form.is_valid():
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 129, in is_valid
+    return self.is_bound and not bool(self.errors)
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 121, in errors
+    self.full_clean()
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 273, in full_clean
+    self._clean_fields()
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 291, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "C:\Python27\lib\site-packages\oscar\views\generic.py", line 175, in clean_phone_number
+    country = self.fields['country'].queryset[0]
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 115, in __getitem__
+    return self._result_cache[k]
+IndexError: list index out of range
+ERROR 2014-06-12 01:08:15,569 base Internal Server Error: /checkout/shipping-address/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\session.py", line 45, in dispatch
+    request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 181, in post
+    request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\edit.py", line 170, in post
+    if form.is_valid():
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 129, in is_valid
+    return self.is_bound and not bool(self.errors)
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 121, in errors
+    self.full_clean()
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 273, in full_clean
+    self._clean_fields()
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 291, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "C:\Python27\lib\site-packages\oscar\views\generic.py", line 175, in clean_phone_number
+    country = self.fields['country'].queryset[0]
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 115, in __getitem__
+    return self._result_cache[k]
+IndexError: list index out of range
+ERROR 2014-06-12 01:32:01,364 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 3, in <module>
+    from oscar.app import application
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 14, in <module>
+    class Shop(Application):
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 20, in Shop
+    checkout_app = get_class('checkout.app', 'application')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 91, in get_classes
+    local_module = _import_module(local_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "c:\DJango\redflower\redflower\apps\checkout\app.py", line 3, in <module>
+    from apps.checkout import views
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 7, in <module>
+    from paypal.payflow import facade
+ImportError: No module named paypal.payflow
+ERROR 2014-06-12 01:32:02,163 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 3, in <module>
+    from oscar.app import application
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 14, in <module>
+    class Shop(Application):
+  File "C:\Python27\lib\site-packages\oscar\app.py", line 20, in Shop
+    checkout_app = get_class('checkout.app', 'application')
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 26, in get_class
+    return get_classes(module_label, [classname])[0]
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 91, in get_classes
+    local_module = _import_module(local_module_label, classnames)
+  File "C:\Python27\lib\site-packages\oscar\core\loading.py", line 112, in _import_module
+    return __import__(module_label, fromlist=classnames)
+  File "c:\DJango\redflower\redflower\apps\checkout\app.py", line 3, in <module>
+    from apps.checkout import views
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 7, in <module>
+    from paypal.payflow import facade
+ImportError: No module named paypal.payflow
+ERROR 2014-06-12 01:32:31,548 base Internal Server Error: /basket/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'paypal-redirect' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2014-06-12 01:36:14,111 base Internal Server Error: /basket/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'paypal-redirect' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2014-06-12 01:40:07,782 base Internal Server Error: /checkout/shipping-address/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\session.py", line 45, in dispatch
+    request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 181, in post
+    request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\edit.py", line 170, in post
+    if form.is_valid():
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 129, in is_valid
+    return self.is_bound and not bool(self.errors)
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 121, in errors
+    self.full_clean()
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 273, in full_clean
+    self._clean_fields()
+  File "C:\Python27\lib\site-packages\django\forms\forms.py", line 291, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "C:\Python27\lib\site-packages\oscar\views\generic.py", line 175, in clean_phone_number
+    country = self.fields['country'].queryset[0]
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 115, in __getitem__
+    return self._result_cache[k]
+IndexError: list index out of range
+ERROR 2014-06-12 01:43:06,536 base Internal Server Error: /basket/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 9, in <module>
+    from apps.app import application
+ImportError: No module named app
+ERROR 2014-06-12 01:43:07,160 base Internal Server Error: /basket/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 9, in <module>
+    from apps.app import application
+ImportError: No module named app
+ERROR 2014-06-12 01:49:17,306 base Internal Server Error: /checkout/payment-details/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'paypal-direct-payment' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []

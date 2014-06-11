@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 from django.core.urlresolvers import reverse_lazy
 from django.contrib.flatpages import views
 
+
 from oscar.core.application import Application
 from oscar.core.loading import get_class
 catalogue_app = get_class('dashboard.catalogue.app', 'application')
@@ -24,6 +25,7 @@ urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'', include(application.urls)),
     url(r'^catalogue/', include(catalogue_app.urls)),
+
 
 
 
