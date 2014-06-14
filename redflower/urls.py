@@ -31,6 +31,8 @@ urlpatterns = [
 
     url(r'^dashboard/dashboard/catalogue/$',include(dashboard_app.urls)),
     url(r'^about/', include('about.urls')),
+    url(r'^deliver/',include('deliver.urls')),
+
     url(r'^events/', include('events.urls')),
     url(r'^blog/', include('blog.urls')),
     url(r'^portfolio/', include('portfolio.urls')),

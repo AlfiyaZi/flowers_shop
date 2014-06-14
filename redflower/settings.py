@@ -6,7 +6,7 @@ Django settings for redflower project.
 
 import os
 import sys
-from oscar import get_core_apps
+
 from oscar import OSCAR_MAIN_TEMPLATE_DIR
 from django.utils.translation import ugettext_lazy as _
 from django.core.urlresolvers import reverse_lazy
@@ -90,6 +90,8 @@ INSTALLED_APPS = [
     'portfolio',
     'robokassa',
     'pay',
+    'deliver',
+
 
 
 

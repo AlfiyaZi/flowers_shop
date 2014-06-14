@@ -23,3 +23,6 @@ class Repository(CoreRepository):
         for method in self.get_methods():
             if code == method.code:
                 return self.prime_method(basket, method)
+
+
+

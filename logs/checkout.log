@@ -10,3 +10,7 @@ INFO 2014-06-11 19:09:24,775 views Order #100004: beginning submission process f
 INFO 2014-06-11 19:09:24,795 views Order #100004: payment successful, placing order
 INFO 2014-06-11 19:09:25,276 mixins Order #100004 - sending ORDER_PLACED messages
 INFO 2014-06-11 19:09:25,276 utils Sending email to silvera@mail.ru
+INFO 2014-06-12 12:20:53,765 views Order #100001: beginning submission process for basket #1
+INFO 2014-06-12 12:20:53,819 views Order #100001: payment successful, placing order
+INFO 2014-06-12 12:20:54,450 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-06-12 12:20:54,461 utils Sending email to alfiya79@gmail.com

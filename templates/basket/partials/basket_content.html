@@ -107,19 +107,17 @@
     <div class="row">
         {% block vouchers %}
             <div class="col-md-6">
-                <div class="sub-header">
-                    <h2>{% trans "Voucher/promo code" %}</h2>
-                </div>
-                <p id="voucher_form_link"><a href="#voucher" class="btn btn-info">{% trans "I have a voucher code..." %}</a></p>
 
-                <div id="voucher_form_container" style="display:none">
+
+
+                <div id="voucher_form_container" >
                     <h4>{% trans "Voucher code" %}</h4>
-                    <form id="voucher_form" action="{% url 'basket:vouchers-add' %}" method="post">
-                        {% csrf_token %}
-                        {% include "partials/form_fields.html" with form=voucher_form %}
-                        <button type="submit" class="btn btn-info">{% trans "Add voucher" %}</button>
-                        {% trans "or" %} <a href="#" id="voucher_form_cancel">{% trans "cancel" %}</a>
-                    </form>
+                    <form action="{% url 'basket:vouchers-add' %}" method="post" class="form-stacked">
+                {% csrf_token %}
+                {% include "partials/form_fields.html" with form=voucher_form %}
+                <button type="submit" class="btn btn-info">{% trans "Add voucher" %}</button>
+                or <a href="#" id="voucher_form_cancel">{% trans "cancel" %}</a>
+            </form>
                 </div>
             </div>
         {% endblock vouchers %}
@@ -175,7 +173,7 @@
                             <div class="col-md-2">
                                 {{ form.id }}
                                 {% with image=form.instance.product.primary_image %}
-                                    {% thumbnail image.original "100x100" upscale=False as thumb %}
+                                    {% thumbnail image.original "150x150" upscale=False as thumb %}
                                         <a href="{{ form.instance.product.get_absolute_url }}">
                                             <img class="thumbnail" src="{{ thumb.url }}" alt="{{ form.instance.product.get_title }}">
                                         </a>

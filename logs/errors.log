@@ -30310,3 +30310,2146 @@ Traceback (most recent call last):
   File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 452, in _reverse_with_prefix
     (lookup_view_s, args, kwargs, len(patterns), patterns))
 NoReverseMatch: Reverse for 'paypal-direct-payment' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2014-06-12 12:20:58,684 base Internal Server Error: /checkout/preview/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\session.py", line 45, in dispatch
+    request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 430, in post
+    return self.handle_place_order_submission(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 446, in handle_place_order_submission
+    return self.submit(**self.build_submission())
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 616, in submit
+    order_total, **order_kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\mixins.py", line 113, in handle_order_placement
+    return self.handle_successful_order(order)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\mixins.py", line 235, in handle_successful_order
+    self.send_confirmation_message(order)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\mixins.py", line 295, in send_confirmation_message
+    event_type, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\customer\utils.py", line 43, in dispatch_order_messages
+    self.dispatch_user_messages(order.user, messages)
+  File "C:\Python27\lib\site-packages\oscar\apps\customer\utils.py", line 55, in dispatch_user_messages
+    self.send_user_email_messages(user, messages)
+  File "C:\Python27\lib\site-packages\oscar\apps\customer\utils.py", line 71, in send_user_email_messages
+    email = self.send_email_messages(user.email, messages)
+  File "C:\Python27\lib\site-packages\oscar\apps\customer\utils.py", line 102, in send_email_messages
+    email.send()
+  File "C:\Python27\lib\site-packages\django\core\mail\message.py", line 274, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Python27\lib\site-packages\django\core\mail\backends\smtp.py", line 87, in send_messages
+    new_conn_created = self.open()
+  File "C:\Python27\lib\site-packages\django\core\mail\backends\smtp.py", line 48, in open
+    local_hostname=DNS_NAME.get_fqdn())
+  File "C:\Python27\Lib\smtplib.py", line 249, in __init__
+    (code, msg) = self.connect(host, port)
+  File "C:\Python27\Lib\smtplib.py", line 309, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "C:\Python27\Lib\smtplib.py", line 284, in _get_socket
+    return socket.create_connection((port, host), timeout)
+  File "C:\Python27\Lib\socket.py", line 571, in create_connection
+    raise err
+error: [Errno 10061] Подключение не установлено,
+ERROR 2014-06-12 13:03:25,651 base Internal Server Error: /checkout/shipping-address/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\middleware.py", line 21, in process_request
+    strategy = selector.strategy(request=request, user=request.user)
+  File "C:\Python27\lib\site-packages\oscar\apps\partner\strategy.py", line 37, in strategy
+    return Default(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\partner\strategy.py", line 55, in __init__
+    if request and request.user.is_authenticated():
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 213, in inner
+    self._setup()
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 298, in _setup
+    self._wrapped = self._setupfunc()
+  File "C:\Python27\lib\site-packages\django\contrib\auth\middleware.py", line 18, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "C:\Python27\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\__init__.py", line 140, in get_user
+    user_id = request.session[SESSION_KEY]
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 47, in __getitem__
+    return self._session[key]
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: django_session
+ERROR 2014-06-12 13:03:26,262 base Internal Server Error: /checkout/shipping-address/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\cms\middleware\language.py", line 12, in process_response
+    session_language = request.session.get('django_language', None)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 58, in get
+    return self._session.get(key, default)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: django_session
+ERROR 2014-06-12 13:04:58,398 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    context = self.resolve_context(self.context_data)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 159, in resolve_context
+    return RequestContext(self._request, context, current_app=self._current_app)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 55, in _request_context__init__
+    context = processor(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 18, in promotions
+    split_by_position(promotions, context)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 46, in split_by_position
+    for linked_promotion in linked_promotions:
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 96, in __iter__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: promotions_pagepromotion
+ERROR 2014-06-12 13:05:05,032 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    context = self.resolve_context(self.context_data)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 159, in resolve_context
+    return RequestContext(self._request, context, current_app=self._current_app)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 55, in _request_context__init__
+    context = processor(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 18, in promotions
+    split_by_position(promotions, context)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 46, in split_by_position
+    for linked_promotion in linked_promotions:
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 96, in __iter__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: promotions_pagepromotion
+ERROR 2014-06-12 13:05:10,489 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    context = self.resolve_context(self.context_data)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 159, in resolve_context
+    return RequestContext(self._request, context, current_app=self._current_app)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 55, in _request_context__init__
+    context = processor(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 18, in promotions
+    split_by_position(promotions, context)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 46, in split_by_position
+    for linked_promotion in linked_promotions:
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 96, in __iter__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: promotions_pagepromotion
+ERROR 2014-06-12 13:08:39,130 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    context = self.resolve_context(self.context_data)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 159, in resolve_context
+    return RequestContext(self._request, context, current_app=self._current_app)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 55, in _request_context__init__
+    context = processor(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 18, in promotions
+    split_by_position(promotions, context)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 46, in split_by_position
+    for linked_promotion in linked_promotions:
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 96, in __iter__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: promotions_pagepromotion
+ERROR 2014-06-12 13:08:45,339 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    context = self.resolve_context(self.context_data)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 159, in resolve_context
+    return RequestContext(self._request, context, current_app=self._current_app)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 55, in _request_context__init__
+    context = processor(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 18, in promotions
+    split_by_position(promotions, context)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 46, in split_by_position
+    for linked_promotion in linked_promotions:
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 96, in __iter__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: promotions_pagepromotion
+ERROR 2014-06-12 13:36:38,260 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    context = self.resolve_context(self.context_data)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 159, in resolve_context
+    return RequestContext(self._request, context, current_app=self._current_app)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 55, in _request_context__init__
+    context = processor(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 18, in promotions
+    split_by_position(promotions, context)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 46, in split_by_position
+    for linked_promotion in linked_promotions:
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 96, in __iter__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: promotions_pagepromotion
+ERROR 2014-06-12 13:37:12,411 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    context = self.resolve_context(self.context_data)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 159, in resolve_context
+    return RequestContext(self._request, context, current_app=self._current_app)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 55, in _request_context__init__
+    context = processor(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 18, in promotions
+    split_by_position(promotions, context)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 46, in split_by_position
+    for linked_promotion in linked_promotions:
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 96, in __iter__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: promotions_pagepromotion
+ERROR 2014-06-12 14:00:41,308 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\middleware.py", line 21, in process_request
+    strategy = selector.strategy(request=request, user=request.user)
+  File "C:\Python27\lib\site-packages\oscar\apps\partner\strategy.py", line 37, in strategy
+    return Default(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\partner\strategy.py", line 55, in __init__
+    if request and request.user.is_authenticated():
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 213, in inner
+    self._setup()
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 298, in _setup
+    self._wrapped = self._setupfunc()
+  File "C:\Python27\lib\site-packages\django\contrib\auth\middleware.py", line 18, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "C:\Python27\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\__init__.py", line 140, in get_user
+    user_id = request.session[SESSION_KEY]
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 47, in __getitem__
+    return self._session[key]
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: django_session
+ERROR 2014-06-12 14:00:42,055 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\cms\middleware\language.py", line 12, in process_response
+    session_language = request.session.get('django_language', None)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 58, in get
+    return self._session.get(key, default)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: django_session
+ERROR 2014-06-12 14:15:17,092 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\middleware.py", line 21, in process_request
+    strategy = selector.strategy(request=request, user=request.user)
+  File "C:\Python27\lib\site-packages\oscar\apps\partner\strategy.py", line 37, in strategy
+    return Default(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\partner\strategy.py", line 55, in __init__
+    if request and request.user.is_authenticated():
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 213, in inner
+    self._setup()
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 298, in _setup
+    self._wrapped = self._setupfunc()
+  File "C:\Python27\lib\site-packages\django\contrib\auth\middleware.py", line 18, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "C:\Python27\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\__init__.py", line 140, in get_user
+    user_id = request.session[SESSION_KEY]
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 47, in __getitem__
+    return self._session[key]
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: django_session
+ERROR 2014-06-12 14:15:17,930 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\cms\middleware\language.py", line 12, in process_response
+    session_language = request.session.get('django_language', None)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 58, in get
+    return self._session.get(key, default)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: django_session
+ERROR 2014-06-12 15:04:17,736 base Internal Server Error: /dashboard/catalogue/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 196, in render
+    nodelist.append(node.render(context))
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 298, in render
+    match = condition.eval(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 867, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 585, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 735, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 789, in _resolve_lookup
+    current = current()
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 514, in primary_image
+    'original': self.get_missing_image(),
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 493, in get_missing_image
+    return MissingProductImage()
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 1059, in __init__
+    self.symlink_missing_image(media_file_path)
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 1065, in symlink_missing_image
+    os.symlink(static_file_path, media_file_path)
+AttributeError: 'module' object has no attribute 'symlink'
+ERROR 2014-06-12 19:21:07,173 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    context = self.resolve_context(self.context_data)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 159, in resolve_context
+    return RequestContext(self._request, context, current_app=self._current_app)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 55, in _request_context__init__
+    context = processor(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 18, in promotions
+    split_by_position(promotions, context)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 46, in split_by_position
+    for linked_promotion in linked_promotions:
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 96, in __iter__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: promotions_pagepromotion
+ERROR 2014-06-12 19:21:07,237 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    context = self.resolve_context(self.context_data)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 159, in resolve_context
+    return RequestContext(self._request, context, current_app=self._current_app)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 55, in _request_context__init__
+    context = processor(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 18, in promotions
+    split_by_position(promotions, context)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 46, in split_by_position
+    for linked_promotion in linked_promotions:
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 96, in __iter__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: promotions_pagepromotion
+ERROR 2014-06-12 21:09:07,861 base Internal Server Error: /media/cache/31/0c/310c2baedf5b99f59be52e7d12d807c4.jpg
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 163, in disable_instrumentation
+    BlockNode.render = BlockNode.render.original
+AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-06-12 21:44:17,249 base Internal Server Error: /img/slider/s23.png/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 163, in disable_instrumentation
+    BlockNode.render = BlockNode.render.original
+AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-06-13 02:00:47,213 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 163, in disable_instrumentation
+    BlockNode.render = BlockNode.render.original
+AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-06-13 12:46:25,490 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 20, in <module>
+    admin.autodiscover()
+  File "C:\Python27\lib\site-packages\django\contrib\admin\__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\admin.py", line 2, in <module>
+    from models import UserAddress
+ImportError: cannot import name UserAddress
+ERROR 2014-06-13 12:46:26,410 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 20, in <module>
+    admin.autodiscover()
+  File "C:\Python27\lib\site-packages\django\contrib\admin\__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\admin.py", line 2, in <module>
+    from models import UserAddress
+ImportError: cannot import name UserAddress
+ERROR 2014-06-13 12:47:10,124 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 20, in <module>
+    admin.autodiscover()
+  File "C:\Python27\lib\site-packages\django\contrib\admin\__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\admin.py", line 4, in <module>
+    admin.site.register(AUserAddress)
+  File "C:\Python27\lib\site-packages\django\contrib\admin\sites.py", line 74, in register
+    'cannot be registered with admin.' % model.__name__)
+ImproperlyConfigured: The model AUserAddress is abstract, so it cannot be registered with admin.
+ERROR 2014-06-13 12:47:11,092 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 20, in <module>
+    admin.autodiscover()
+  File "C:\Python27\lib\site-packages\django\contrib\admin\__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\admin.py", line 4, in <module>
+    admin.site.register(AUserAddress)
+  File "C:\Python27\lib\site-packages\django\contrib\admin\sites.py", line 74, in register
+    'cannot be registered with admin.' % model.__name__)
+ImproperlyConfigured: The model AUserAddress is abstract, so it cannot be registered with admin.
+ERROR 2014-06-13 12:58:53,348 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"), max_length=255, blank=True)
+TypeError: __init__() got multiple values for keyword argument 'max_length'
+ERROR 2014-06-13 12:58:54,164 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"), max_length=255, blank=True)
+TypeError: __init__() got multiple values for keyword argument 'max_length'
+ERROR 2014-06-13 13:00:10,229 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"))
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 202, in __init__
+    self.validators.append(validators.MaxLengthValidator(int(max_length)))
+TypeError: int() argument must be a string or a number, not '__proxy__'
+ERROR 2014-06-13 13:00:11,161 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"))
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 202, in __init__
+    self.validators.append(validators.MaxLengthValidator(int(max_length)))
+TypeError: int() argument must be a string or a number, not '__proxy__'
+ERROR 2014-06-13 13:00:39,332 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"))
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 202, in __init__
+    self.validators.append(validators.MaxLengthValidator(int(max_length)))
+TypeError: int() argument must be a string or a number, not '__proxy__'
+ERROR 2014-06-13 13:00:40,480 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"))
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 202, in __init__
+    self.validators.append(validators.MaxLengthValidator(int(max_length)))
+TypeError: int() argument must be a string or a number, not '__proxy__'
+ERROR 2014-06-13 13:01:49,563 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"), max_length=255, blank=True)
+TypeError: __init__() got multiple values for keyword argument 'max_length'
+ERROR 2014-06-13 13:01:50,865 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"), max_length=255, blank=True)
+TypeError: __init__() got multiple values for keyword argument 'max_length'
+ERROR 2014-06-13 13:01:52,655 base Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\django\middleware\common.py", line 71, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 596, in is_valid_path
+    resolve(path, urlconf)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"), max_length=255, blank=True)
+TypeError: __init__() got multiple values for keyword argument 'max_length'
+ERROR 2014-06-13 13:01:53,430 base Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"), max_length=255, blank=True)
+TypeError: __init__() got multiple values for keyword argument 'max_length'
+ERROR 2014-06-13 13:03:36,371 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"), blank=True)
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 198, in __init__
+    super(CharField, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'blank'
+ERROR 2014-06-13 13:03:37,326 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"), blank=True)
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 198, in __init__
+    super(CharField, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'blank'
+ERROR 2014-06-13 13:03:38,585 base Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\django\middleware\common.py", line 71, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 596, in is_valid_path
+    resolve(path, urlconf)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"), blank=True)
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 198, in __init__
+    super(CharField, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'blank'
+ERROR 2014-06-13 13:03:39,734 base Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"), blank=True)
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 198, in __init__
+    super(CharField, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'blank'
+ERROR 2014-06-13 13:04:06,194 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"))
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 202, in __init__
+    self.validators.append(validators.MaxLengthValidator(int(max_length)))
+TypeError: int() argument must be a string or a number, not '__proxy__'
+ERROR 2014-06-13 13:04:07,482 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"))
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 202, in __init__
+    self.validators.append(validators.MaxLengthValidator(int(max_length)))
+TypeError: int() argument must be a string or a number, not '__proxy__'
+ERROR 2014-06-13 13:04:09,177 base Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\django\middleware\common.py", line 71, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 596, in is_valid_path
+    resolve(path, urlconf)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"))
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 202, in __init__
+    self.validators.append(validators.MaxLengthValidator(int(max_length)))
+TypeError: int() argument must be a string or a number, not '__proxy__'
+ERROR 2014-06-13 13:04:09,901 base Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^delivery/', include('delivery.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\delivery\urls.py", line 5, in <module>
+    from delivery import views
+  File "c:\DJango\redflower\redflower\delivery\views.py", line 8, in <module>
+    from delivery.forms import *
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 8, in <module>
+    class CustomerAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\delivery\forms.py", line 9, in CustomerAddressForm
+    first_name = forms.CharField(_("First name"))
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 202, in __init__
+    self.validators.append(validators.MaxLengthValidator(int(max_length)))
+TypeError: int() argument must be a string or a number, not '__proxy__'
+ERROR 2014-06-13 15:05:05,525 base Internal Server Error: /address/add_address/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^address/',include('address.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\address\urls.py", line 7, in <module>
+    url(r'^add_address/$', views.add_addres, name='add_address'),
+AttributeError: 'module' object has no attribute 'add_addres'
+ERROR 2014-06-13 15:05:06,372 base Internal Server Error: /address/add_address/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^address/',include('address.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\address\urls.py", line 7, in <module>
+    url(r'^add_address/$', views.add_addres, name='add_address'),
+AttributeError: 'module' object has no attribute 'add_addres'
+ERROR 2014-06-13 15:05:45,573 base Internal Server Error: /address/add_address/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "c:\DJango\redflower\redflower\address\views.py", line 58, in add_address
+    return render_to_response('address/add_address.html', context)
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: address/add_address.html
+ERROR 2014-06-13 15:23:16,884 base Internal Server Error: /address/add_address/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "c:\DJango\redflower\redflower\address\views.py", line 56, in add_address
+    form.save(commit=True)
+  File "C:\Python27\lib\site-packages\django\forms\models.py", line 446, in save
+    construct=False)
+  File "C:\Python27\lib\site-packages\django\forms\models.py", line 99, in save_instance
+    instance.save()
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 1514, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 903, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: address_address
+ERROR 2014-06-13 15:35:05,746 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    context = self.resolve_context(self.context_data)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 159, in resolve_context
+    return RequestContext(self._request, context, current_app=self._current_app)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 55, in _request_context__init__
+    context = processor(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 18, in promotions
+    split_by_position(promotions, context)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 46, in split_by_position
+    for linked_promotion in linked_promotions:
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 96, in __iter__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: promotions_pagepromotion
+ERROR 2014-06-13 15:35:07,246 base Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    context = self.resolve_context(self.context_data)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 159, in resolve_context
+    return RequestContext(self._request, context, current_app=self._current_app)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 55, in _request_context__init__
+    context = processor(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 18, in promotions
+    split_by_position(promotions, context)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 46, in split_by_position
+    for linked_promotion in linked_promotions:
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 96, in __iter__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: promotions_pagepromotion
+ERROR 2014-06-13 15:35:14,865 base Internal Server Error: /address/add_address/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "c:\DJango\redflower\redflower\address\views.py", line 38, in add_address
+    context = RequestContext(request)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 55, in _request_context__init__
+    context = processor(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 18, in promotions
+    split_by_position(promotions, context)
+  File "C:\Python27\lib\site-packages\oscar\apps\promotions\context_processors.py", line 46, in split_by_position
+    for linked_promotion in linked_promotions:
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 96, in __iter__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: promotions_pagepromotion
+ERROR 2014-06-13 15:42:14,553 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 20, in <module>
+    admin.autodiscover()
+  File "C:\Python27\lib\site-packages\django\contrib\admin\__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\deliver\admin.py", line 3, in <module>
+    from deliver.models import Address
+ImportError: cannot import name Address
+ERROR 2014-06-13 15:42:15,292 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 20, in <module>
+    admin.autodiscover()
+  File "C:\Python27\lib\site-packages\django\contrib\admin\__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\deliver\admin.py", line 3, in <module>
+    from deliver.models import Address
+ImportError: cannot import name Address
+ERROR 2014-06-13 15:47:13,569 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^deliver/',include('deliver.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\deliver\urls.py", line 3, in <module>
+    from deliver import views
+  File "c:\DJango\redflower\redflower\deliver\views.py", line 13, in <module>
+    from deliver.forms import dAddressForm
+  File "c:\DJango\redflower\redflower\deliver\forms.py", line 14, in <module>
+    class dAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\deliver\forms.py", line 20, in dAddressForm
+    message = models.CharField(widget=forms.Textarea(attrs={ 'rows': 5}), max_length=500, help_text=u" Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ")
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 685, in __init__
+    super(CharField, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'widget'
+ERROR 2014-06-13 15:47:13,697 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^deliver/',include('deliver.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\deliver\urls.py", line 3, in <module>
+    from deliver import views
+  File "c:\DJango\redflower\redflower\deliver\views.py", line 13, in <module>
+    from deliver.forms import dAddressForm
+  File "c:\DJango\redflower\redflower\deliver\forms.py", line 14, in <module>
+    class dAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\deliver\forms.py", line 20, in dAddressForm
+    message = models.CharField(widget=forms.Textarea(attrs={ 'rows': 5}), max_length=500, help_text=u" Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ")
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 685, in __init__
+    super(CharField, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'widget'
+ERROR 2014-06-13 15:47:16,230 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^deliver/',include('deliver.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\deliver\urls.py", line 3, in <module>
+    from deliver import views
+  File "c:\DJango\redflower\redflower\deliver\views.py", line 13, in <module>
+    from deliver.forms import dAddressForm
+  File "c:\DJango\redflower\redflower\deliver\forms.py", line 14, in <module>
+    class dAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\deliver\forms.py", line 20, in dAddressForm
+    message = models.CharField(widget=forms.Textarea(attrs={ 'rows': 5}), max_length=500, help_text=u" Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ")
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 685, in __init__
+    super(CharField, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'widget'
+ERROR 2014-06-13 15:47:16,334 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^deliver/',include('deliver.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\deliver\urls.py", line 3, in <module>
+    from deliver import views
+  File "c:\DJango\redflower\redflower\deliver\views.py", line 13, in <module>
+    from deliver.forms import dAddressForm
+  File "c:\DJango\redflower\redflower\deliver\forms.py", line 14, in <module>
+    class dAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\deliver\forms.py", line 20, in dAddressForm
+    message = models.CharField(widget=forms.Textarea(attrs={ 'rows': 5}), max_length=500, help_text=u" Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ")
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 685, in __init__
+    super(CharField, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'widget'
+ERROR 2014-06-13 15:48:33,042 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\cms\middleware\toolbar.py", line 77, in process_request
+    request.toolbar = CMSToolbar(request)
+  File "C:\Python27\lib\site-packages\cms\toolbar\toolbar.py", line 77, in __init__
+    self.view_name = resolve(self.request.path).func.__module__
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^deliver/',include('deliver.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\deliver\urls.py", line 3, in <module>
+    from deliver import views
+  File "c:\DJango\redflower\redflower\deliver\views.py", line 13, in <module>
+    from deliver.forms import dAddressForm
+  File "c:\DJango\redflower\redflower\deliver\forms.py", line 14, in <module>
+    class dAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\deliver\forms.py", line 15, in dAddressForm
+    name = forms.CharField(max_length=128, help_text=u"РРјСЏ", blank=True)
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 198, in __init__
+    super(CharField, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'blank'
+ERROR 2014-06-13 15:48:34,230 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 34, in <module>
+    url(r'^deliver/',include('deliver.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\deliver\urls.py", line 3, in <module>
+    from deliver import views
+  File "c:\DJango\redflower\redflower\deliver\views.py", line 13, in <module>
+    from deliver.forms import dAddressForm
+  File "c:\DJango\redflower\redflower\deliver\forms.py", line 14, in <module>
+    class dAddressForm(forms.ModelForm):
+  File "c:\DJango\redflower\redflower\deliver\forms.py", line 15, in dAddressForm
+    name = forms.CharField(max_length=128, help_text=u"РРјСЏ", blank=True)
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 198, in __init__
+    super(CharField, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'blank'
+ERROR 2014-06-13 22:23:38,348 base Internal Server Error: /dashboard/catalogue/products/create/tsvety/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\edit.py", line 228, in post
+    return super(BaseUpdateView, self).post(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\edit.py", line 171, in post
+    return self.form_valid(form)
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\catalogue\views.py", line 252, in process_all_forms
+    self.object = form.save()
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\catalogue\forms.py", line 364, in save
+    product.save()
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 318, in save
+    super(AbstractProduct, self).save(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 1514, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 903, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: database is locked
+ERROR 2014-06-13 22:23:38,476 base Internal Server Error: /dashboard/catalogue/products/create/tsvety/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\edit.py", line 228, in post
+    return super(BaseUpdateView, self).post(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\edit.py", line 171, in post
+    return self.form_valid(form)
+  File "C:\Python27\lib\site-packages\oscar\apps\dashboard\catalogue\views.py", line 263, in process_all_forms
+    for formset in formsets.values()])
+  File "C:\Python27\lib\site-packages\django\forms\formsets.py", line 292, in is_valid
+    err = self.errors
+  File "C:\Python27\lib\site-packages\django\forms\formsets.py", line 267, in errors
+    self.full_clean()
+  File "C:\Python27\lib\site-packages\django\forms\formsets.py", line 313, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "C:\Python27\lib\site-packages\django\forms\formsets.py", line 106, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "C:\Python27\lib\site-packages\django\forms\formsets.py", line 89, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']

@@ -4,7 +4,7 @@
 {% load i18n %}
 
 <div class="container">
-<ul class="nav nav-pills ">
+<ul class="nav nav-pills hidden-sm hidden-xs ">
     {% category_tree depth=2 as tree_categories %}
   <li><a tabindex="-1" href="{% url 'catalogue:index' %}">Все</a></li>
      {% if tree_categories %}
