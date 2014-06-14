@@ -1,8 +1,9 @@
 from decimal import Decimal as D
 
 from oscar.apps.shipping.methods import Free, FixedPrice
-from oscar.apps.shipping.repository import Repository as CoreRepository
 
+from oscar.apps.shipping.repository import Repository as CoreRepository
+from oscar.apps.shipping import repository, models ,methods
 
 class Repository(CoreRepository):
     """
@@ -16,6 +17,9 @@ class Repository(CoreRepository):
 
     def get_shipping_methods(self, user, basket, shipping_addr=None,
                              request=None, **kwargs):
+
+        shipping_addr == 'RU'
+        shipping_addr.country.code == 'RU'
         methods = self.get_methods()
         return self.prime_methods(basket, methods)
 

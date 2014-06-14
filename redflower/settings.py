@@ -90,7 +90,7 @@ INSTALLED_APPS = [
     'portfolio',
     'robokassa',
     'pay',
-    'deliver',
+
 
 
 
