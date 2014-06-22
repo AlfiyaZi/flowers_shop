@@ -32528,3 +32528,230 @@ Traceback (most recent call last):
   File "c:\DJango\redflower\redflower\apps\shipping\repository.py", line 22, in get_shipping_methods
     shipping_addr.country.code == 'RU'
 AttributeError: 'NoneType' object has no attribute 'country'
+ERROR 2014-06-15 04:20:49,180 base Internal Server Error: /basket/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 338, in get
+    return super(BaseModelFormSetView, self).get(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 301, in get
+    return self.render_to_response(self.get_context_data(formset=formset))
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 144, in get_context_data
+    method = self.get_default_shipping_method(self.request.basket)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 110, in get_default_shipping_method
+    request=self.request)
+  File "C:\Python27\lib\site-packages\oscar\apps\shipping\repository.py", line 43, in get_default_shipping_method
+    request=request, **kwargs)
+  File "c:\DJango\redflower\redflower\apps\shipping\repository.py", line 22, in get_shipping_methods
+    shipping_addr.country.code == 'RU'
+AttributeError: 'NoneType' object has no attribute 'country'
+ERROR 2014-06-15 04:21:49,635 base Internal Server Error: /basket/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 338, in get
+    return super(BaseModelFormSetView, self).get(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 301, in get
+    return self.render_to_response(self.get_context_data(formset=formset))
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 144, in get_context_data
+    method = self.get_default_shipping_method(self.request.basket)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 110, in get_default_shipping_method
+    request=self.request)
+  File "C:\Python27\lib\site-packages\oscar\apps\shipping\repository.py", line 43, in get_default_shipping_method
+    request=request, **kwargs)
+  File "c:\DJango\redflower\redflower\apps\shipping\repository.py", line 22, in get_shipping_methods
+    if shipping_addr.country.code == 'RU':
+AttributeError: 'NoneType' object has no attribute 'country'
+ERROR 2014-06-15 04:21:58,154 base Internal Server Error: /basket/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 338, in get
+    return super(BaseModelFormSetView, self).get(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 301, in get
+    return self.render_to_response(self.get_context_data(formset=formset))
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 144, in get_context_data
+    method = self.get_default_shipping_method(self.request.basket)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 110, in get_default_shipping_method
+    request=self.request)
+  File "C:\Python27\lib\site-packages\oscar\apps\shipping\repository.py", line 43, in get_default_shipping_method
+    request=request, **kwargs)
+  File "c:\DJango\redflower\redflower\apps\shipping\repository.py", line 22, in get_shipping_methods
+    if shipping_addr.country.code == 'RU':
+AttributeError: 'NoneType' object has no attribute 'country'
+ERROR 2014-06-15 04:22:49,542 base Internal Server Error: /basket/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 338, in get
+    return super(BaseModelFormSetView, self).get(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 301, in get
+    return self.render_to_response(self.get_context_data(formset=formset))
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 144, in get_context_data
+    method = self.get_default_shipping_method(self.request.basket)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 110, in get_default_shipping_method
+    request=self.request)
+  File "C:\Python27\lib\site-packages\oscar\apps\shipping\repository.py", line 44, in get_default_shipping_method
+    if len(shipping_methods) == 0:
+TypeError: object of type 'NoneType' has no len()
+ERROR 2014-06-15 04:43:30,917 base Internal Server Error: /checkout/shipping-address/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\session.py", line 45, in dispatch
+    request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\edit.py", line 161, in get
+    return self.render_to_response(self.get_context_data(form=form))
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 144, in get_context_data
+    ctx = super(ShippingAddressView, self).get_context_data(**kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\session.py", line 153, in get_context_data
+    ctx = self.build_submission(**kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\session.py", line 169, in build_submission
+    basket, shipping_address)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\session.py", line 247, in get_shipping_method
+    shipping_addr=shipping_address, request=self.request)
+  File "c:\DJango\redflower\redflower\apps\shipping\repository.py", line 22, in get_shipping_methods
+    shipping_addr.country.code == 'RU'
+AttributeError: 'NoneType' object has no attribute 'country'
+ERROR 2014-06-15 20:03:01,272 base Internal Server Error: /basket/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 338, in get
+    return super(BaseModelFormSetView, self).get(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 301, in get
+    return self.render_to_response(self.get_context_data(formset=formset))
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 144, in get_context_data
+    method = self.get_default_shipping_method(self.request.basket)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 110, in get_default_shipping_method
+    request=self.request)
+  File "C:\Python27\lib\site-packages\oscar\apps\shipping\repository.py", line 43, in get_default_shipping_method
+    request=request, **kwargs)
+  File "c:\DJango\redflower\redflower\apps\shipping\repository.py", line 22, in get_shipping_methods
+    shipping_addr.country.code == 'RU'
+AttributeError: 'NoneType' object has no attribute 'country'
+ERROR 2014-06-15 20:07:34,164 base Internal Server Error: /basket/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 338, in get
+    return super(BaseModelFormSetView, self).get(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 301, in get
+    return self.render_to_response(self.get_context_data(formset=formset))
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 144, in get_context_data
+    method = self.get_default_shipping_method(self.request.basket)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 110, in get_default_shipping_method
+    request=self.request)
+  File "C:\Python27\lib\site-packages\oscar\apps\shipping\repository.py", line 44, in get_default_shipping_method
+    if len(shipping_methods) == 0:
+TypeError: object of type 'NoneType' has no len()
+ERROR 2014-06-15 20:15:15,186 base Internal Server Error: /checkout/preview/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\session.py", line 45, in dispatch
+    request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 430, in post
+    return self.handle_place_order_submission(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 446, in handle_place_order_submission
+    return self.submit(**self.build_submission())
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 616, in submit
+    order_total, **order_kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\mixins.py", line 113, in handle_order_placement
+    return self.handle_successful_order(order)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\mixins.py", line 235, in handle_successful_order
+    self.send_confirmation_message(order)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\mixins.py", line 295, in send_confirmation_message
+    event_type, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\customer\utils.py", line 43, in dispatch_order_messages
+    self.dispatch_user_messages(order.user, messages)
+  File "C:\Python27\lib\site-packages\oscar\apps\customer\utils.py", line 55, in dispatch_user_messages
+    self.send_user_email_messages(user, messages)
+  File "C:\Python27\lib\site-packages\oscar\apps\customer\utils.py", line 71, in send_user_email_messages
+    email = self.send_email_messages(user.email, messages)
+  File "C:\Python27\lib\site-packages\oscar\apps\customer\utils.py", line 102, in send_email_messages
+    email.send()
+  File "C:\Python27\lib\site-packages\django\core\mail\message.py", line 274, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Python27\lib\site-packages\django\core\mail\backends\smtp.py", line 87, in send_messages
+    new_conn_created = self.open()
+  File "C:\Python27\lib\site-packages\django\core\mail\backends\smtp.py", line 48, in open
+    local_hostname=DNS_NAME.get_fqdn())
+  File "C:\Python27\Lib\smtplib.py", line 249, in __init__
+    (code, msg) = self.connect(host, port)
+  File "C:\Python27\Lib\smtplib.py", line 309, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "C:\Python27\Lib\smtplib.py", line 284, in _get_socket
+    return socket.create_connection((port, host), timeout)
+  File "C:\Python27\Lib\socket.py", line 571, in create_connection
+    raise err
+error: [Errno 10061] Подключение не установлено,
+ERROR 2014-06-22 14:39:16,834 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 162, in disable_instrumentation
+    Template.render = Template.render.original
+AttributeError: 'function' object has no attribute 'original'
