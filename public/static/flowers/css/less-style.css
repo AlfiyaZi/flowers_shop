@@ -343,26 +343,25 @@ a:hover {
 
 
 
- .nav-pills li a {
+
+.nav-pills li a {
  border-radius: 3px;
  padding: 5px  10px;
  font-size: 14px;
 	font-family: 'Open Sans Condensed', sans-serif;
-	  background: #EB2029;
 
 	color: #bbb;
 	text-transform: uppercase;
 }
 
 
-
 .nav-pills li a:hover {
-  background: #EB2029;
+  background: #BE7F70;
   color: #ffffff;
   border-color:#EB2029;
 }
 .nav-pills li.active a {
-  background-color: #EB2029;
+  background-color: #BE7F70;
   border-color:#EB2029;
   color: #ffffff;
 }
@@ -504,7 +503,7 @@ a:hover {
 	vertical-align:baseline;
 	white-space:nowrap;
 	text-align:center;
-	background-color:#E9544E;
+	background-color:#BE7F70;
 	border-radius:10px
 }
 

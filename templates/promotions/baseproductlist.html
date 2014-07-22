@@ -11,7 +11,7 @@
 
     <ul class="row" style="list-style: none;">
         {% for product in products %}
-        <li class="col-md-3 {% if forloop.counter0|divisibleby:"4" %}no-margin{% endif %}">{% render_product product %}</li>
+        <li class="col-md-3 col-sm-6 {% if forloop.counter0|divisibleby:"4" %}no-margin{% endif %}">{% render_product product %}</li>
         {% endfor %}
     </ul>
 
