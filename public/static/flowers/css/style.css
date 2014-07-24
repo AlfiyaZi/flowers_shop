@@ -30,9 +30,23 @@ h1,h2,h3,h4,h5,h6{
 p{
 	margin:0;
 	padding:0;
-	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
 	line-height: 23px;
 }
+
+
+.letter {
+     color: #b80c00; /* Красный цвет символов */
+     font-size: 135%; /* Размер шрифта в процентах */
+     font-family: 'Open Sans Condensed', sans-serif;
+     position: relative; /* Относительное позиционирование */
+     top: 5px; /* Сдвиг сверху */
+    }
+
+
+
+
 
 a{
 
@@ -102,6 +116,11 @@ table { background: #fff; }
 	text-shadow: none !important;
 	position: relative;
 }
+
+
+
+
+
 
 /*
  * Drop Down CSS
@@ -616,12 +635,13 @@ font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .default-heading p{
-	max-width: 500px;
+	max-width:500px;
 	margin: 0 auto;
 	margin-bottom: 15px;
-	font-size: 14px;
+
 	line-height: 24px;
 	color: #959595;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .default-heading .border{
