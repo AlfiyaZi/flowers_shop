@@ -12,6 +12,31 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic);
 @import url(http://fonts.googleapis.com/css?family=Roboto&subset=cyrillic,cyrillic-ext,latin,latin-ext);
 @import url('http://fonts.googleapis.com/css?family=Oswald:300,400:latin,latin-ext');
+
+
+ @font-face {
+    font-family: NovitoNova; /* Имя шрифта */
+    src: url(fonts/NovitoNova-Thin.otf); /* Путь к файлу со шрифтом */
+   }
+
+
+/* только для Internet Explorer 4+ */
+@font-face {
+  font-family:  NovitoNova;
+  src: url(../fonts/NovitoNova-Thin.otf);
+}
+
+/* далее для всех остальных браузеров */
+@font-face {
+  font-family: NovitoNova-Thin;
+  src: local("NovitoNova-Thin"),
+       local("NovitoNova-Thin"),
+       url(../fonts/NovitoNova-Thin.otf) format("opentype");
+}
+
+
+
+
 /* 
  * Basic CSS starts
  */
@@ -37,9 +62,10 @@ p{
 
 
 .letter {
-     color: #b80c00; /* Красный цвет символов */
+
      font-size: 135%; /* Размер шрифта в процентах */
      font-family: 'Open Sans Condensed', sans-serif;
+
      position: relative; /* Относительное позиционирование */
      top: 5px; /* Сдвиг сверху */
     }
@@ -222,7 +248,7 @@ font-size: 14px;
 .header .header-top{
 	padding-top: 15px;
 	padding-bottom: 1px;
-	border-bottom: 1px solid #f4f4f4;
+	/*border-bottom: 1px solid #f4f4f4;*/
     background-color:#fff;
 }
 
