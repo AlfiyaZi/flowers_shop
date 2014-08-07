@@ -196,7 +196,7 @@ a:hover {
 /*********/
 .label {
   padding: 3px 6px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: normal;
 }
 .label.label-default {
@@ -219,7 +219,7 @@ a:hover {
   background: #609cec;
 }
 .label.label-warning {
-  background: #f78153;
+  background: #A39E76;
 }
 .label.label-yellow {
   background: #fcd419;

@@ -32803,3 +32803,21 @@ Traceback (most recent call last):
   File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 163, in disable_instrumentation
     BlockNode.render = BlockNode.render.original
 AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-08-04 17:49:15,857 base Internal Server Error: /media/cache/5e/27/5e27a692dd07f88e7840e7b4e8e8369b.jpg
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 163, in disable_instrumentation
+    BlockNode.render = BlockNode.render.original
+AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-08-07 17:44:28,082 base Internal Server Error: /media/cache/ac/7a/ac7a79be7a53bce7bbb11f91feea6aa7.jpg
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 163, in disable_instrumentation
+    BlockNode.render = BlockNode.render.original
+AttributeError: 'function' object has no attribute 'original'
