@@ -124,11 +124,11 @@ a:hover {
   background: #333333;
 }
 .btn.btn-danger {
-  background: #ed4747;
-  border: 1px solid  #ed4747;
+  background: #BE7F70;
+  border: 1px solid  #BE7F70;
 }
 .btn.btn-danger:hover {
-  background: #ed4747;
+  background: #8C3B37;
 }
 .btn.btn-success {
   background: #51d466;
@@ -282,12 +282,12 @@ a:hover {
   color: #ffffff;
 }
 .pagination li.active a {
-  background-color: #f75353;
-  border-color: #f75353;
+  background-color: #BE7F70;
+  border-color: #BE7F70;
 }
 .pagination li.active a:hover {
-  background-color: #f75353;
-  border-color: #f75353;
+  background-color: #8C3B37;
+  border-color: #8C3B37;
 }
 .pagination li.active a:focus {
   background-color: #f75353;
@@ -350,7 +350,7 @@ a:hover {
  font-size: 14px;
 	font-family: 'Open Sans Condensed', sans-serif;
 
-	color: #BE7F70;
+	color: #777;
 	text-transform: uppercase;
 }
 
