@@ -141,6 +141,11 @@
 	}
 	.btn-primary {
 		background-color:#9DB667 !important;
+
+
+     border-color:  solid 1px #9DB667 !important;
+
+
 	}
 	.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
 		border:rgba(255,255,255,0) 2px solid;

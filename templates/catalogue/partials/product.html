@@ -21,14 +21,19 @@
 										<span class="overlay color2"></span>
 
 										<span class="inner">
+                                           <!-- <p class="hidden-sm hidden-xs">{{product.description|striptags}}</p>-->
 
-											<span class="block fa fa-plus fsize20"></span>
+											<span class="block fa fa-plus "></span>
 											УЗНАТЬ БОЛЬШЕ
 
 										</span>
-                                         
+
 									</a>
-									<a href="shop-cart.html@action=cart_add&amp;product_id=1&amp;product_color=red&amp;product_size=l&amp;product_qty=1" class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> В КОРЗИНУ</a>
+                                    <!--							<a class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> В КОРЗИНУ</a>-->
+                                    {% if not product.is_group %}
+                                       {% include "catalogue/partials/add_to_basket_form_compact.html" %}
+                                     {% endif %}
+
 
                                        {% with image=product.primary_image %}
                                 {% thumbnail image.original  "480x480" crop="center" as thumb %}
@@ -44,11 +49,24 @@
 								</figure>
 								<div class="item-box-desc">
                                     {% block product_title %}
-                     <h4>{{ product.get_title|truncatewords:4 }}</h4>
-                    {% endblock %}
-									<h4>Cool Chair</h4>
-									<small class="styleColor"><span>$180</span> $150</small>
-								</div>
+                                         <h4>{{ product.get_title|truncatewords:4 }}</h4>
+                                     {% endblock %}
+
+
+
+                   <!--<a href="/contact/add_contact/" class="btn btn-danger  e_bounceIn ">Обратный звонок</a>-->
+
+
+
+                                        <small class="styleColor">
+                                            {% block product_price %}
+                                         <span></span><div class="product_price ">
+                                         {% include "catalogue/partials/stock_record.html" %}
+
+                                                       </div>
+                                        {% endblock %}
+
+								 </div></small>
 
 
  {% endblock %}

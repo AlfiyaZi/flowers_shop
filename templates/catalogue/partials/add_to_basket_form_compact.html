@@ -12,7 +12,8 @@
     <form action="{% url 'basket:add' %}" method="post">
         {% csrf_token %}
         {{ basket_form.as_p }}
-        <button type="submit" class="btn btn-danger e_bounceIn">В корзину</button>
+        <button type="submit" class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> В КОРЗИНУ</button>
+
 
     </form>
 {% else %}

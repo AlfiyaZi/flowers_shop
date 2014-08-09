@@ -7,7 +7,7 @@
 
 {% if session.price.exists %}
     {% if session.price.is_tax_known %}
-        <h4 style="color:#fff;" >{{ session.price.incl_tax|currency:session.price.currency }}</h4>
+        <h4>{{ session.price.incl_tax|currency:session.price.currency }}</h4>
     {% else %}
         <h2 >{{ session.price.excl_tax|currency:session.price.currency }}</h2>
     {% endif %}

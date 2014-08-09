@@ -32951,3 +32951,139 @@ Traceback (most recent call last):
   File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 162, in disable_instrumentation
     Template.render = Template.render.original
 AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-08-09 14:17:39,401 base Internal Server Error: /basket/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 342, in post
+    return super(BaseModelFormSetView, self).post(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 310, in post
+    return self.formset_valid(formset)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 212, in formset_valid
+    response = super(BasketView, self).formset_valid(formset)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 199, in formset_valid
+    self.object_list = formset.save()
+  File "C:\Python27\lib\site-packages\django\forms\models.py", line 618, in save
+    return self.save_existing_objects(commit) + self.save_new_objects(commit)
+  File "C:\Python27\lib\site-packages\django\forms\models.py", line 729, in save_existing_objects
+    obj.delete()
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 695, in delete
+    collector.delete()
+  File "C:\Python27\lib\site-packages\django\db\models\deletion.py", line 260, in delete
+    qs._raw_delete(using=self.using)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 479, in _raw_delete
+    sql.DeleteQuery(self.model).delete_qs(self, using)
+  File "C:\Python27\lib\site-packages\django\db\models\sql\subqueries.py", line 85, in delete_qs
+    self.get_compiler(using).execute_sql(None)
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: database is locked
+ERROR 2014-08-09 14:17:42,217 base Internal Server Error: /basket/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 342, in post
+    return super(BaseModelFormSetView, self).post(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 310, in post
+    return self.formset_valid(formset)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 212, in formset_valid
+    response = super(BasketView, self).formset_valid(formset)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 199, in formset_valid
+    self.object_list = formset.save()
+  File "C:\Python27\lib\site-packages\django\forms\models.py", line 618, in save
+    return self.save_existing_objects(commit) + self.save_new_objects(commit)
+  File "C:\Python27\lib\site-packages\django\forms\models.py", line 723, in save_existing_objects
+    pk_value = form.fields[pk_name].clean(raw_pk_value)
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 148, in clean
+    value = self.to_python(value)
+  File "C:\Python27\lib\site-packages\django\forms\models.py", line 1137, in to_python
+    raise ValidationError(self.error_messages['invalid_choice'], code='invalid_choice')
+ValidationError: [u'\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u044b\u0439 \u0432\u0430\u0440\u0438\u0430\u043d\u0442. \u0412\u0430\u0448\u0435\u0433\u043e \u0432\u0430\u0440\u0438\u0430\u043d\u0442\u0430 \u043d\u0435\u0442 \u0441\u0440\u0435\u0434\u0438 \u0434\u043e\u043f\u0443\u0441\u0442\u0438\u043c\u044b\u0445 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0439.']
+ERROR 2014-08-09 14:17:43,812 base Internal Server Error: /basket/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 342, in post
+    return super(BaseModelFormSetView, self).post(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 310, in post
+    return self.formset_valid(formset)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 212, in formset_valid
+    response = super(BasketView, self).formset_valid(formset)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 199, in formset_valid
+    self.object_list = formset.save()
+  File "C:\Python27\lib\site-packages\django\forms\models.py", line 618, in save
+    return self.save_existing_objects(commit) + self.save_new_objects(commit)
+  File "C:\Python27\lib\site-packages\django\forms\models.py", line 723, in save_existing_objects
+    pk_value = form.fields[pk_name].clean(raw_pk_value)
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 148, in clean
+    value = self.to_python(value)
+  File "C:\Python27\lib\site-packages\django\forms\models.py", line 1137, in to_python
+    raise ValidationError(self.error_messages['invalid_choice'], code='invalid_choice')
+ValidationError: [u'\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u044b\u0439 \u0432\u0430\u0440\u0438\u0430\u043d\u0442. \u0412\u0430\u0448\u0435\u0433\u043e \u0432\u0430\u0440\u0438\u0430\u043d\u0442\u0430 \u043d\u0435\u0442 \u0441\u0440\u0435\u0434\u0438 \u0434\u043e\u043f\u0443\u0441\u0442\u0438\u043c\u044b\u0445 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0439.']
+ERROR 2014-08-09 14:17:44,884 base Internal Server Error: /basket/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 342, in post
+    return super(BaseModelFormSetView, self).post(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 310, in post
+    return self.formset_valid(formset)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 212, in formset_valid
+    response = super(BasketView, self).formset_valid(formset)
+  File "C:\Python27\lib\site-packages\extra_views\formsets.py", line 199, in formset_valid
+    self.object_list = formset.save()
+  File "C:\Python27\lib\site-packages\django\forms\models.py", line 618, in save
+    return self.save_existing_objects(commit) + self.save_new_objects(commit)
+  File "C:\Python27\lib\site-packages\django\forms\models.py", line 723, in save_existing_objects
+    pk_value = form.fields[pk_name].clean(raw_pk_value)
+  File "C:\Python27\lib\site-packages\django\forms\fields.py", line 148, in clean
+    value = self.to_python(value)
+  File "C:\Python27\lib\site-packages\django\forms\models.py", line 1137, in to_python
+    raise ValidationError(self.error_messages['invalid_choice'], code='invalid_choice')
+ValidationError: [u'\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u044b\u0439 \u0432\u0430\u0440\u0438\u0430\u043d\u0442. \u0412\u0430\u0448\u0435\u0433\u043e \u0432\u0430\u0440\u0438\u0430\u043d\u0442\u0430 \u043d\u0435\u0442 \u0441\u0440\u0435\u0434\u0438 \u0434\u043e\u043f\u0443\u0441\u0442\u0438\u043c\u044b\u0445 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0439.']
