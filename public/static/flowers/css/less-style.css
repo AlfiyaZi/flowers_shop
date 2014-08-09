@@ -145,12 +145,12 @@ a:hover {
   background: red;
 }
 .btn.btn-primary {
-  background: #609cec;
-  border: 1px solid #528fe2;
+  background: #ed5434 ;
+  border: 1px solid #ed5434 ;
 }
-.btn.btn-primary:hover {
-  background: #528fe2;
-}
+/**.btn.btn-primary:hover {*/
+/****  background: #528fe2;***/
+}**/
 .btn.btn-warning {
   background: #f78153;
   border: 1px solid #eb6c3a;
@@ -570,3 +570,6 @@ a:hover {
 /*****************/
 
 ul li  p {visibility: hidden}
+
+
+

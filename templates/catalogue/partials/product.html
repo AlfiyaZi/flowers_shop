@@ -8,67 +8,57 @@
 {% load staticfiles %}
 
 {% block product %}
- <div class="portfolio">
-      {% block product_image %}
-
-
-          <figure class="e_pulse" >
-	     	    {% with image=product.primary_image %}
-                    {% thumbnail image.original  "480x480" crop="center" as thumb %}
-                    <a href="{{ product.get_absolute_url }}"><img   src="{{ thumb.url }}"  width="{{ im.width }}" height="{{ im.height }}" alt="{{ product.get_title }}"  ></a>
-                    {% endthumbnail %}
-                 {% endwith %}
-
-          <figcaption>
 
 
 
-                    {% block product_title %}
-                     <h4 style="color:#ffffff;"><a href="{{ product.get_absolute_url }}">{{ product.get_title|truncatewords:4 }}</a></h4>
+
+
+       <div class="item-box fixed-box">
+
+           {% block product_image %}
+								<figure>
+									<a class="item-hover" href="{{ product.get_absolute_url }}" >
+										<span class="overlay color2"></span>
+
+										<span class="inner">
+
+											<span class="block fa fa-plus fsize20"></span>
+											УЗНАТЬ БОЛЬШЕ
+
+										</span>
+                                         
+									</a>
+									<a href="shop-cart.html@action=cart_add&amp;product_id=1&amp;product_color=red&amp;product_size=l&amp;product_qty=1" class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> В КОРЗИНУ</a>
+
+                                       {% with image=product.primary_image %}
+                                {% thumbnail image.original  "480x480" crop="center" as thumb %}
+                                    <a href="{{ product.get_absolute_url }}"><img   src="{{ thumb.url }}"  width="{{ im.width }}" height="{{ im.height }}" alt="{{ product.get_title }}"  ></a>
+                                    {% endthumbnail %}
+                                {% endwith %}
+
+
+
+
+
+
+								</figure>
+								<div class="item-box-desc">
+                                    {% block product_title %}
+                     <h4>{{ product.get_title|truncatewords:4 }}</h4>
                     {% endblock %}
+									<h4>Cool Chair</h4>
+									<small class="styleColor"><span>$180</span> $150</small>
+								</div>
 
 
+ {% endblock %}
 
-
-			         <p>
-                            {% block product_price %}
-                              <div class="product_price ">
-                                   {% include "catalogue/partials/stock_record.html" %}
-
-                              </div>
-                             {% endblock %}</p>
-
-
-                 <p class="hidden-sm hidden-xs">{{product.description|striptags}}</p>
- <a href="/contact/add_contact/" class="btn btn-danger  e_bounceIn ">Обратный звонок</a>
-
-
-
-
-
-
-
-			        <!--  <p class="hidden-sm hidden-xs">{{product.description|striptags}}</p>-->
-			          <br/>
-                                 {% if not product.is_group %}
-                                       {% include "catalogue/partials/add_to_basket_form_compact.html" %}
-                                     {% endif %}
-
-
-		       </figcaption>
-
-
-	    </figure>
-
+	   </div>
 
      {% endblock %}
 
 
 
-
-
- </div>
-{% endblock %}
 
 
 

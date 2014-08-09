@@ -19,18 +19,22 @@
 
 
     {% if products %}
-        <section class="portfolio">
+        <div id="shop" style="color:#2E363F;font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:23px; margin:0; padding:0;">
+
+				<section class="container">
 
 
 
                 <ol class="row " style="list-style: none;">
                     {% for product in products %}
-                        <li class="col-md-3 col-sm-6 click  ">{% render_product product %}</li>
+                        <li class="col-md-3 col-sm-6 ">{% render_product product %}</li>
                     {% endfor %}
                 </ol>
                 {% include "partials/pagination.html" %}
 
         </section>
+
+            </div>
     {% else %}
         <p class="nonefound">{% trans "No products found." %}</p>
     {% endif %}
