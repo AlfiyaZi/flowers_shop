@@ -635,24 +635,13 @@ ul.list-icon.circle li:before {
 
 
 
-/** 08. Paragraphs
- **************************************************************** **/
-p {
-	line-height: 22px;
-	margin: 0 0 20px;
-}
-p.featured {
-	font-size: 1.6em;
-	line-height: 1.5em;
-	font-weight:200;
-}
 
 
 
 
 /** 09. Drop Caps & Cite
  **************************************************************** **/
-p.drop-caps:first-child:first-letter {
+p.drop-caps:first-child:first-letter
 	float: left;
 	font-size: 75px;
 	line-height: 60px;
