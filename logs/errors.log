@@ -33087,3 +33087,503 @@ Traceback (most recent call last):
   File "C:\Python27\lib\site-packages\django\forms\models.py", line 1137, in to_python
     raise ValidationError(self.error_messages['invalid_choice'], code='invalid_choice')
 ValidationError: [u'\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u044b\u0439 \u0432\u0430\u0440\u0438\u0430\u043d\u0442. \u0412\u0430\u0448\u0435\u0433\u043e \u0432\u0430\u0440\u0438\u0430\u043d\u0442\u0430 \u043d\u0435\u0442 \u0441\u0440\u0435\u0434\u0438 \u0434\u043e\u043f\u0443\u0441\u0442\u0438\u043c\u044b\u0445 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0439.']
+ERROR 2014-08-09 17:16:50,553 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 163, in disable_instrumentation
+    BlockNode.render = BlockNode.render.original
+AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-08-09 19:11:50,338 base Internal Server Error: /catalogue/buket-edinstvennoi_7/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 1407, in do_with
+    nodelist = parser.parse(('endwith',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 942, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'endwith', expected 'elif','else' \u0438\u043b\u0438 'endif'
+ERROR 2014-08-09 19:34:46,529 base Internal Server Error: /catalogue/buket-edinstvennoi_7/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 1407, in do_with
+    nodelist = parser.parse(('endwith',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 942, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'endthumbnail', expected 'empty' \u0438\u043b\u0438 'endfor'
+ERROR 2014-08-09 19:35:04,272 base Internal Server Error: /catalogue/buket-edinstvennoi_7/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 1407, in do_with
+    nodelist = parser.parse(('endwith',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 942, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\sorl\thumbnail\templatetags\thumbnail.py", line 119, in thumbnail
+    return ThumbnailNode(parser, token)
+  File "C:\Python27\lib\site-packages\sorl\thumbnail\templatetags\thumbnail.py", line 67, in __init__
+    self.geometry = parser.compile_filter(bits[2])
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 360, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 577, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '=False' from 'upscale=False'
+ERROR 2014-08-09 19:35:11,209 base Internal Server Error: /catalogue/buket-edinstvennoi_7/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 1407, in do_with
+    nodelist = parser.parse(('endwith',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 942, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\sorl\thumbnail\templatetags\thumbnail.py", line 119, in thumbnail
+    return ThumbnailNode(parser, token)
+  File "C:\Python27\lib\site-packages\sorl\thumbnail\templatetags\thumbnail.py", line 67, in __init__
+    self.geometry = parser.compile_filter(bits[2])
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 360, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 577, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '=False' from 'upscale=False'
+ERROR 2014-08-09 19:35:44,592 base Internal Server Error: /media/cache/a9/db/a9db29b25da34dcedc2e0e4bda11b31c.jpg
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 162, in disable_instrumentation
+    Template.render = Template.render.original
+AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-08-09 19:46:48,957 base Internal Server Error: /catalogue/buket-edinstvennoi_7/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 1407, in do_with
+    nodelist = parser.parse(('endwith',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 942, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'endif', expected 'empty' \u0438\u043b\u0438 'endfor'
+ERROR 2014-08-09 19:46:57,076 base Internal Server Error: /catalogue/buket-edinstvennoi_7/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 1407, in do_with
+    nodelist = parser.parse(('endwith',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 942, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'endif', expected 'empty' \u0438\u043b\u0438 'endfor'

@@ -25,10 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="78" selection-start="4833" selection-end="4833" vertical-scroll-proportion="1.2417392" vertical-offset="765" max-vertical-offset="4692">
+            <state line="86" column="73" selection-start="4827" selection-end="4827" vertical-scroll-proportion="-42.5" vertical-offset="357" max-vertical-offset="4743">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="essentials.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/static/flowers/css/essentials.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1113" column="0" selection-start="27847" selection-end="27847" vertical-scroll-proportion="25.589018" vertical-offset="3542" max-vertical-offset="34136">
               <folding />
             </state>
           </provider>
@@ -37,34 +46,7 @@
       <file leaf-file-name="my.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/static/flowers/css/color_scheme/my.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="242" column="5" selection-start="5664" selection-end="5664" vertical-scroll-proportion="0.0" vertical-offset="3534" max-vertical-offset="4216">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="handpickedproductlist.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/promotions/handpickedproductlist.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="153">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static/flowers/css/layout.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="361" column="1" selection-start="6136" selection-end="6136" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="16082">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static/flowers/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="48535">
+            <state line="242" column="5" selection-start="5664" selection-end="5664" vertical-scroll-proportion="0.0" vertical-offset="3581" max-vertical-offset="4216">
               <folding />
             </state>
           </provider>
@@ -73,16 +55,34 @@
       <file leaf-file-name="product.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/product.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="65" selection-start="1139" selection-end="1142" vertical-scroll-proportion="2.6153846" vertical-offset="714" max-vertical-offset="1496">
+            <state line="75" column="41" selection-start="2487" selection-end="2487" vertical-scroll-proportion="-46.307693" vertical-offset="71" max-vertical-offset="1615">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orange.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static/flowers/css/color_scheme/orange.css">
+      <file leaf-file-name="layout.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="242" column="5" selection-start="0" selection-end="5672" vertical-scroll-proportion="0.0" vertical-offset="3534" max-vertical-offset="4216">
+            <state line="32" column="104" selection-start="728" selection-end="800" vertical-scroll-proportion="-0.53846157" vertical-offset="530" max-vertical-offset="3145">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/partials/search.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="57" selection-start="130" selection-end="150" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="459">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gallery.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/gallery.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="21" selection-start="327" selection-end="327" vertical-scroll-proportion="-5.230769" vertical-offset="51" max-vertical-offset="1020">
               <folding />
             </state>
           </provider>
@@ -91,26 +91,30 @@
       <file leaf-file-name="add_to_basket_form_compact.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/add_to_basket_form_compact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="503" selection-end="503" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="459">
+            <state line="14" column="84" selection-start="466" selection-end="466" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="459">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="less-style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static/flowers/css/less-style.css">
+      <file leaf-file-name="detail.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/catalogue/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="0" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.0" vertical-offset="3077" max-vertical-offset="9843">
-              <folding />
+            <state line="221" column="34" selection-start="7592" selection-end="7622" vertical-scroll-proportion="-14.923077" vertical-offset="3369" max-vertical-offset="3995">
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#article#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="darkgreen.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static/flowers/css/color_scheme/darkgreen.css">
+      <file leaf-file-name="browse.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/catalogue/browse.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="30" selection-start="3559" selection-end="3559" vertical-scroll-proportion="0.0" vertical-offset="2193" max-vertical-offset="4267">
-              <folding />
+            <state line="26" column="0" selection-start="543" selection-end="543" vertical-scroll-proportion="-9.538462" vertical-offset="194" max-vertical-offset="833">
+              <folding>
+                <element signature="n#style#0;n#ol#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,9 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/basket/partials/basket_content.html" />
-        <option value="$PROJECT_DIR$/templates/partials/nav_primary_pills.html" />
-        <option value="$PROJECT_DIR$/delivery/amodels.py" />
         <option value="$PROJECT_DIR$/redflower/__init__.py" />
         <option value="$PROJECT_DIR$/templates/delivery/add_contact.html" />
         <option value="$PROJECT_DIR$/delivery/urls.py" />
@@ -169,20 +170,22 @@
         <option value="$PROJECT_DIR$/templates/catalogue/partials/stock_record.html" />
         <option value="$PROJECT_DIR$/templates/catalogue/browse.html" />
         <option value="$PROJECT_DIR$/public/static/flowers/css/style.css" />
-        <option value="$PROJECT_DIR$/templates/catalogue/partials/product.html" />
-        <option value="$PROJECT_DIR$/templates/catalogue/partials/add_to_basket_form_compact.html" />
         <option value="$PROJECT_DIR$/public/static/flowers/css/color_scheme/orange.css" />
         <option value="$PROJECT_DIR$/public/static/flowers/css/less-style.css" />
         <option value="$PROJECT_DIR$/public/static/flowers/css/color_scheme/darkgreen.css" />
         <option value="$PROJECT_DIR$/public/static/flowers/css/color_scheme/my.css" />
+        <option value="$PROJECT_DIR$/templates/catalogue/partials/gallery.html" />
+        <option value="$PROJECT_DIR$/templates/catalogue/detail.html" />
+        <option value="$PROJECT_DIR$/templates/catalogue/partials/product.html" />
+        <option value="$PROJECT_DIR$/templates/catalogue/partials/add_to_basket_form_compact.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/public/static/flowers/css/essentials.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="12" />
-    <option name="width" value="1279" />
+    <option name="y" value="5" />
+    <option name="width" value="1280" />
     <option name="height" value="765" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -211,7 +214,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -258,7 +260,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="promotions" />
+              <option name="myItemId" value="partials" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -312,6 +314,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redflower" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redflower" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redflower" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redflower" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redflower" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -338,63 +372,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flowers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flowers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flowers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="color_scheme" />
+              <option name="myItemId" value="oscar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -414,11 +392,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="Y:/redflower/templates/promotions/home.html" />
+    <property name="last_opened_file_path" value="C:/!/redflower/templates/catalogue/partials/gallery.html" />
     <property name="options.lastSelected" value="reference.settings.ide.settings.web.browsers" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -706,14 +685,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="12" width="1279" height="765" extended-state="1" />
+    <frame x="0" y="5" width="1280" height="765" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23673792" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23655063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3301887" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -721,11 +700,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -742,9 +721,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1953125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
@@ -769,31 +748,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/img/slider/s86.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/img/slider/s61.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/img/slider/s83.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/img/slider/s24.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/img/slider/s81.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/static/flowers/img/slider/s93.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -901,30 +855,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/partials/nav_primary_pills.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="901">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="901" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/florists/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="65" selection-start="4337" selection-end="4337" vertical-scroll-proportion="-51.0" vertical-offset="510" max-vertical-offset="2533">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="43.153847" vertical-offset="1122" max-vertical-offset="3995">
-          <folding />
-        </state>
+        <state line="108" column="65" selection-start="4337" selection-end="4337" vertical-scroll-proportion="-51.0" vertical-offset="510" max-vertical-offset="2533" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/add_to_basket_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="52" selection-start="501" selection-end="501" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="578">
-          <folding />
-        </state>
+        <state line="12" column="52" selection-start="501" selection-end="501" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="578" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/flowers/assets/images/demo/shop/9.jpg">
@@ -934,101 +875,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/flowers/css/layout-responsive.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.3957653" vertical-offset="3927" max-vertical-offset="10098">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/css/essentials.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="20" selection-start="2374" selection-end="2585" vertical-scroll-proportion="0.0" vertical-offset="2397" max-vertical-offset="35564">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.3957653" vertical-offset="3927" max-vertical-offset="10098" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/flowers/css/color_scheme/red.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.9136808" vertical-offset="561" max-vertical-offset="4182">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="104" selection-start="728" selection-end="800" vertical-scroll-proportion="66.15385" vertical-offset="2264" max-vertical-offset="3145">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.9136808" vertical-offset="561" max-vertical-offset="4182" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/layout_catalogue.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="0" selection-start="3784" selection-end="3784" vertical-scroll-proportion="-3.2692308" vertical-offset="2652" max-vertical-offset="3417">
-          <folding />
-        </state>
+        <state line="161" column="0" selection-start="3784" selection-end="3784" vertical-scroll-proportion="-3.2692308" vertical-offset="2652" max-vertical-offset="3417" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/flowers/css/shop.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5083">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5083" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/partials/pagination.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="614">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="614" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/promotions/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="303" column="94" selection-start="10631" selection-end="10673" vertical-scroll-proportion="-1.9615384" vertical-offset="5100" max-vertical-offset="7378">
-          <folding />
-        </state>
+        <state line="303" column="94" selection-start="10631" selection-end="10673" vertical-scroll-proportion="-1.9615384" vertical-offset="5100" max-vertical-offset="7378" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/stock_record.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="11" selection-start="233" selection-end="233" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/browse.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="58" selection-start="712" selection-end="712" vertical-scroll-proportion="-9.038462" vertical-offset="258" max-vertical-offset="833">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ol#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="9" column="11" selection-start="233" selection-end="233" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="510" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/flowers/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="48535">
-          <folding />
-        </state>
+        <state line="45" column="0" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="48535" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/promotions/handpickedproductlist.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/add_to_basket_form_compact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="503" selection-end="503" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/product.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="65" selection-start="1139" selection-end="1142" vertical-scroll-proportion="2.6153846" vertical-offset="714" max-vertical-offset="1496">
           <folding />
         </state>
       </provider>
@@ -1061,6 +948,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/!/redflower/templates/catalogue/partials/gallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="34" selection-start="210" selection-end="210" vertical-scroll-proportion="0.11826087" vertical-offset="51" max-vertical-offset="1037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/add_to_wishlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/browse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="543" selection-end="543" vertical-scroll-proportion="-9.538462" vertical-offset="194" max-vertical-offset="833">
+          <folding>
+            <element signature="n#style#0;n#ol#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="221" column="34" selection-start="7592" selection-end="7622" vertical-scroll-proportion="-14.923077" vertical-offset="3369" max-vertical-offset="3995">
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#article#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="104" selection-start="728" selection-end="800" vertical-scroll-proportion="-0.53846157" vertical-offset="530" max-vertical-offset="3145">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/partials/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="57" selection-start="130" selection-end="150" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/add_to_basket_form_compact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="84" selection-start="466" selection-end="466" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/gallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="21" selection-start="327" selection-end="327" vertical-scroll-proportion="-5.230769" vertical-offset="51" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="73" selection-start="4827" selection-end="4827" vertical-scroll-proportion="-42.5" vertical-offset="357" max-vertical-offset="4743">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/static/flowers/css/color_scheme/my.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="242" column="5" selection-start="5664" selection-end="5664" vertical-scroll-proportion="0.0" vertical-offset="3534" max-vertical-offset="4216">
@@ -1068,9 +1029,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/product.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="78" selection-start="4833" selection-end="4833" vertical-scroll-proportion="1.2417392" vertical-offset="765" max-vertical-offset="4692">
+        <state line="75" column="41" selection-start="2487" selection-end="2487" vertical-scroll-proportion="-46.307693" vertical-offset="71" max-vertical-offset="1615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/flowers/css/essentials.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1113" column="0" selection-start="27847" selection-end="27847" vertical-scroll-proportion="25.589018" vertical-offset="3542" max-vertical-offset="34136">
           <folding />
         </state>
       </provider>

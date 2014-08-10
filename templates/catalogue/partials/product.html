@@ -16,7 +16,7 @@
        <div class="item-box fixed-box">
 
            {% block product_image %}
-								<figure>
+								<figure class="e_pulse">
 									<a class="item-hover" href="{{ product.get_absolute_url }}" >
 										<span class="overlay color2"></span>
 
@@ -58,8 +58,9 @@
 
 
 
-                                        <small class="styleColor">
+
                                             {% block product_price %}
+                                             <small class="styleColor">
                                          <span></span><div class="product_price ">
                                          {% include "catalogue/partials/stock_record.html" %}
 
@@ -67,6 +68,12 @@
                                         {% endblock %}
 
 								 </div></small>
+
+
+           <!--<div class="item-box-desc">
+									<h4>Cool Chair</h4>
+									<small class="styleColor"><span>$180</span> $150</small>
+								</div>-->
 
 
  {% endblock %}
