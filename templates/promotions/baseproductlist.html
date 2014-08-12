@@ -8,6 +8,7 @@
     </div>
 
     <!--{{ promotion.description|safe }}-->
+        <div id="shop1">
 
     <ul class="row" style="list-style: none;">
         {% for product in products %}
@@ -18,5 +19,5 @@
     {% if block.link_url %}
         <a href="{{ block.link_url }}">{% trans "See more" %}</a>
     {% endif %}
-
+</div>
 {% endblock %}

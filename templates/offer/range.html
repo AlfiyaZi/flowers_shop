@@ -30,6 +30,7 @@
 
     {% endif %}
     {% if products %}
+        <div id="shop1">
         <section>
             <div class="mod">
                 <ol class="row" style="list-style: none;" >
@@ -42,5 +43,6 @@
         </section>
     {% else %}
         <p class="nonefound">{% trans "No products found." %}</p>
+            </div>
     {% endif %}
 {% endblock content %}

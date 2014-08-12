@@ -156,7 +156,7 @@
     {% endblock %}
 
     {% iffeature "reviews" %}
-        {% block product_review %}
+       {% block product_review %}
         <section>
             <div id="reviews" class="sub-header">
                 {% if product.num_approved_reviews > 3 %}
@@ -209,19 +209,23 @@
             <div class="sub-header">
                 <h2>{% trans "Recommended items" %}</h2>
             </div>
+    <div id="shop1">
             <ul class="row"  style="list-style: none;">
                 {% for product in recommended_products %}
                 <li class="col-md-2 {% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">
                     {% render_product product %}
                 </li>
                 {% endfor %}
-            </ul>
+            </ul> </div>
         {% endif %}
     {% endwith %}
-    
-    {% recently_viewed_products %}
 
+     <div id="shop1">
+
+    {% recently_viewed_products %}
+</div>
 </article><!-- End of product page -->
+
 {% endblock content %}
 
 {% block extrascripts %}

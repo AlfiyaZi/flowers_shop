@@ -132,6 +132,40 @@
 		color:#2d2f3c;
 	}
 
+/*************/
+/* Nav Pills */
+/*************/
+
+
+
+.nav-pills li a {
+ border-radius: 3px;
+ padding: 5px  10px;
+ font-size: 14px;
+	font-family: 'Open Sans Condensed', sans-serif;
+
+	color: #777;
+	text-transform: uppercase;
+}
+
+
+.nav-pills li a:hover {
+  background: #A0CE4D !important;
+  color: #ffffff;
+  border-color:#EB2029;
+}
+.nav-pills li.active a {
+  background-color: #A0CE4D !important;
+  border-color:#A0CE4D !important;
+  color: #ffffff;
+}
+.nav-pills li.active a:hover {
+  background-color: #EB2029;
+}
+
+
+
+
 
 	/* Buttons */
 	.btn-default {

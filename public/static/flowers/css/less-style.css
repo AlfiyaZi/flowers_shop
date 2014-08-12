@@ -332,40 +332,7 @@ a:hover {
   border-color: #f75353;
   color: #ffffff;
 }
-/*************/
-/* Nav Pills */
-/*************/
 
-
-
-
-
-
-
-.nav-pills li a {
- border-radius: 3px;
- padding: 5px  10px;
- font-size: 14px;
-	font-family: 'Open Sans Condensed', sans-serif;
-
-	color: #777;
-	text-transform: uppercase;
-}
-
-
-.nav-pills li a:hover {
-  background: #BE7F70;
-  color: #ffffff;
-  border-color:#EB2029;
-}
-.nav-pills li.active a {
-  background-color: #BE7F70;
-  border-color:#EB2029;
-  color: #ffffff;
-}
-.nav-pills li.active a:hover {
-  background-color: #EB2029;
-}
 /****************/
 /* Progress bar */
 /****************/

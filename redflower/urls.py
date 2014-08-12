@@ -25,6 +25,9 @@ urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'', include(application.urls)),
     url(r'^catalogue/', include(catalogue_app.urls)),
+    url(r'^weblog/', include('zinnia.urls')),
+    url(r'^comments/', include('django.contrib.comments.urls')),
+
 
 
 

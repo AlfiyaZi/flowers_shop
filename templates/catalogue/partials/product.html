@@ -16,15 +16,15 @@
        <div class="item-box fixed-box">
 
            {% block product_image %}
-								<figure class="e_pulse">
+								<figure>
 									<a class="item-hover" href="{{ product.get_absolute_url }}" >
 										<span class="overlay color2"></span>
 
 										<span class="inner">
                                            <!-- <p class="hidden-sm hidden-xs">{{product.description|striptags}}</p>-->
 
-											<span class="block fa fa-plus "></span>
-											УЗНАТЬ БОЛЬШЕ
+
+
 
 										</span>
 
@@ -33,7 +33,6 @@
                                     {% if not product.is_group %}
                                        {% include "catalogue/partials/add_to_basket_form_compact.html" %}
                                      {% endif %}
-
 
                                        {% with image=product.primary_image %}
                                 {% thumbnail image.original  "480x480" crop="center" as thumb %}
@@ -48,7 +47,7 @@
 
 								</figure>
 								<div class="item-box-desc">
-                                    {% block product_title %}
+                                     {% block product_title %}
                                          <h4>{{ product.get_title|truncatewords:4 }}</h4>
                                      {% endblock %}
 
@@ -61,13 +60,12 @@
 
                                             {% block product_price %}
                                              <small class="styleColor">
-                                         <span></span><div class="product_price ">
-                                         {% include "catalogue/partials/stock_record.html" %}
+                                             <span> </span><div class="product_price ">
+                                            {% include "catalogue/partials/stock_record.html" %}
+                                             </div></small>
+                                           {% endblock %}
 
-                                                       </div>
-                                        {% endblock %}
-
-								 </div></small>
+								 </div>
 
 
            <!--<div class="item-box-desc">

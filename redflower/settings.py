@@ -79,7 +79,8 @@ INSTALLED_APPS = [
     'mcbv',
 
     'contact',
-    'cms',  # django CMS itself
+     'cms',  # django CMS itself
+
     'mptt',  # utilities for implementing a modified pre-order traversal tree
     'menus',  # helper for model independent hierarchical website navigation
     'south',  # intelligent schema and data migrations
@@ -90,6 +91,8 @@ INSTALLED_APPS = [
     'portfolio',
     'robokassa',
     'pay',
+     'zinnia',
+    'tagging',
 
 
 
