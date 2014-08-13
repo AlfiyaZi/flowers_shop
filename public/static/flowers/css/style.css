@@ -370,11 +370,11 @@ font-size: 14px;
 	color: #fff;
 }
 
-.header .navbar-default .navbar-nav{ margin-top: 20px; }
+.header .navbar-default .navbar-nav{ margin-top: -55px; }
 
 .header .navbar-default .navbar-nav>li>a{
 	padding-top: 0px;
-	padding-bottom: 20px;
+	padding-bottom: 0px;
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 18px;
 

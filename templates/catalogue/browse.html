@@ -27,7 +27,8 @@
 
                 <ol class="row " style="list-style: none;">
                     {% for product in products %}
-                        <li class="col-md-3 col-sm-6 col-xs-6 click">{% render_product product %}</li>
+                        <li class="col15-md-3  col15-md-offset-0  col-sm-4 col-xs-6 ">{% render_product product %}</li>
+
                     {% endfor %}
                 </ol>
                 {% include "partials/pagination.html" %}

@@ -130,13 +130,7 @@ a:hover {
 .btn.btn-danger:hover {
   background: #8C3B37;
 }
-.btn.btn-success {
-  background: #51d466;
-  border: 1px solid #42c557;
-}
-.btn.btn-success:hover {
-  background: #42c557;
-}
+
 .btn.btn-info {
   background:  #eb2029;
   border: 1px solid  #eb2029;
@@ -268,6 +262,23 @@ a:hover {
 .badge.badge-brown {
   background: #d08166;
 }
+
+/**************/
+/*             */
+
+.navbar {
+position: relative;
+min-height: 10px;
+margin-bottom: 18px;
+border: 1px solid transparent;
+}
+
+
+/***************/
+
+
+
+
 /**************/
 /* Pagination */
 /**************/
@@ -379,6 +390,8 @@ a:hover {
 /* Page CSS */
 /****************/
 /* Navigation Menu */
+
+
 .header .navbar-default .navbar-nav li a {
   color: #777777;
 }
@@ -451,26 +464,6 @@ a:hover {
 }
 
 
-/************/
-
-
-.badge{
-	display:inline-block;
-	min-width:10px;
-	padding:3px 7px;
-	font-size:12px;
-
-	font-family: 'Open Sans Condensed', sans-serif;
-
-	color: #bbb;
-	color:#fff;
-	line-height:1;
-	vertical-align:baseline;
-	white-space:nowrap;
-	text-align:center;
-	background-color:#BE7F70;
-	border-radius:10px
-}
 
 
 

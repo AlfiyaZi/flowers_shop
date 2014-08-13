@@ -16,13 +16,13 @@
 	overflow:hidden;
 }
 #shop .item-box figure {
-	height:260px;
+	height:200px;
 }
 	#shop .item-box figure img {
 		margin:auto;
 	}
 #shop .item-box-desc {
-	height:80px;
+	height:60px;
 }
 #shop .item-box-desc small {
 	font-size:16px;
