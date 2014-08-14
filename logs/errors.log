@@ -34998,3 +34998,255 @@ Traceback (most recent call last):
   File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 1084, in load
     (taglib, e))
 TemplateSyntaxError: 'comments' is not a valid tag library: Template library comments not found, tried django.templatetags.comments,django.contrib.admin.templatetags.comments,django.contrib.staticfiles.templatetags.comments,django.contrib.flatpages.templatetags.comments,treebeard.templatetags.comments,compressor.templatetags.comments,pagination.templatetags.comments,bootstrap_pagination.templatetags.comments,widget_tweaks.templatetags.comments,cms.templatetags.comments,mptt.templatetags.comments,menus.templatetags.comments,sekizai.templatetags.comments,adminsortable.templatetags.comments,sorl.thumbnail.templatetags.comments,zinnia.templatetags.comments,tagging.templatetags.comments,oscar.templatetags.comments,haystack.templatetags.comments,treebeard.templatetags.comments,sorl.thumbnail.templatetags.comments
+ERROR 2014-08-13 17:42:19,698 base Internal Server Error: /weblog/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 101, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 98, in get_parent
+    return get_template(parent)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 942, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'trans', expected 'elif','else' \u0438\u043b\u0438 'endif'
+ERROR 2014-08-13 17:44:00,976 base Internal Server Error: /weblog/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 101, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 98, in get_parent
+    return get_template(parent)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 942, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'trans', expected 'elif','else' \u0438\u043b\u0438 'endif'
+ERROR 2014-08-13 17:44:29,769 base Internal Server Error: /weblog/2014/08/13/pyat-idealnyh-blondinok/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 101, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 98, in get_parent
+    return get_template(parent)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 942, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'trans', expected 'elif','else' \u0438\u043b\u0438 'endif'
+ERROR 2014-08-13 17:47:23,819 base Internal Server Error: /weblog/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 101, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 98, in get_parent
+    return get_template(parent)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 942, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'trans', expected 'elif','else' \u0438\u043b\u0438 'endif'

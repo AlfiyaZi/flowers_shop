@@ -1,0 +1,177 @@
+{% load i18n compress %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="{{ LANGUAGE_CODE|default:"ru" }}" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="{{ LANGUAGE_CODE|default:"ru" }}" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="{{ LANGUAGE_CODE|default:"ru" }}" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="{{ LANGUAGE_CODE|default:"ru" }}" class="no-js"> <!--<![endif]-->
+    <head>
+        <title>{% if display_version %}[{% trans "Build" %} {{ version }}] {% endif %}{% block title %}Интернет магазин цветов.  Доставка букетов цветов на заказ. Заказ букетов и доставка цветов пермь. Цветы большого города.{% endblock %}</title>
+
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <meta name="created" content="{% now "jS M Y h:i" %}" />
+        <meta name="description" content="{% block description %}Интернет магазин цветов.  Доставка букетов цветов на заказ. Заказ букетов и доставка цветов Пермь{% endblock %}" />
+        <meta name="keywords" content="{% block keywords %}доставка букетов, заказ букетов доставка, доставка букетов цветов, доставка букетов пермь, заказ цветов доставка букетов, доставка букетов, школа флористики,флористы, флористы пермь.{% endblock %}" />
+        <meta name="viewport" content="{% block viewport %}width=device-width, initial-scale=1.0{% endblock %}">
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Styles -->
+
+
+
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+
+		<!-- Favicon -->
+        {% block favicon %}
+            <link rel="shortcut icon" href="{% static   "flowers/favicon.ico" %}" />
+        {% endblock %}
+       <!-- Styles -->
+        {% block mainstyles %}
+            {% comment %}
+            We use an inner block to work-around the fact that django-compressor doesn't work with
+            template inheritance.  Ie, we can't just wrap the {% block mainstyles %} with compress tags and
+            expect it to compress CSS files added in child templates.
+            {% endcomment %}
+            {% block styles %}
+                {% comment %}
+                If you are developing Oscar's CSS, or overriding Oscar's CSS
+                files in your project, then set USE_LESS = True in your
+                settings file.  You will also need to ensure that the 'lessc'
+                executable is available and you have COMPRESS_PRECOMPILERS specified
+                correctly.
+                {% endcomment %}
+                {% compress css %}
+                    {% if use_less %}
+
+
+                     <!-- Custom CSS -->
+
+                    {% else %}
+  <link rel=" stylesheet"   href="{% static "flowers/css/color_scheme/orange.css" %}"   type="text/css" title="orange" />
+
+
+                    {% endif %}
+                {% endcompress %}
+            {% endblock %}
+        {% endblock %}
+
+        {# Additional CSS - specific to certain pages #}
+        {% block extrastyles %}
+             <!-- <link rel="stylesheet" type="text/css" href="{% static "oscar/css/styles.css" %}" />-->
+
+               <link rel="stylesheet"   href="{% static "flowers/css/prettyPhoto.css" %}"/>
+               <link rel="stylesheet"   href="{% static "flowers/css/custom.css" %}"/>
+               <link rel="stylesheet" media="screen"  href="{% static "flowers/css/flexslider.css" %}"/>
+               <link rel="stylesheet" type="text/css" href="{% static "flowers/css/bootstrap.min.css" %}"/>
+
+        <link rel="stylesheet" type="text/css" href="{% static "flowers/css/bootstrap_col_15.css" %}"/>
+
+               <link rel="stylesheet" type="text/css" href="{% static "flowers/css/settings.css" %}"/>
+               <link rel="stylesheet" type="text/css" href="{% static "flowers/css/landing.css" %}"/>
+                <link rel="stylesheet"   href="{% static "flowers/css/less-style.css" %}"/>
+                <!-- Font awesome CSS -->
+                <link rel="stylesheet"  href="{% static "flowers/css/font-awesome.min.css" %}"/>
+           	    <!-- Custom Less -->
+
+                 <!-- Custom CSS -->
+           	    <link rel="stylesheet"    href="{% static "flowers/css/style.css" %}"/>
+
+              <link rel="stylesheet"    href="{% static "flowers/css/shop.css" %}"/>
+        <link rel="stylesheet"    href="{% static "flowers/css/shop1.css" %}"/>
+          <link rel="stylesheet"    href="{% static "flowers/css/layout.css" %}"/>
+        <link rel="stylesheet"    href="{% static "flowers/css/essentials.css" %}"/>
+
+
+
+        <link rel=" stylesheet"   href="{% static "flowers/css/color_scheme/green.css" %}"   type="text/css" title="orange" />
+
+
+
+
+                 <link rel="stylesheet"    href="{% static "flowers/css/animate.css" %}"/>
+
+
+                 <!-- REVOLUTION SLIDER -->
+
+                <!--<link rel="stylesheet"    href="{% static "flowers/css/style1.css" %}"/>-->
+                <!--[if IE]><link rel="stylesheet" href="{% static "flowers/css/ie-style.css" %}"/><![endif]-->
+
+
+        {% endblock %}
+
+        {% block extrahead %}{% endblock %}
+    </head>
+  <body class="zinnia {% block theme-class %}default{% endblock theme-class %} {% block color-class %}blue{% endblock color-class %} {% block sidebar-class %}right-sidebar{% endblock sidebar-class %} {% block body-class %}{% endblock body-class %}">
+    <div class="container">
+      <div id="header">
+        <ul class="top-navigation">
+          <li>
+            <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}" class="sitemap">
+              {% trans "Sitemap" %}
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'zinnia_entry_latest_feed' %}" title="{% trans "RSS Feed of latest entries" %}" class="feeds">
+              {% trans "RSS Feed" %}
+            </a>
+          </li>
+        </ul>
+        <form method="get" action="{% url 'zinnia_entry_search' %}">
+          <p>
+            <input type="text" name="pattern" placeholder="{% trans "Keywords..." %}" {% if pattern %}value="{{ pattern }}"{% endif %} />
+            <input type="submit" class="submitbutton" value="OK" />
+          </p>
+        </form>
+        <h1>
+          <a href="{% url 'zinnia_entry_archive_index' %}" title="Zinnia's Weblog" rel="home">
+            Zinnia's Weblog
+          </a>
+        </h1>
+        <blockquote>
+          <p>{% trans "Just another Zinnia weblog." %}</p>
+        </blockquote>
+        {% block breadcrumbs %}{% endblock breadcrumbs %}
+      </div>
+      {% block slider %}{% endblock slider %}
+      <div id="content" class="hfeed">
+        {% block content %}
+        <div class="links">
+          <h3>{% trans "Useful links" %}</h3>
+          <ul>
+            <li>
+              <a href="{% url 'zinnia_entry_archive_index' %}" title="{% trans "Weblog index" %}">
+                {% trans "Weblog index" %}
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}">
+                {% trans "Sitemap" %}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="search">
+          <h3>{% trans "Search" %}</h3>
+          {% include "zinnia/tags/search_form.html" %}
+        </div>
+        {% endblock content %}
+      </div>
+      <div id="sidebar">
+        {% block sidebar %}
+        {% endblock sidebar %}
+      </div>
+      <div id="footer">
+        <p>{% blocktrans %}Powered by <a href="http://www.djangoproject.com">Django</a> and <a href="https://github.com/Fantomas42/django-blog-zinnia">Zinnia {{ ZINNIA_VERSION }}</a>.{% endblocktrans %}</p>
+      </div>
+    </div>
+  </body>
+</html>
