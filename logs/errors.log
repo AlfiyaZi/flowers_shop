@@ -35250,3 +35250,752 @@ Traceback (most recent call last):
   File "C:\Python27\lib\site-packages\django\template\base.py", line 331, in invalid_block_tag
     (command, get_text_list(["'%s'" % p for p in parse_until])))
 TemplateSyntaxError: Invalid block tag: 'trans', expected 'elif','else' \u0438\u043b\u0438 'endif'
+ERROR 2014-08-14 18:29:58,450 base Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 186, in select_template
+    raise TemplateDoesNotExist(', '.join(not_found))
+TemplateDoesNotExist: blog/list.html, blog/post_list.html
+ERROR 2014-08-14 18:30:33,763 base Internal Server Error: /media/cache/ec/ff/ecff106061b2820b597d9bfcc74af77b.jpg
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 162, in disable_instrumentation
+    Template.render = Template.render.original
+AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-08-14 18:55:01,223 base Internal Server Error: /blog/2014/08/11/novost-dnya/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\templatetags\comments.py", line 182, in render
+    formstr = render_to_string(template_search_list, {"form" : self.get_form(context)}, context)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 169, in render_to_string
+    return t.render(context_instance)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 1125, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\templatetags\comments.py", line 326, in comment_form_target
+    return comments.get_form_target()
+  File "C:\Python27\lib\site-packages\django\contrib\comments\__init__.py", line 64, in get_form_target
+    return urlresolvers.reverse("django.contrib.comments.views.comments.post_comment")
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'django.contrib.comments.views.comments.post_comment' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2014-08-14 20:38:18,351 base Internal Server Error: /blog/2014/08/13/pyat-idealnyh-blondinok/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\templatetags\comments.py", line 182, in render
+    formstr = render_to_string(template_search_list, {"form" : self.get_form(context)}, context)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 169, in render_to_string
+    return t.render(context_instance)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 1125, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\templatetags\comments.py", line 326, in comment_form_target
+    return comments.get_form_target()
+  File "C:\Python27\lib\site-packages\django\contrib\comments\__init__.py", line 64, in get_form_target
+    return urlresolvers.reverse("django.contrib.comments.views.comments.post_comment")
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'django.contrib.comments.views.comments.post_comment' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2014-08-14 20:38:22,237 base Internal Server Error: /blog/2014/08/11/novost-dnya/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\templatetags\comments.py", line 182, in render
+    formstr = render_to_string(template_search_list, {"form" : self.get_form(context)}, context)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 169, in render_to_string
+    return t.render(context_instance)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 1125, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\templatetags\comments.py", line 326, in comment_form_target
+    return comments.get_form_target()
+  File "C:\Python27\lib\site-packages\django\contrib\comments\__init__.py", line 64, in get_form_target
+    return urlresolvers.reverse("django.contrib.comments.views.comments.post_comment")
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'django.contrib.comments.views.comments.post_comment' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2014-08-14 20:38:38,947 base Internal Server Error: /blog/2014/08/11/novost-dnya/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\templatetags\comments.py", line 182, in render
+    formstr = render_to_string(template_search_list, {"form" : self.get_form(context)}, context)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 169, in render_to_string
+    return t.render(context_instance)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 1125, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\templatetags\comments.py", line 326, in comment_form_target
+    return comments.get_form_target()
+  File "C:\Python27\lib\site-packages\django\contrib\comments\__init__.py", line 64, in get_form_target
+    return urlresolvers.reverse("django.contrib.comments.views.comments.post_comment")
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'django.contrib.comments.views.comments.post_comment' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2014-08-14 20:41:09,661 base Internal Server Error: /blog/2014/08/11/ldl/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\templatetags\comments.py", line 182, in render
+    formstr = render_to_string(template_search_list, {"form" : self.get_form(context)}, context)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 169, in render_to_string
+    return t.render(context_instance)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 1125, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\templatetags\comments.py", line 326, in comment_form_target
+    return comments.get_form_target()
+  File "C:\Python27\lib\site-packages\django\contrib\comments\__init__.py", line 64, in get_form_target
+    return urlresolvers.reverse("django.contrib.comments.views.comments.post_comment")
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'django.contrib.comments.views.comments.post_comment' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2014-08-14 21:10:21,908 base Internal Server Error: /blog/2014/08/14/dfsdfsdg/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\templatetags\comments.py", line 182, in render
+    formstr = render_to_string(template_search_list, {"form" : self.get_form(context)}, context)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 169, in render_to_string
+    return t.render(context_instance)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 1125, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\templatetags\comments.py", line 326, in comment_form_target
+    return comments.get_form_target()
+  File "C:\Python27\lib\site-packages\django\contrib\comments\__init__.py", line 64, in get_form_target
+    return urlresolvers.reverse("django.contrib.comments.views.comments.post_comment")
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'django.contrib.comments.views.comments.post_comment' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2014-08-14 21:13:03,585 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 163, in disable_instrumentation
+    BlockNode.render = BlockNode.render.original
+AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-08-14 21:13:14,092 base Internal Server Error: /blog/2014/08/14/dfsdfsdg/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\templatetags\comments.py", line 182, in render
+    formstr = render_to_string(template_search_list, {"form" : self.get_form(context)}, context)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 169, in render_to_string
+    return t.render(context_instance)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 1125, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\templatetags\comments.py", line 326, in comment_form_target
+    return comments.get_form_target()
+  File "C:\Python27\lib\site-packages\django\contrib\comments\__init__.py", line 64, in get_form_target
+    return urlresolvers.reverse("django.contrib.comments.views.comments.post_comment")
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'django.contrib.comments.views.comments.post_comment' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2014-08-14 21:17:03,240 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 163, in disable_instrumentation
+    BlockNode.render = BlockNode.render.original
+AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-08-15 00:15:02,898 base Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 101, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 98, in get_parent
+    return get_template(parent)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: zinnia:zinnia/base.html
+ERROR 2014-08-15 00:15:10,869 base Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 101, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 98, in get_parent
+    return get_template(parent)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: zinnia:zinnia/base.html

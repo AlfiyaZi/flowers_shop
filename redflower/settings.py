@@ -69,11 +69,12 @@ INSTALLED_APPS = [
     'pagination',
     'bootstrap_pagination',
     'widget_tweaks',
-    'blog',
+
     'florists',
     'events',
     'about',
     'school',
+  
 
     'pages',
     'factory',
