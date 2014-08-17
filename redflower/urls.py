@@ -15,6 +15,11 @@ dashboard_app = get_class('dashboard.app', 'application')
 from oscar.views import handler500, handler404, handler403  # noqa
 
 
+from zinnia.sitemaps import TagSitemap
+from zinnia.sitemaps import EntrySitemap
+from zinnia.sitemaps import CategorySitemap
+from zinnia.sitemaps import AuthorSitemap
+
 
 
 admin.autodiscover()
@@ -27,6 +32,7 @@ urlpatterns = [
     url(r'^catalogue/', include(catalogue_app.urls)),
 
     url(r'^comments/', include('django.contrib.comments.urls')),
+
 
 
     url(r'^', include('zinnia.urls.capabilities')),
@@ -48,7 +54,6 @@ urlpatterns = [
     url(r'^about/', include('about.urls')),
 
     url(r'^events/', include('events.urls')),
-
 
 
 

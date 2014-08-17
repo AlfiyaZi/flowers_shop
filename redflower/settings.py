@@ -74,7 +74,8 @@ INSTALLED_APPS = [
     'events',
     'about',
     'school',
-  
+     'zinnia_bootstrap',
+
 
     'pages',
     'factory',
@@ -277,6 +278,7 @@ CMS_TEMPLATES = (
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
+    'app_namespace.Loader',
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
     # needed by django-treebeard for admin (and potentially other libs)
