@@ -37,12 +37,18 @@
 
 
 
+
+
+
+
+
 /* 
  * Basic CSS starts
  */
 
 body{
-background-color:#f1f2f7;
+background: #fff url('../img/crossword.png') repeat;
+
 
 	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -248,9 +254,15 @@ font-size: 14px;
 
 .header .header-top{
 	padding-top: 15px;
-	padding-bottom: 1px;
+	padding-bottom: 15px;
 	/*border-bottom: 1px solid #f4f4f4;*/
     background-color:#fff;
+  /*background:url("../img/backgrounds/h12.jpg") ;*/
+    background-position: bottom;
+
+
+
+
 }
 
 .header .header-contact span{
@@ -357,7 +369,7 @@ font-size: 14px;
 
 }
 
-.header .navbar-default{
+header .navbar-default{
 	background: transparent;
 	border: 0px;
 	border-radius: 0px;
@@ -370,11 +382,11 @@ font-size: 14px;
 	color: #fff;
 }
 
-.header .navbar-default .navbar-nav{ margin-top: -55px; }
+.header .navbar-default .navbar-nav{ margin-top: 20px; }
 
 .header .navbar-default .navbar-nav>li>a{
 	padding-top: 0px;
-	padding-bottom: 0px;
+	padding-bottom: 20px;
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 18px;
 
@@ -1164,7 +1176,7 @@ div.ppt { display:none !important; }
  */
 
 .banner {
-	
+		background: url('../img/banner.jpg') center center repeat-x;
 	text-align: center;
 }
 

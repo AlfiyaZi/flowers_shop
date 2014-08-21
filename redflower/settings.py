@@ -82,7 +82,7 @@ INSTALLED_APPS = [
     'mcbv',
 
     'contact',
-     'cms',  # django CMS itself
+
 
     'mptt',  # utilities for implementing a modified pre-order traversal tree
     'menus',  # helper for model independent hierarchical website navigation
@@ -138,9 +138,6 @@ RQ_QUEUES = {
 
 
 
-SMSAERO_USER = 'flowerBigCity@yandex.ru'
-SMSAERO_PASSWORD = '246fbT47t'
-SMSAERO_PASSWORD_MD5 = ''
 
 
 

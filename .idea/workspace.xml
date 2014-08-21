@@ -25,62 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layout_right.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/layout_right.html">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/redflower/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="33" selection-start="811" selection-end="834" vertical-scroll-proportion="1.3846154" vertical-offset="614" max-vertical-offset="1717">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/layout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="83" selection-start="730" selection-end="833" vertical-scroll-proportion="-9.192307" vertical-offset="339" max-vertical-offset="3179">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/zinnia/templates/zinnia/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="6" selection-start="1875" selection-end="1986" vertical-scroll-proportion="-28.76923" vertical-offset="0" max-vertical-offset="1853">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="favicon.ico" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static/flowers/favicon.ico">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="skeleton.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/zinnia/skeleton.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="32" selection-start="4261" selection-end="4261" vertical-scroll-proportion="-37.96154" vertical-offset="322" max-vertical-offset="2516">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="entry_detail_base.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/zinnia/entry_detail_base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="27.461538" vertical-offset="714" max-vertical-offset="3264">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_entry_detail_base.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/zinnia/_entry_detail_base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="10" selection-start="2599" selection-end="2599" vertical-scroll-proportion="0.26551723" vertical-offset="968" max-vertical-offset="3247">
+            <state line="62" column="26" selection-start="1568" selection-end="1595" vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="9095">
               <folding />
             </state>
           </provider>
@@ -89,25 +37,68 @@
       <file leaf-file-name="product.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/product.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="110" selection-start="516" selection-end="516" vertical-scroll-proportion="-9.153846" vertical-offset="153" max-vertical-offset="1581">
+            <state line="37" column="69" selection-start="1054" selection-end="1063" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1581">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="category_list.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/zinnia/category_list.html">
+      <file leaf-file-name="home.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/promotions/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="578">
+            <state line="179" column="51" selection-start="6301" selection-end="6301" vertical-scroll-proportion="0.9705882" vertical-offset="2482" max-vertical-offset="6851">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="breadcrumbs.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/breadcrumbs.html">
+      <file leaf-file-name="s22.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/static/flowers/img/slider/s22.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="browse.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/catalogue/browse.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="289">
+            <state line="29" column="43" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="850">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="171" column="83" selection-start="7756" selection-end="7756" vertical-scroll-proportion="-10.461538" vertical-offset="2635" max-vertical-offset="4845">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="slider_revolution.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/static/flowers/js/slider_revolution.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="103.72" vertical-offset="2593" max-vertical-offset="4012">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/partials/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="0" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="2057">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/layout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="32" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="1217" max-vertical-offset="3111">
               <folding />
             </state>
           </provider>
@@ -123,21 +114,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/deliver/views.py" />
-        <option value="$PROJECT_DIR$/templates/deliver/add_address.html" />
-        <option value="$PROJECT_DIR$/deliver/admin.py" />
-        <option value="$PROJECT_DIR$/deliver/forms.py" />
-        <option value="$PROJECT_DIR$/apps/shipping/forms.py" />
-        <option value="$PROJECT_DIR$/apps/shipping/admin.py" />
-        <option value="$PROJECT_DIR$/apps/shipping/repository.py" />
-        <option value="$PROJECT_DIR$/apps/shipping/methods.py" />
-        <option value="$PROJECT_DIR$/apps/address/admin.py" />
-        <option value="$PROJECT_DIR$/apps/address/models.py" />
-        <option value="$PROJECT_DIR$/apps/address/forms.py" />
         <option value="$PROJECT_DIR$/../Atropos/v1.3/HTML/shop-home.html" />
         <option value="$PROJECT_DIR$/public/static/flowers/css/settings.css" />
-        <option value="$PROJECT_DIR$/templates/florists/index.html" />
-        <option value="$PROJECT_DIR$/public/static/flowers/css/layout.css" />
         <option value="$PROJECT_DIR$/templates/catalogue/partials/stock_record.html" />
         <option value="$PROJECT_DIR$/public/static/flowers/css/color_scheme/orange.css" />
         <option value="$PROJECT_DIR$/public/static/flowers/css/color_scheme/darkgreen.css" />
@@ -146,40 +124,55 @@
         <option value="$PROJECT_DIR$/templates/catalogue/partials/add_to_basket_form_compact.html" />
         <option value="$PROJECT_DIR$/public/static/flowers/css/shop1.css" />
         <option value="$PROJECT_DIR$/templates/promotions/baseproductlist.html" />
-        <option value="$PROJECT_DIR$/public/static/flowers/css/essentials.css" />
         <option value="$PROJECT_DIR$/templates/offer/list.html" />
         <option value="$PROJECT_DIR$/templates/offer/range.html" />
         <option value="$PROJECT_DIR$/templates/offer/detail.html" />
         <option value="$PROJECT_DIR$/templates/layout_catalogue.html" />
         <option value="$PROJECT_DIR$/templates/customer/login_registration.html" />
-        <option value="$PROJECT_DIR$/templates/promotions/home.html" />
         <option value="$PROJECT_DIR$/public/static/flowers/css/shop.css" />
         <option value="$PROJECT_DIR$/templates/catalogue/partials/add_to_basket_form.html" />
-        <option value="$PROJECT_DIR$/templates/catalogue/browse.html" />
         <option value="$PROJECT_DIR$/templates/partials/footer.html" />
         <option value="$PROJECT_DIR$/templates/catalogue/detail.html" />
-        <option value="$PROJECT_DIR$/templates/layout.html" />
-        <option value="$PROJECT_DIR$/public/static/flowers/css/style.css" />
-        <option value="$PROJECT_DIR$/public/static/flowers/css/less-style.css" />
         <option value="$PROJECT_DIR$/templates/zinnia/skeleton.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/public/static/flowers/css/color_scheme/green.css" />
-        <option value="$PROJECT_DIR$/redflower/urls.py" />
         <option value="$PROJECT_DIR$/templates/comments/zinnia/entry/form.html" />
-        <option value="$PROJECT_DIR$/redflower/settings.py" />
         <option value="$PROJECT_DIR$/templates/zinnia/zinnia/base.html" />
         <option value="$PROJECT_DIR$/templates/zinnia/zinnia/skeleton.html" />
         <option value="$PROJECT_DIR$/templates/zinnia/tags/search_form.html" />
-        <option value="$PROJECT_DIR$/templates/zinnia/base.html" />
-        <option value="$PROJECT_DIR$/templates/zinnia/_entry_detail_base.html" />
         <option value="$PROJECT_DIR$/templates/catalogue/partials/product.html" />
+        <option value="$PROJECT_DIR$/public/static/flowers/css/less-style.css" />
+        <option value="$PROJECT_DIR$/templates/florists/index.html" />
+        <option value="$PROJECT_DIR$/public/static/flowers/css/color_scheme/green.css" />
+        <option value="$PROJECT_DIR$/templates/zinnia/_entry_detail_base.html" />
+        <option value="$PROJECT_DIR$/public/static/flowers/css/layout.css" />
         <option value="$PROJECT_DIR$/templates/layout_right.html" />
+        <option value="$PROJECT_DIR$/public/static/flowers/css/essentials.css" />
+        <option value="$PROJECT_DIR$/templates/zinnia/tags/categories.html" />
+        <option value="$PROJECT_DIR$/templates/zinnia/tags/authors.html" />
+        <option value="$PROJECT_DIR$/templates/zinnia/tags/recent_comments.html" />
+        <option value="$PROJECT_DIR$/templates/zinnia/tags/entries_random.html" />
+        <option value="$PROJECT_DIR$/templates/zinnia/tags/entries_similar.html" />
+        <option value="$PROJECT_DIR$/templates/zinnia/tags/entries_featured.html" />
+        <option value="$PROJECT_DIR$/templates/zinnia/tags/entries_recent.html" />
+        <option value="$PROJECT_DIR$/templates/zinnia/base.html" />
+        <option value="$PROJECT_DIR$/templates/zinnia/entry_detail_base.html" />
+        <option value="$PROJECT_DIR$/templates/zinnia/tags/entries_archives.html" />
+        <option value="$PROJECT_DIR$/templates/zinnia/tag_list.html" />
+        <option value="$PROJECT_DIR$/templates/zinnia/tags/tag_cloud.html" />
+        <option value="$PROJECT_DIR$/redflower/urls.py" />
+        <option value="$PROJECT_DIR$/redflower/settings.py" />
+        <option value="$PROJECT_DIR$/templates/catalogue/browse.html" />
+        <option value="$PROJECT_DIR$/public/static/flowers/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/layout.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/promotions/home.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1280" />
-    <option name="height" value="770" />
+    <option name="x" value="11" />
+    <option name="y" value="2" />
+    <option name="width" value="1267" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -207,6 +200,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -253,7 +247,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="zinnia" />
+              <option name="myItemId" value="promotions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -267,15 +261,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zinnia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tags" />
+              <option name="myItemId" value="redflower" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -289,33 +275,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalogue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalogue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -381,32 +341,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redflower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="C:/Python27/Lib/site-packages/zinnia/templates/zinnia/base.html" />
+    <property name="last_opened_file_path" value="C:/Python27/Lib/site-packages/zinnia/urls/entries.py" />
     <property name="options.lastSelected" value="reference.settings.ide.settings.web.browsers" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -422,11 +367,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\DJango\redflower\redflower\public\static\flowers" />
-      <recent name="C:\DJango\redflower\redflower\templates" />
-      <recent name="C:\DJango\redflower\redflower\templates\zinnia" />
-      <recent name="C:\DJango\redflower\redflower\templates\comments\zinnia\entry" />
-      <recent name="C:\DJango\redflower\redflower" />
+      <recent name="C:\DJango\redflower\redflower\public\static\flowers\js" />
+      <recent name="C:\DJango\redflower\redflower\templates\zinnia\tags" />
+      <recent name="C:\DJango\redflower\redflower\public\static\flowers\img\backgrounds" />
+      <recent name="C:\DJango\redflower\redflower\public\static\flowers\css" />
+      <recent name="C:\DJango\redflower\redflower\public\static\flowers\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\DJango\redflower\redflower\apps\adress" />
@@ -694,17 +639,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="770" extended-state="0" />
+    <frame x="11" y="2" width="1267" height="768" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24050634" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24940048" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3301887" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298193" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27429467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -757,291 +702,273 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/zinnia/base.html">
+    <entry file="file://C:/Python27/Lib/site-packages/zinnia/templates/zinnia/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="15" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1904">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/search_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="65" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout_2_col.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="27" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="1003">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="23" selection-start="628" selection-end="628" vertical-scroll-proportion="0.40865386" vertical-offset="0" max-vertical-offset="624" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/offer/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="835" selection-end="835" vertical-scroll-proportion="0.7943144" vertical-offset="120" max-vertical-offset="952" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="637" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/css/color_scheme/orange.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="33" selection-start="4891" selection-end="4918" vertical-scroll-proportion="0.0" vertical-offset="2116" max-vertical-offset="4216" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/add_to_basket_form_compact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="84" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/img/slider/slide94.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
+        <state line="71" column="10" selection-start="2671" selection-end="2787" vertical-scroll-proportion="0.6527546" vertical-offset="816" max-vertical-offset="1853" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/flowers/css/essentials.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1031" column="0" selection-start="26491" selection-end="26491" vertical-scroll-proportion="-6.9967847" vertical-offset="21879" max-vertical-offset="33949" />
+        <state line="1216" column="16" selection-start="29387" selection-end="29387" vertical-scroll-proportion="0.0" vertical-offset="20336" max-vertical-offset="34034" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/customer/login_registration.html">
+    <entry file="file://$PROJECT_DIR$/public/static/flowers/css/settings.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="96" selection-start="760" selection-end="760" vertical-scroll-proportion="0.5786062" vertical-offset="0" max-vertical-offset="697" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/img/slider/s52.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/promotions/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="0" selection-start="3916" selection-end="3916" vertical-scroll-proportion="-0.0" vertical-offset="1547" max-vertical-offset="4845" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/css/bootstrap_col_15.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="1" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.54662377" vertical-offset="0" max-vertical-offset="13345" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/css/shop.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="5083" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/add_to_basket_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="53" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="578" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/browse.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="64" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="850" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/partials/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="2547" selection-end="2547" vertical-scroll-proportion="0.0" vertical-offset="879" max-vertical-offset="2057" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout_catalogue.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="0" selection-start="118" selection-end="2711" vertical-scroll-proportion="0.0" vertical-offset="1802" max-vertical-offset="3417" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="44" selection-start="7391" selection-end="7391" vertical-scroll-proportion="-37.96154" vertical-offset="2651" max-vertical-offset="4063" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="372" column="52" selection-start="6746" selection-end="6746" vertical-scroll-proportion="0.29516128" vertical-offset="6141" max-vertical-offset="48535" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/css/less-style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="270" column="13" selection-start="4266" selection-end="4266" vertical-scroll-proportion="0.72511846" vertical-offset="4131" max-vertical-offset="9163" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="633" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/403.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="340" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comments/zinnia/entry/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout_l.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.4795222" vertical-offset="281" max-vertical-offset="867" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout_la.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.16040955" vertical-offset="94" max-vertical-offset="1751" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="252" column="32" selection-start="5592" selection-end="10005" vertical-scroll-proportion="0.5993266" vertical-offset="3928" max-vertical-offset="4590" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="3" selection-start="0" selection-end="27" vertical-scroll-proportion="-0.16803955" vertical-offset="102" max-vertical-offset="714" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/zinnia/templates/zinnia/skeleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1632" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/comments/zinnia/entry/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="31926" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/authors.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="643" />
+        <state line="15" column="7" selection-start="702" selection-end="702" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="408" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redflower/settings.py">
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/entries_calendar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="280" column="4" selection-start="6492" selection-end="6492" vertical-scroll-proportion="1.2928803" vertical-offset="3876" max-vertical-offset="9061" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/css/color_scheme/green.css">
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/entries_slider.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="31" selection-start="4500" selection-end="4500" vertical-scroll-proportion="1.4512196" vertical-offset="2601" max-vertical-offset="5559" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.9230769" vertical-offset="102" max-vertical-offset="765" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redflower/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/pagination.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="19" selection-start="1345" selection-end="1360" vertical-scroll-proportion="0.83518225" vertical-offset="0" max-vertical-offset="1632" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/zinnia/entry_search.html">
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/popular_entries.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="622">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/search_form.html">
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/random_entries.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="65" selection-start="532" selection-end="532" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout_2_col.html">
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/recent_comments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="18" selection-start="812" selection-end="1373" vertical-scroll-proportion="-26.807692" vertical-offset="51" max-vertical-offset="1003">
-          <folding />
-        </state>
+        <state line="1" column="38" selection-start="54" selection-end="54" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="408" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/categories.html">
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/entries_draft.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="39" selection-start="409" selection-end="409" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="391">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/img/favicon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/entries_popular.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="604" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/flowers/favicon.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/entries_similar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="77" selection-start="93" selection-end="93" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="306" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/entries_featured.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="78" selection-start="94" selection-end="94" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="306" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/entries_random.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="75" selection-start="91" selection-end="91" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="306" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout_right.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="11" selection-start="493" selection-end="493" vertical-scroll-proportion="-24.192308" vertical-offset="0" max-vertical-offset="1207" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/entries_recent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="71" selection-start="76" selection-end="88" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="306" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/breadcrumbs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="656">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="289" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/zinnia/skeleton.html">
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/tag_cloud.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="32" selection-start="4261" selection-end="4261" vertical-scroll-proportion="-37.96154" vertical-offset="322" max-vertical-offset="2516">
-          <folding />
-        </state>
+        <state line="1" column="64" selection-start="80" selection-end="80" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="340" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/zinnia/category_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="622">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="604" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/zinnia/entry_detail_base.html">
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/entries_archives.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="27.461538" vertical-offset="714" max-vertical-offset="3264">
-          <folding />
-        </state>
+        <state line="1" column="75" selection-start="91" selection-end="91" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="357" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/product.html">
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/entries_archives_link.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="110" selection-start="516" selection-end="516" vertical-scroll-proportion="-9.153846" vertical-offset="153" max-vertical-offset="1581">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="604" />
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/zinnia/templates/zinnia/base.html">
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tag_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="6" selection-start="1875" selection-end="1986" vertical-scroll-proportion="-28.76923" vertical-offset="0" max-vertical-offset="1853">
-          <folding />
-        </state>
+        <state line="10" column="133" selection-start="400" selection-end="400" vertical-scroll-proportion="0.29411766" vertical-offset="0" max-vertical-offset="578" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/zinnia/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="54" selection-start="221" selection-end="267" vertical-scroll-proportion="0.2637931" vertical-offset="0" max-vertical-offset="1955">
+        <state line="62" column="0" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.05676127" vertical-offset="1020" max-vertical-offset="2193" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/tags/categories.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="35" selection-start="0" selection-end="687" vertical-scroll-proportion="0.028380634" vertical-offset="0" max-vertical-offset="599" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/zinnia/urls/entries.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/zinnia/admin/entry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.0783699" vertical-offset="1326" max-vertical-offset="7854" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redflower/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/entry_detail_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="726" selection-end="726" vertical-scroll-proportion="-2.4056761" vertical-offset="1849" max-vertical-offset="2754" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/zinnia/_entry_detail_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="32" selection-start="4656" selection-end="4656" vertical-scroll-proportion="0.4040067" vertical-offset="1951" max-vertical-offset="2550" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/portfolio/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="357" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/portfolio/category_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/portfolio/category_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/shipping/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/shipping/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/shipping/repository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/flowers/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="393" column="1" selection-start="7049" selection-end="7049" vertical-scroll-proportion="0.0" vertical-offset="6120" max-vertical-offset="48739" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redflower/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="26" selection-start="1568" selection-end="1595" vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="9095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redflower/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="38" selection-start="1006" selection-end="1110" vertical-scroll-proportion="0.3158784" vertical-offset="204" max-vertical-offset="1360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.8184766" vertical-offset="1122" max-vertical-offset="1751" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/partials/product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="69" selection-start="1054" selection-end="1063" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1581">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/catalogue/browse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="43" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/partials/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="2057">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="83" selection-start="730" selection-end="833" vertical-scroll-proportion="-9.192307" vertical-offset="339" max-vertical-offset="3179">
+        <state line="33" column="32" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="1217" max-vertical-offset="3111">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout_right.html">
+    <entry file="file://$PROJECT_DIR$/templates/403.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="33" selection-start="811" selection-end="834" vertical-scroll-proportion="1.3846154" vertical-offset="614" max-vertical-offset="1717">
+        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/flowers/js/jquery.themepunch.plugins.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/flowers/img/slider/s22.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/flowers/img/slider/s23.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="171" column="83" selection-start="7756" selection-end="7756" vertical-scroll-proportion="-10.461538" vertical-offset="2635" max-vertical-offset="4845">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/zinnia/_entry_detail_base.html">
+    <entry file="file://$PROJECT_DIR$/public/static/flowers/js/slider_revolution.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="10" selection-start="2599" selection-end="2599" vertical-scroll-proportion="0.26551723" vertical-offset="968" max-vertical-offset="3247">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="103.72" vertical-offset="2593" max-vertical-offset="4012">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/promotions/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="51" selection-start="6301" selection-end="6301" vertical-scroll-proportion="0.9705882" vertical-offset="2482" max-vertical-offset="6851">
           <folding />
         </state>
       </provider>

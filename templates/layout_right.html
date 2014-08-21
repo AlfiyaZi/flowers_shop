@@ -6,78 +6,49 @@
 
 
 
+
+
+
 {% block content_wrapper %}
+
 
  <div class="container">
         <div class="page-inner">
-          <!-- Banner Start -->
 
-			<div class="banner padd">
-				<div class="container">
-					<!-- Image -->
 
-                    <img class="img-responsive" src="{% static "flowers/img/crown-white.png" %}" alt="Цветы большого города" />
-					<!-- Heading -->
-					<h2 class="white">Новости</h2>
-					<ol class="breadcrumb">
-						<li><a href="index.html">Home</a></li>
-						<li class="active">Blog</li>
-					</ol>
-					<div class="clearfix"></div>
-				</div>
-			</div>
+            <div class="container">
+						<!-- Default Heading -->
+						<div class="default-heading">
 
-			<!-- Banner End -->
+
+
+
+						</div>
+
+					</div>
+
+
+
+
 
 
       <div class="row">
         <div id="content" class="hfeed col-xs-12 col-sm-8 col-md-8 col-lg-8">
           {% block breadcrumbs %}
-            <div class="links">
-            <h3>{% trans "Useful links" %}</h3>
-            <ul>
-              <li>
-                <a href="{% url 'zinnia_entry_archive_index' %}" title="{% trans "Weblog index" %}">
-                  {% trans "Weblog index" %}
-                </a>
-              </li>
-              <li>
-                <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}">
-                  {% trans "Sitemap" %}
-                </a>
-              </li>
-            </ul>
-          </div>
+          {% zinnia_breadcrumbs %}
 
             {% endblock %}
 
 
              {% block subnavigation %}
 
-             <div class="links">
-            <h3>{% trans "Useful links" %}</h3>
-            <ul>
-              <li>
-                <a href="{% url 'zinnia_entry_archive_index' %}" title="{% trans "Weblog index" %}">
-                  {% trans "Weblog index" %}
-                </a>
-              </li>
-              <li>
-                <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}">
-                  {% trans "Sitemap" %}
-                </a>
-              </li>
-            </ul>
-          </div>
+
             {% endblock %}
 
           {% block content %}
 
 
-          <div class="search">
-            <h3>{% trans "Search" %}</h3>
-            {% include "zinnia/tags/search_form.html" %}
-          </div>
+
           {% endblock content %}
         </div>
         <div id="sidebar" class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -89,7 +60,6 @@
 
     </div><!-- /page_inner -->
 </div><!-- /container-->
-         <div class="padd">
 
-</div>
 {% endblock %}
+

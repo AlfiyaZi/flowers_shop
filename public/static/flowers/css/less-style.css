@@ -268,7 +268,7 @@ a:hover {
 
 .navbar {
 position: relative;
-min-height: 10px;
+min-height: 15px;
 margin-bottom: 18px;
 border: 1px solid transparent;
 }

@@ -260,57 +260,7 @@ span.js_loader {
 	padding-top:10%;
 }
 
-	/*
-		Custom Arrows
-	*/
-	.tp-bannertimer {
-		background:#777 !important;
-		background:rgba(0,0,0,0.1) !important;
-		height:5px !important;
-	  }
 
-
-	.tparrows:before {
-		font-family: 'revicons';
-		color: #fff;
-		font-style: normal;
-		font-weight: normal;
-		speak: none;
-		display: inline-block;
-		text-decoration: inherit;
-		margin-right: 0;
-		margin-top: 9px;
-		text-align: center;
-		width: 40px;
-		font-size: 20px;
-	}
-	.tparrows {
-
-		cursor: pointer;
-
-		background: rgba(0, 0, 0, 0.5) !important;
-		-webkit-border-radius: 5px;
-		border-radius: 5px;
-		width: 40px !important;
-		height: 40px !important;
-
-	}
-	.tparrows:hover {
-		color: #fff;
-	}
-	.tp-leftarrow:before {
-		content: '\e824';
-	}
-	.tp-rightarrow:before {
-		content: '\e825';
-	}
-	.tparrows.tp-rightarrow:before {
-		margin-left: 1px;
-	}
-	.tparrows:hover {
-		background: rgba(0, 0, 0, 1) !important;
-	}
-	/* end custom arrows */
 
 
 	/* box-icon line separator */

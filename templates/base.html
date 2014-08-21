@@ -83,6 +83,10 @@
            	    <!-- Custom Less -->
 
                  <!-- Custom CSS -->
+
+
+
+
            	    <link rel="stylesheet"    href="{% static "flowers/css/style.css" %}"/>
 
               <link rel="stylesheet"    href="{% static "flowers/css/shop.css" %}"/>
@@ -150,6 +154,14 @@
 
 
          <script src="{% static "flowers/js/animate.js" %}" type="text/javascript" charset="utf-8"></script>
+         <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 		<!-- Bootstrap JS -->
 
@@ -157,6 +169,7 @@
 		<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
 		<script type="text/javascript" src="{% static "flowers/js/jquery.themepunch.plugins.min.js"%}" ></script>
 		<script type="text/javascript" src="{% static "flowers/js/jquery.themepunch.revolution.min.js"%}"></script>
+        <script type="text/javascript" src="{% static "flowers/js/slider_revolution.js"%}"></script>
 		<!-- FLEX SLIDER SCRIPTS  -->
 		<script defer src="{% static "flowers/js/jquery.flexslider-min.js" %}" ></script>
 		<!-- Pretty Photo JS -->
@@ -176,7 +189,9 @@
 					   jQuery('.tp-banner').revolution(
 						{
 							delay:9000,
-							startheight:500,
+							startwidth:1170,
+				startheight:500,
+
 
 							hideThumbs:10,
 

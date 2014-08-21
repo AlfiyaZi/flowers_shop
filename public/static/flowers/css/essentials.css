@@ -786,13 +786,10 @@ span.progress-bar-tooltip:after {
  **************************************************************** **/
 .btn, .btn:hover {
 	border: 0;
-	padding: 8px 18px;
-	border:rgba(255,255,255,0) 2px solid;
 
-	-webkit-transition: all 0.2s;
-	   -moz-transition: all 0.2s;
-		 -o-transition: all 0.2s;
-			transition: all 0.2s;
+	border:rgba(255,255,255,0) 1px solid;
+
+
 }
 
 .btn.notransition {
@@ -1217,6 +1214,11 @@ div.tabs ul.nav-tabs a i.fa {
 			border-radius: 6px;
 }
 
+.panel-default .ul {
+   list-style:none;
+}
+
+
 .panel-heading .fa {
     display: inline-block;
     font-size: 14px;
@@ -1230,6 +1232,9 @@ div.tabs ul.nav-tabs a i.fa {
     top: -1px;
     width: 25px;
 }
+
+
+
 
 .panel-title a {
 	text-decoration:none;
