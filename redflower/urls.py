@@ -1,3 +1,4 @@
+
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from oscar.app import application
@@ -6,6 +7,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.core.urlresolvers import reverse_lazy
 from django.contrib.flatpages import views
+
+
+
+
+from django.conf.urls.i18n import i18n_patterns
+
 
 
 
@@ -34,12 +41,14 @@ urlpatterns = [
     url(r'^catalogue/', include(catalogue_app.urls)),
 
     url(r'^comments/', include('django.contrib.comments.urls')),
-    url(r'^blog/', include('zinnia.urls')),
+   url(r'^blog/', include('zinnia.urls')),
 
     url(r'^dashboard/dashboard/catalogue/$',include(dashboard_app.urls)),
     url(r'^about/', include('about.urls')),
 
     url(r'^events/', include('events.urls')),
+
+
 
 
 

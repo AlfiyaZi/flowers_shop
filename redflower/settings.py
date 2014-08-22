@@ -11,6 +11,8 @@ from oscar import OSCAR_MAIN_TEMPLATE_DIR
 from django.utils.translation import ugettext_lazy as _
 from django.core.urlresolvers import reverse_lazy
 
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -22,7 +24,7 @@ PROJECT_PATH = os.path.abspath(PROJECT_PATH)
 
 TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 STATIC_PATH = os.path.join(PROJECT_PATH, 'static')
-#DATABASE_PATH = os.path.join(PROJECT_PATH, 'shop.db')
+
 
 
 
@@ -47,11 +49,9 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = ['.next-lab.ru', '.next-lab.ru.', ]
 
 
-# Application definition
-
-
 
 INSTALLED_APPS = [
+
     'django.contrib.auth',
     'django.contrib.admin',
     'django.contrib.contenttypes',
@@ -86,7 +86,7 @@ INSTALLED_APPS = [
 
     'mptt',  # utilities for implementing a modified pre-order traversal tree
     'menus',  # helper for model independent hierarchical website navigation
-    'south',  # intelligent schema and data migrations
+
     'sekizai',  # for javascript and css management
     'djangocms_admin_style',  # for the admin skin. You **must** add 'djangocms_admin_style' in the list before 'django.contrib.admin'.
     'adminsortable',
@@ -94,9 +94,13 @@ INSTALLED_APPS = [
     'portfolio',
     'robokassa',
     'pay',
-     'zinnia',
+    'zinnia',
     'tagging',
+   'feincms',
 
+    'feincms.module.page',
+    'feincms.module.medialibrary',
+    'news',
 
 
 
@@ -106,9 +110,15 @@ INSTALLED_APPS = [
 from oscar import get_core_apps
 INSTALLED_APPS = INSTALLED_APPS + get_core_apps(
     ['apps.shipping'])
+
+
+
+
+
 SITE_ID = 1
 
 MIDDLEWARE_CLASSES = (
+
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -119,13 +129,14 @@ MIDDLEWARE_CLASSES = (
     'oscar.apps.basket.middleware.BasketMiddleware',
     'django.middleware.transaction.TransactionMiddleware',  
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-    'cms.middleware.page.CurrentPageMiddleware',
-    'cms.middleware.user.CurrentUserMiddleware',
-    'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware',
+
+
+)
+
+
 
     
-)
+
 
 RQ_QUEUES = {
     'default': {
@@ -230,7 +241,14 @@ APPEND_SLASH = True
 
 
 
+
+
+
+
+
+
 TEMPLATE_CONTEXT_PROCESSORS = (
+
     "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.request",
     "django.core.context_processors.debug",
@@ -244,8 +262,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'oscar.apps.checkout.context_processors.checkout',
     'oscar.apps.customer.notifications.context_processors.notifications',
     'oscar.core.context_processors.metadata',
-    'django.contrib.auth.context_processors.auth',
-    'cms.context_processors.cms_settings',
     'sekizai.context_processors.sekizai',
 
 
@@ -256,7 +272,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 AUTHENTICATION_BACKENDS = (
     'oscar.apps.customer.auth_backends.Emailbackend',
+
     'django.contrib.auth.backends.ModelBackend',
+
 )
 
 
@@ -266,11 +284,9 @@ TEMPLATE_DIRS = (
    # OSCAR_MAIN_TEMPLATE_DIR,
 )
 
-CMS_TEMPLATES = (
-    ('template_1.html', 'Template One'),
-    ('template_2.html', 'Template Two'),
-)
 
+# The numeric mode to set newly-uploaded files to. The value should be
+# a mode you'd pass directly to os.chmod.
 
 
 # List of callables that know how to import templates from various sources.
@@ -518,11 +534,6 @@ THUMBNAIL_KVSTORE = 'oscar.sorl_kvstore.ConcurrentKVStore'
 # in tests/config.py
 
 # Search facets
-
-
-
-
-
 
 
 DISPLAY_VERSION = False

@@ -5,84 +5,82 @@
 
 {% block layout %}
 
-  <div class="wrapper">
+<div class="wrapper">
 
 			<!-- Header Start -->
 
+		<!-- Header Start -->
+
 			<div class="header">
 				<div class="container">
-					<!-- Header top area content -->
-					<div class="header-top">
+					  <!-- Header top area content -->
+					  <div class="header-top">
 
-                    <div class="row">
+                            <div class="row">
 
-                      <div class="col-md-4 col-sm-4"> <div class="header-contact">
-									<!-- Contact number -->
-
-
-								<!--	<span> <i class="fa fa-phone red"></i>+7(342)212-75-99</span>-->
-			 					 </div>
+                                         <div class="col-md-4 col-sm-4">
+                                             <div class="header-contact"></div>
 
 
+					                     </div>
+
+                                         <div class="col-md-4 col-sm-4">
+                                       	        <!-- Link -->
+
+                                         </div>
+
+                                         <div class="col-md-4 col-sm-4">
+                                                 {% include "partials/nav_accounts.html" %}
+                                                       <div class="clearfix"></div>
+
+                                                            {% include "partials/search.html" %}
 
 
-					   </div>
-                       <div class="col-md-4 col-sm-4">
-                  	<!-- Link -->
-							<a href="/">
-								<!-- Logo area -->
-								
-							</a>
-                        </div>
-                     <div class="col-md-4 col-sm-4">
-                          {% include "partials/nav_accounts.html" %}
-                              <div class="clearfix"></div>
 
-               {% include "partials/search.html" %}
-
+					                      </div>
+                             </div>
+                       </div>
 
 
 
 
-						</div>
-                    </div>
-                    </div>
 
 
-   <div class="row">
-
-       <div class="col-md-12 col-sm-12">
-							  <nav class="navbar navbar-default " role="navigation">
-								<div class="container-fluid">
-									<!-- Brand and toggle get grouped for better mobile display -->
-									<div class="navbar-header">
-										<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-											<span class="sr-only">Toggle navigation</span>
-											<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-										</button>
-									</div>
-
-									<!-- Collect the nav links, forms, and other content for toggling -->
-									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-										<ul class="nav navbar-nav">
-
-										<li><a href="items.html"> Портфолио</a></li>
-										<li> <a href="gallery.html">Школа</a></li>
-											<li> <a href="gallery.html">Мероприятия</a></li>
 
 
-										</ul>
+						            	  <nav class="navbar navbar-default " role="navigation">
+						                		<div class="container-fluid">
+							                    		<!-- Brand and toggle get grouped for better mobile display -->
+								            	<div class="navbar-header">
+									                        	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+										    	                <span class="sr-only">Toggle navigation</span>
+											                     <span class="icon-bar"></span>
+											                     <span class="icon-bar"></span>
+											                    <span class="icon-bar"></span>
+										                        </button>
+									            </div>
+
+									            <!-- Collect the nav links, forms, and other content for toggling -->
+									   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
 
 
 										<ul class="nav navbar-nav navbar-right">
 
 
-										<li> <a href="/catalogue/">Каталог</a></li>
-											<li> <a href="/blog/">Новости</a></li>
+                                            	<li> <a href="/catalogue/">Каталог</a></li>
 
-											<li><a href="/florists/">Флористы</a></li>
+
+                                            <li> <a href="items.html">Портфолио</a></li>
+                                            <li> <a href="/blog/">Новости</a></li>
+										<li> <a href="gallery.html">Школа </a></li>
+											<li> <a href="gallery.html">Мероприятия</a></li>
+
+
+
+
+											<li><a href="/florists/"> Флористы</a></li>
+
 
 
 
@@ -98,15 +96,16 @@
 								</div><!-- /.container-fluid -->
 							</nav>
 
-						</div>
 
 
-					</div> <!-- end row-->
+
+
 				</div> <!-- / .container -->
 			</div>
 			<!-- Header End -->
 
 {% block content_wrapper %}
+
 
 
 

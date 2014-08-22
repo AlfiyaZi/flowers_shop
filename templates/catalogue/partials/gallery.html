@@ -23,7 +23,7 @@
             <ol class="carousel-indicators thumbnail">
                 {% for image in all_images %}
                     <li data-target="#product-gallery" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}">
-                        {% thumbnail image.original "65x55" crop="center" as thumb %}
+                        {% thumbnail image.original "100x100" crop="center" as thumb %}
                         <img src="{{ thumb.url }}" alt="{{ product.get_title }}" />
                         {% endthumbnail %}
                     </li>
