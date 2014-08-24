@@ -257,7 +257,7 @@ font-size: 14px;
 	padding-bottom: 15px;
 	/*border-bottom: 1px solid #f4f4f4;*/
     background-color:#fff;
-  /*background:url("../img/backgrounds/h12.jpg") ;*/
+
     background-position: bottom;
 
 
@@ -340,7 +340,7 @@ font-size: 14px;
 
 .logo img {
 	display: inline-block; 
-	max-width: 72%;
+	max-width: 100%;
     margin-left:58px;
     
     
