@@ -138,6 +138,40 @@
 		color:#2d2f3c;
 	}
 
+
+
+
+.header .navbar-default .navbar-nav li a:hover {
+  background: transparent !important;
+  color: #A0CE4D;
+  border-color:#EB2029;
+}
+.header .navbar-default .navbar-nav li.active a {
+  background: transparent !important;
+  color: #A0CE4D;
+
+}
+.header .navbar-default .navbar-nav li.active a:hover {
+  background-color: #EB2029;
+}
+
+
+
+
+.barbar {
+
+background-color:rgba(236, 105, 105, 0.94);
+padding:5px;
+}
+
+
+
+
+
+
+
+
+
 /*************/
 /* Nav Pills */
 /*************/

@@ -16,7 +16,13 @@
 
                     <div class="row">
 
-                      <div class="col-md-4 col-sm-4"> <div class="header-contact">
+                      <div class="col-md-4 col-sm-4">
+                             	<!-- Link -->
+
+
+
+
+                          <div class="header-contact">
 									<!-- Contact number -->
 
 
@@ -24,29 +30,16 @@
 			 					 </div>
 
 
-
-
-					   </div>
+					       </div>
                        <div class="col-md-4 col-sm-4">
                   	<!-- Link -->
-							<a href="/">
-								<!-- Logo area -->
-								<div class="logo">
-									<img class="img-responsive" src="{% static "flowers/img/logo633.png" %}" alt="Цветы большого города" />
 
-
-									<!-- Paragraph -->
-
-								</div>
-							</a>
                         </div>
                      <div class="col-md-4 col-sm-4">
                           {% include "partials/nav_accounts.html" %}
-                              <div class="clearfix"></div>
+                         <div class="clearfix"></div>
 
                {% include "partials/search.html" %}
-
-
 
 
 
@@ -55,9 +48,28 @@
                     </div>
 
 
-   <div class="row">
 
-       <div class="col-md-12 col-sm-12">
+
+
+
+
+
+       <div class="row">
+						<div class="col-md-4 col-sm-5">
+							<!-- Link -->
+							<a href="index.html">
+								<!-- Logo area -->
+								<div class="logo">
+									<img class="img-responsive" src="{% static "flowers/img/fl.png" %}">
+
+								</div>
+							</a>
+						</div>
+						<div class="col-md-8 col-sm-7">
+
+
+
+
 							  <nav class="navbar navbar-default " role="navigation">
 								<div class="container-fluid">
 									<!-- Brand and toggle get grouped for better mobile display -->
@@ -72,22 +84,24 @@
 
 									<!-- Collect the nav links, forms, and other content for toggling -->
 									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-										<ul class="nav navbar-nav">
 
-										<li> <a href="items.html">Портфолио</a></li>
+
+
+										<ul class="nav navbar-nav navbar-right">
+                                             <li> <a href="/"><i class="fa fa-home fa-lg"></i></a></li>
+                                            <li> <a href="/catalogue/">Каталог</a></li>
+
+                                         <li> <a href="/portfolio/">Услуги</a></li>
+                                            	<li> <a href="/blog/">Новости</a></li>
 										<li> <a href="gallery.html">Школа </a></li>
 											<li> <a href="gallery.html">Мероприятия</a></li>
 
 
-										</ul>
 
 
-										<ul class="nav navbar-nav navbar-right">
+											<li><a href="/florists/"> Флористы</a></li>
 
-										<li> <a href="/catalogue/">Каталог</a></li>
-											<li> <a href="/blog/">Новости</a></li>
 
-											<li><a href="/florists/">Флористы</a></li>
 
 
 
@@ -106,16 +120,17 @@
 
 
 					</div> <!-- end row-->
+
+
+
+
 				</div> <!-- / .container -->
 			</div>
 			<!-- Header End -->
 
 {% block content_wrapper %}
 
-
-
-
- <!-- Inner Content -->
+<!-- Inner Content -->
 	<div class="inner-page padd">
 	<!-- Shopping Start -->
 
@@ -123,7 +138,8 @@
 		<div class="container">
 
 
-			<div class="row">
+			<div class="row  padd">
+
 
 
 
@@ -136,8 +152,7 @@
        {% block header %}
 
 
-                        {% block headertext %}{% endblock %}
-
+                       {% block headertext %}{% endblock %}
 
                 {% endblock %}
 
@@ -160,24 +175,17 @@
 
 
 
+      <!--end row-->
 
+                   </div>
 
 </div>
-
-
-
-      <!--end row-->
-                </div>
-
-                </div>
-
 				</div><!--end  container-->
-
+              </div>
 
 			</div><!-- /Inner page pad -->
 
 
-        </div>
  {% endblock %}
 
 <!-- Footer Start -->

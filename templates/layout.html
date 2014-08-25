@@ -48,11 +48,28 @@
                     </div>
 
 
-   <div class="row">
 
 
 
-       <div class="col-sm-12    col-md-6 col-md-offset-6">
+
+
+
+       <div class="row">
+						<div class="col-md-4 col-sm-5">
+							<!-- Link -->
+							<a href="index.html">
+								<!-- Logo area -->
+								<div class="logo">
+									<img class="img-responsive" src="{% static "flowers/img/fl.png" %}">
+
+								</div>
+							</a>
+						</div>
+						<div class="col-md-8 col-sm-7">
+
+
+
+
 							  <nav class="navbar navbar-default " role="navigation">
 								<div class="container-fluid">
 									<!-- Brand and toggle get grouped for better mobile display -->
@@ -71,13 +88,16 @@
 
 
 										<ul class="nav navbar-nav navbar-right">
+                                             <li> <a href="/"><i class="fa fa-home fa-lg"></i></a></li>
+                                            <li> <a href="/catalogue/">Каталог</a></li>
 
-                                         <li> <a href="items.html">Портфолио</a></li>
+                                         <li> <a href="/portfolio/">Услуги</a></li>
+                                            	<li> <a href="/blog/">Новости</a></li>
 										<li> <a href="gallery.html">Школа </a></li>
 											<li> <a href="gallery.html">Мероприятия</a></li>
 
-										<li> <a href="/catalogue/">Каталог</a></li>
-										<li> <a href="/blog/">Новости</a></li>
+
+
 
 											<li><a href="/florists/"> Флористы</a></li>
 
@@ -109,16 +129,20 @@
 			<!-- Header End -->
 
 {% block content_wrapper %}
+	<div class="barbar">
 
 
- {% include "partials/nav_primary.html" %}
 
- <!-- Inner Content -->
+
+   {% include "partials/nav_primary_pills.html" %}
+                </div>
+<!-- Inner Content -->
 	<div class="inner-page padd">
 	<!-- Shopping Start -->
 
 	<div class="shopping">
 		<div class="container">
+
 
 
 <!-- end navigation -->
