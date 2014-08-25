@@ -1394,7 +1394,7 @@ div.ppt { display:none !important; }
  * Shopping, On-line Order Page
  */
  
-.inner-page .shopping {  margin-bottom: 20px; }
+.inner-page .shopping {  margin-bottom: 1px;  background-color:rgba(213, 87, 87, 0.39);}
 .inner-page .shopping .shopping-item { 
 	position: relative;
 	max-width: 400px;

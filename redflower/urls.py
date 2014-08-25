@@ -49,12 +49,6 @@ urlpatterns = [
     url(r'^events/', include('events.urls')),
 
 
-
-
-
-
-
-
     url(r'^portfolio/', include('portfolio.urls')),
      url(r'^contact/', include('contact.urls')),
     url(r'^robokassa/', include('robokassa.urls')),
