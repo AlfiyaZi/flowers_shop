@@ -10,6 +10,7 @@
      {% if tree_categories %}
         {% for tree_category, info in tree_categories %}
 
+
           <li><a tabindex="-1" href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a></li>
 
                                 {% endfor %}

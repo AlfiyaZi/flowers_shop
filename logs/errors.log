@@ -53737,3 +53737,830 @@ Traceback (most recent call last):
   File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 163, in disable_instrumentation
     BlockNode.render = BlockNode.render.original
 AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-08-27 19:06:08,835 base Internal Server Error: /basket/add/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\edit.py", line 171, in post
+    return self.form_valid(form)
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\views.py", line 320, in form_valid
+    form.cleaned_options())
+  File "C:\Python27\lib\site-packages\oscar\apps\basket\abstract_models.py", line 169, in add_product
+    self.save()
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 1514, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 903, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: database is locked
+ERROR 2014-08-27 20:16:23,736 base Internal Server Error: /catalogue/vpyp_2/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 186, in do_block
+    raise TemplateSyntaxError("'%s' tag with name '%s' appears more than once" % (bits[0], block_name))
+TemplateSyntaxError: 'block' tag with name 'product_description' appears more than once
+ERROR 2014-08-27 20:35:51,549 base Internal Server Error: /comments/post/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\utils\decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\views\comments.py", line 124, in post_comment
+    comment.save()
+  File "C:\Python27\lib\site-packages\django\contrib\comments\models.py", line 88, in save
+    super(Comment, self).save(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 1514, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 903, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 104, in _record
+    return method(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: database is locked
+ERROR 2014-08-27 20:35:57,838 base Internal Server Error: /comments/post/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\utils\decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\views\comments.py", line 128, in post_comment
+    request=request
+  File "C:\Python27\lib\site-packages\django\dispatch\dispatcher.py", line 185, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\moderation.py", line 352, in post_save_moderation
+    self._registry[model].email(comment, comment.content_object, request)
+  File "C:\Python27\lib\site-packages\zinnia\moderator.py", line 49, in email
+    request)
+  File "C:\Python27\lib\site-packages\zinnia\moderator.py", line 91, in do_email_authors
+    recipient_list, fail_silently=not settings.DEBUG)
+  File "C:\Python27\lib\site-packages\django\core\mail\__init__.py", line 50, in send_mail
+    connection=connection).send()
+  File "C:\Python27\lib\site-packages\django\core\mail\message.py", line 274, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Python27\lib\site-packages\django\core\mail\backends\smtp.py", line 87, in send_messages
+    new_conn_created = self.open()
+  File "C:\Python27\lib\site-packages\django\core\mail\backends\smtp.py", line 48, in open
+    local_hostname=DNS_NAME.get_fqdn())
+  File "C:\Python27\Lib\smtplib.py", line 249, in __init__
+    (code, msg) = self.connect(host, port)
+  File "C:\Python27\Lib\smtplib.py", line 309, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "C:\Python27\Lib\smtplib.py", line 284, in _get_socket
+    return socket.create_connection((port, host), timeout)
+  File "C:\Python27\Lib\socket.py", line 571, in create_connection
+    raise err
+error: [Errno 10061] Подключение не установлено,
+ERROR 2014-08-27 22:03:37,490 base Internal Server Error: /catalogue/vpyp_2/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 186, in do_block
+    raise TemplateSyntaxError("'%s' tag with name '%s' appears more than once" % (bits[0], block_name))
+TemplateSyntaxError: 'block' tag with name 'product_basket_form' appears more than once
+ERROR 2014-08-28 01:17:27,875 base Internal Server Error: /dashboard/catalogue/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 196, in render
+    nodelist.append(node.render(context))
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 298, in render
+    match = condition.eval(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 867, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 585, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 735, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 789, in _resolve_lookup
+    current = current()
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 514, in primary_image
+    'original': self.get_missing_image(),
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 493, in get_missing_image
+    return MissingProductImage()
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 1059, in __init__
+    self.symlink_missing_image(media_file_path)
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 1065, in symlink_missing_image
+    os.symlink(static_file_path, media_file_path)
+AttributeError: 'module' object has no attribute 'symlink'
+ERROR 2014-08-28 01:17:37,530 base Internal Server Error: /catalogue/buket_4/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 506, in render
+    output = self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 504, in render
+    six.iteritems(self.extra_context)])
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 585, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 735, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 789, in _resolve_lookup
+    current = current()
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 514, in primary_image
+    'original': self.get_missing_image(),
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 493, in get_missing_image
+    return MissingProductImage()
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 1059, in __init__
+    self.symlink_missing_image(media_file_path)
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 1065, in symlink_missing_image
+    os.symlink(static_file_path, media_file_path)
+AttributeError: 'module' object has no attribute 'symlink'
+ERROR 2014-08-28 01:17:51,052 base Internal Server Error: /catalogue/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 137, in get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 196, in render
+    nodelist.append(node.render(context))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 1125, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "C:\Python27\lib\site-packages\oscar\templatetags\product_tags.py", line 29, in render_product
+    return template_.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\test\utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 53, in render
+    result = self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 110, in timing_hook
+    result = func(self, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 53, in render
+    result = self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 78, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 504, in render
+    six.iteritems(self.extra_context)])
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 585, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 735, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 789, in _resolve_lookup
+    current = current()
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 514, in primary_image
+    'original': self.get_missing_image(),
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 493, in get_missing_image
+    return MissingProductImage()
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 1059, in __init__
+    self.symlink_missing_image(media_file_path)
+  File "C:\Python27\lib\site-packages\oscar\apps\catalogue\abstract_models.py", line 1065, in symlink_missing_image
+    os.symlink(static_file_path, media_file_path)
+AttributeError: 'module' object has no attribute 'symlink'
+ERROR 2014-08-29 06:08:45,569 base Internal Server Error: /media/cache/88/e4/88e48edf15c85681042e2b7d2ef54e9d.jpg
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 163, in disable_instrumentation
+    BlockNode.render = BlockNode.render.original
+AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-08-29 12:23:00,548 base Internal Server Error: /comments/post/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\utils\decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\views\comments.py", line 128, in post_comment
+    request=request
+  File "C:\Python27\lib\site-packages\django\dispatch\dispatcher.py", line 185, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "C:\Python27\lib\site-packages\django\contrib\comments\moderation.py", line 352, in post_save_moderation
+    self._registry[model].email(comment, comment.content_object, request)
+  File "C:\Python27\lib\site-packages\zinnia\moderator.py", line 49, in email
+    request)
+  File "C:\Python27\lib\site-packages\zinnia\moderator.py", line 91, in do_email_authors
+    recipient_list, fail_silently=not settings.DEBUG)
+  File "C:\Python27\lib\site-packages\django\core\mail\__init__.py", line 50, in send_mail
+    connection=connection).send()
+  File "C:\Python27\lib\site-packages\django\core\mail\message.py", line 274, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Python27\lib\site-packages\django\core\mail\backends\smtp.py", line 87, in send_messages
+    new_conn_created = self.open()
+  File "C:\Python27\lib\site-packages\django\core\mail\backends\smtp.py", line 48, in open
+    local_hostname=DNS_NAME.get_fqdn())
+  File "C:\Python27\Lib\smtplib.py", line 249, in __init__
+    (code, msg) = self.connect(host, port)
+  File "C:\Python27\Lib\smtplib.py", line 309, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "C:\Python27\Lib\smtplib.py", line 284, in _get_socket
+    return socket.create_connection((port, host), timeout)
+  File "C:\Python27\Lib\socket.py", line 571, in create_connection
+    raise err
+error: [Errno 10061] Подключение не установлено,
+ERROR 2014-08-29 12:23:20,898 base Internal Server Error: /media/cache/88/e4/88e48edf15c85681042e2b7d2ef54e9d.jpg
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 163, in disable_instrumentation
+    BlockNode.render = BlockNode.render.original
+AttributeError: 'function' object has no attribute 'original'
+ERROR 2014-08-31 02:40:55,114 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 99, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 61, in <module>
+    url(r'^reserve/', views.flatpage,{'url': '/reserve/'}, name='reserve' ),
+AttributeError: 'module' object has no attribute 'flatpage'
+ERROR 2014-08-31 02:40:55,180 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 99, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 61, in <module>
+    url(r'^reserve/', views.flatpage,{'url': '/reserve/'}, name='reserve' ),
+AttributeError: 'module' object has no attribute 'flatpage'
+ERROR 2014-08-31 02:40:57,825 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 61, in <module>
+    url(r'^reserve/', views.flatpage,{'url': '/reserve/'}, name='reserve' ),
+AttributeError: 'module' object has no attribute 'flatpage'
+ERROR 2014-08-31 02:40:57,869 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 61, in <module>
+    url(r'^reserve/', views.flatpage,{'url': '/reserve/'}, name='reserve' ),
+AttributeError: 'module' object has no attribute 'flatpage'
+ERROR 2014-08-31 02:41:32,773 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 99, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 61, in <module>
+    url(r'^reserve/', views.flatpage,{'url': '/reserve/'}, name='reserve' ),
+AttributeError: 'module' object has no attribute 'flatpage'
+ERROR 2014-08-31 02:41:33,858 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 61, in <module>
+    url(r'^reserve/', views.flatpage,{'url': '/reserve/'}, name='reserve' ),
+AttributeError: 'module' object has no attribute 'flatpage'
+ERROR 2014-08-31 02:43:16,105 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 99, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 67, in <module>
+    url(r'^(?P<url>.*/)$', views.flatpage),
+AttributeError: 'module' object has no attribute 'flatpage'
+ERROR 2014-08-31 02:43:16,799 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 67, in <module>
+    url(r'^(?P<url>.*/)$', views.flatpage),
+AttributeError: 'module' object has no attribute 'flatpage'
+ERROR 2014-08-31 02:43:19,644 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 99, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 67, in <module>
+    url(r'^(?P<url>.*/)$', views.flatpage),
+AttributeError: 'module' object has no attribute 'flatpage'
+ERROR 2014-08-31 02:43:20,436 base Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\panels\request.py", line 33, in process_response
+    match = resolve(request.path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "c:\DJango\redflower\redflower\redflower\urls.py", line 67, in <module>
+    url(r'^(?P<url>.*/)$', views.flatpage),
+AttributeError: 'module' object has no attribute 'flatpage'
+ERROR 2014-08-31 11:44:28,730 base Internal Server Error: /checkout/preview/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\db\transaction.py", line 371, in inner
+    return func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\session.py", line 45, in dispatch
+    request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\generic\base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 430, in post
+    return self.handle_place_order_submission(request)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 446, in handle_place_order_submission
+    return self.submit(**self.build_submission())
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 616, in submit
+    order_total, **order_kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\mixins.py", line 113, in handle_order_placement
+    return self.handle_successful_order(order)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\mixins.py", line 235, in handle_successful_order
+    self.send_confirmation_message(order)
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\mixins.py", line 295, in send_confirmation_message
+    event_type, **kwargs)
+  File "C:\Python27\lib\site-packages\oscar\apps\customer\utils.py", line 43, in dispatch_order_messages
+    self.dispatch_user_messages(order.user, messages)
+  File "C:\Python27\lib\site-packages\oscar\apps\customer\utils.py", line 55, in dispatch_user_messages
+    self.send_user_email_messages(user, messages)
+  File "C:\Python27\lib\site-packages\oscar\apps\customer\utils.py", line 71, in send_user_email_messages
+    email = self.send_email_messages(user.email, messages)
+  File "C:\Python27\lib\site-packages\oscar\apps\customer\utils.py", line 102, in send_email_messages
+    email.send()
+  File "C:\Python27\lib\site-packages\django\core\mail\message.py", line 274, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Python27\lib\site-packages\django\core\mail\backends\smtp.py", line 87, in send_messages
+    new_conn_created = self.open()
+  File "C:\Python27\lib\site-packages\django\core\mail\backends\smtp.py", line 48, in open
+    local_hostname=DNS_NAME.get_fqdn())
+  File "C:\Python27\Lib\smtplib.py", line 249, in __init__
+    (code, msg) = self.connect(host, port)
+  File "C:\Python27\Lib\smtplib.py", line 309, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "C:\Python27\Lib\smtplib.py", line 284, in _get_socket
+    return socket.create_connection((port, host), timeout)
+  File "C:\Python27\Lib\socket.py", line 571, in create_connection
+    raise err
+error: [Errno 10061] Подключение не установлено,
+ERROR 2014-08-31 11:55:52,421 base Internal Server Error: /media/cache/69/d1/69d17431beda6350d0de469f78f14c73.jpg
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "C:\Python27\lib\site-packages\debug_toolbar\middleware.py", line 93, in process_response
+    panel.disable_instrumentation()
+  File "C:\Python27\lib\site-packages\template_timings_panel\panels\TemplateTimings.py", line 162, in disable_instrumentation
+    Template.render = Template.render.original
+AttributeError: 'function' object has no attribute 'original'

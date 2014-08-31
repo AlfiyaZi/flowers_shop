@@ -21,7 +21,7 @@
 										<span class="overlay color2"></span>
 
 										<span class="inner">
-                                          <p class="hidden-sm hidden-xs">{{product.description|striptags}}</p>
+                                         <!-- <p class="hidden-sm hidden-xs">{{product.description|striptags}}</p>-->
 
 
 
@@ -36,7 +36,7 @@
 
                                        {% with image=product.primary_image %}
                                 {% thumbnail image.original  "480x480" crop="center" as thumb %}
-                                    <a href="{{ product.get_absolute_url }}"><img   src="{{ thumb.url }}"  width="{{ im.width }}" height="{{ im.height }}" alt="{{ product.get_title }}"  ></a>
+                                    <a href="{{ product.get_absolute_url }}"><img   src="{{ thumb.url }}" class="img-thumbnail" width="{{ im.width }}" height="{{ im.height }}" alt="{{ product.get_title }}"  ></a>
                                     {% endthumbnail %}
                                 {% endwith %}
 

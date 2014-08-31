@@ -275,11 +275,33 @@ border: 1px solid transparent;
 }
 
 
+
+/***************/
 .navbar-default  {
-background-color:#fff;
+background-color: #FCDADA;
 
 }
 /***************/
+
+.thumbnail {
+display: block;
+padding: 4px;
+margin-bottom: 18px;
+line-height: 1.42857143;
+background-color: transparent;
+border: 0px solid #ddd;
+
+
+-webkit-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;
+}
+/******************/
+
+.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+ display: inline;
+max-width: 100%;
+height: auto;
+}
 
 
 

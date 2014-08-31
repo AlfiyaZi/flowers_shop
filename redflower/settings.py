@@ -516,7 +516,14 @@ OSCAR_FROM_EMAIL = 'florgreen@bk.ru'
 
 
 # Address settings
-OSCAR_REQUIRED_ADDRESS_FIELDS = ('first_name', 'last_name')
+EXCLUDED_ADDRESS_FIELDS = ('title', 'first_name', 'last_name', 'state', 'line2', 'line3','country')
+ADDRESS_FIELDS_ORDERING = ('full_name',  'line1', 'postcode', 'line4','country', )
+SHIPPING_ADDRESS_FIELDS_ORDERING = ( 'phone_number', 'line1', 'postcode', 'line4', 'notes',)
+POSTALCODE_MAX_LENGTH = 5
+POSTALCODE_MIN_LENGTH = 3
+
+
+
 
 
 # Sorl

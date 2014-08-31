@@ -7,7 +7,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.core.urlresolvers import reverse_lazy
 from django.contrib.flatpages import views
-
+from portfolio import urls, views, models
 
 
 
@@ -58,14 +58,11 @@ urlpatterns = [
 
     url(r'^school/', include('school.urls')),
      url(r'^pages/', include('pages.urls')),
-    url(r'^reserve/', views.flatpage,{'url': '/reserve/'}, name='reserve' ),
+
 
     url(r'^admin/', include(admin.site.urls)),
 ]
 
-urlpatterns += [
-    url(r'^(?P<url>.*/)$', views.flatpage),
-]
 
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

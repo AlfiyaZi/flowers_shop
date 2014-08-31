@@ -77,7 +77,7 @@
                     {% endblock %}
                 </ul>
             {% endblock %}
-            {% include "partials/search.html" %}
+
     </div><!-- /.navbar-collapse -->
 
 
@@ -88,22 +88,4 @@
 
 </nav>
 
-<form class="content container " >
-   {% category_tree as tree_categories %}
-    {% if tree_categories %}
 
-                {% for tree_category, info in tree_categories %}
-
-
-                 <input class="nav-menu" id="{{ tree_category.name }}" type="radio" name="filter" checked="checked"/>
-                        <label for="{{ tree_category.name }}">{{ tree_category.name }}</label>
-
-
-            {% endfor %}
-
-
-    {% endif %}
-
-
-
-</form>

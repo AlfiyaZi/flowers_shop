@@ -1,1 +1,1 @@
-from oscar.apps.address.models import *
+from oscar.apps.order.models import *

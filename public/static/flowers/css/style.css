@@ -47,6 +47,7 @@
  */
 
 body{
+
 background: #ccc url('../img/crossword.png');
 
 
@@ -206,7 +207,7 @@ table { background: #fff; }
   padding: -8px 8px;
   margin-bottom: 20px;
   list-style: none;
-  background-color: #ffffff;
+  background-color: #FCDADA;
   border-radius: 4px;
   color:#bbbbbb;
 
@@ -236,6 +237,11 @@ font-size: 14px;
 .breadcrumb.nav-accounts > .active {
   color: #bbbbbb;
 }
+
+/************************/
+
+
+
 
 /************************/
 /*
@@ -296,7 +302,7 @@ font-size: 14px;
 	color:#999 !important;
 	border:1px solid #d8d8d8 !important;
 	border-right:0px !important;
-	background:#fff;
+	background:#FCDADA;
 	box-shadow: none;
 	border-radius: 2px;
 	border-top-right-radius: 0;
@@ -345,10 +351,12 @@ font-size: 14px;
 
 .logo img {
 	display: inline-block; 
-	max-width: 100%;
+	max-width: 75%;
     margin-left:5px;
-    margin-top:-58px;
-    margin-bottom:-23px;
+
+	margin-top: -65px;
+
+	margin-bottom: 22px;
 
     
     
@@ -1394,7 +1402,7 @@ div.ppt { display:none !important; }
  * Shopping, On-line Order Page
  */
  
-.inner-page .shopping {  margin-bottom: 1px;  background-color:rgba(213, 87, 87, 0.39);}
+.inner-page .shopping {  margin-bottom: 1px;  }
 .inner-page .shopping .shopping-item { 
 	position: relative;
 	max-width: 400px;

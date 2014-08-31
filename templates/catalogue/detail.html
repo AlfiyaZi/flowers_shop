@@ -50,18 +50,10 @@
             {% if user.is_authenticated and user.is_staff %}
                 <a class="hidden-sm" href="{% url 'dashboard:catalogue-product' pk=product.id %}"><i class="fa fa-pencil-square-o"></i> {% trans "Edit this product" %}</a>
             {% endif %}
-            <h1>{{ product.get_title }}</h1>
- {% purchase_info_for_product request product as session %}
-            {% if session.price.exists %}
+            <h3>{{ product.get_title }}</h3>
 
 
-            {% if session.price.is_tax_known %}
 
-                  <h2> {{ session.price.incl_tax|currency:session.price.currency }}</h2>
-
-
-            {% endif %}
-            {% endif %}
 
              {% iffeature "reviews" %}
             {% if product.rating != None %}
@@ -84,22 +76,78 @@
                 <h4>
             {% endif %}
             {% if product|is_review_permitted:user %}
-                <a id="write_review" href="{% url 'catalogue:reviews-add' product_slug=product.slug product_pk=product.id %}#addreview" class="btn btn-success btn-sm">
+                    <small>
+                <a id="write_review" href="{% url 'catalogue:reviews-add' product_slug=product.slug product_pk=product.id %}#addreview" >
                     {% trans "Write a review" %}
-                </a>
+                </a></small>
             {% endif %}
             </h4>
         {% endiffeature %}
 
+
+
+
+                    {% for av in product.attribute_values.all %}
+            <tr>
+              <!--  <th>{{ av.attribute.name }}</th>-->
+                <td>{{ av.value_as_html }}</td>
+            </tr>
+        {% endfor %}
+ {% purchase_info_for_product request product as session %}
+
+
+
+
+
+            {% if session.price.exists %}
+
+
+            {% if session.price.is_tax_known %}
+                    <div >
+
+                  <h2> {{ session.price.incl_tax|currency:session.price.currency }}</h2>
+                    {% block product_basket_form %}
+                {% include "catalogue/partials/add_to_basket_form.html" %} </div>
+            {% endblock %}
+
+
+            {% endif %}
+            {% endif %}
+
+
             <hr/>
 
-            {% block product_basket_form %}
-                {% include "catalogue/partials/add_to_basket_form.html" %}
-            {% endblock %}
+                  <ul  style="list-style: none;">
+                      <li>
+                            <h3 > Закажите по телефону
+                      +7(342) 212 75 99</h3>
+
+                      </li>
+
+                      <li>
+                          Закажите обратный звонок и наш менеджер перезвонит вам.
+<a href="/contact/add_contact/" class="btn btn-danger   ">Обратный звонок</a>
+
+                      </li>
+
+
+                  </ul>
+
+
+
+
+
+
+
+
         </div><!-- /6 -->
         {% endblock %}
 
     </div><!-- /row -->
+
+
+
+    {% block product_info %}
 
     {% block product_description %}
         {% if product.description %}
@@ -110,7 +158,6 @@
         {% endif %}
     {% endblock %}
 
-    {% block product_info %}
     <div class="sub-header">
         <h2>{% trans "Product Information" %}</h2>
     </div>
@@ -136,12 +183,7 @@
                 <td>{{ session.availability.message }}</td>
             </tr>
         {% endif %}
-        {% for av in product.attribute_values.all %}
-            <tr>
-                <th>{{ av.attribute.name }}</th>
-                <td>{{ av.value_as_html }}</td>
-            </tr>
-        {% endfor %}
+
         {% iffeature "reviews" %}
             <tr>
                 <th>{% trans "Number of reviews" %}</th>

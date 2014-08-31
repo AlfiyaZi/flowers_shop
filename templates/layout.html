@@ -26,7 +26,7 @@
 									<!-- Contact number -->
 
 
-								<!--	<span> <i class="fa fa-phone red"></i>+7(342)212-75-99</span>-->
+							<!--<span> <i class="fa fa-phone red"></i>+7(342)212-75-99</span>-->
 			 					 </div>
 
 
@@ -57,15 +57,15 @@
        <div class="row">
 						<div class="col-md-4 col-sm-5">
 							<!-- Link -->
-							<a href="index.html">
+							<a href="/">
 								<!-- Logo area -->
 								<div class="logo">
-									<img class="img-responsive" src="{% static "flowers/img/fl.png" %}">
+									<img class="img-responsive" src="{% static "flowers/img/londonlogo.png" %}">
 
 								</div>
 							</a>
 						</div>
-						<div class="col-md-8 col-sm-7">
+						<div class="col-md-8 col-sm-7 hidden-sm">
 
 
 
@@ -129,21 +129,23 @@
 			<!-- Header End -->
 
 {% block content_wrapper %}
-	<!--<div class="barbar">
 
 
-
-
-   {% include "partials/nav_primary_pills.html" %}
-                </div> -->
 <!-- Inner Content -->
-	<div class="inner-page ">
+
 	<!-- Shopping Start -->
 
 	<div class="shopping">
 		<div class="container">
 
+<div class="row  padd">
 
+
+
+
+   {% include "partials/nav_primary_pills.html" %}
+
+                </div>
 
 <!-- end navigation -->
   <div class="page_inner">
@@ -183,7 +185,7 @@
 				</div><!--end  container-->
               </div>
 
-			</div><!-- /Inner page pad -->
+			<!-- /Inner page pad -->
 
 
  {% endblock %}
@@ -196,7 +198,7 @@
 	<!-- Footer End -->
 
 
-		 </div><!-- / Wrapper End -->
+		 </div> <!-- / Wrapper End -->
 		<!-- Scroll to top -->
 		<span class="totop"><a href="index.html#"><i class="fa fa-angle-up"></i></a></span>
 

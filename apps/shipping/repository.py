@@ -12,7 +12,7 @@ class Repository(CoreRepository):
     """
 
     def get_methods(self):
-        return [  FixedPrice(D('210.00'), D('200.00'))]
+        return [ Free(), FixedPrice(D('210.00'), D('200.00'))]
 
     def get_shipping_methods(self, user, basket, shipping_addr='RU',
                              request=None, **kwargs):
