@@ -29,17 +29,17 @@ class PaymentDetailsView(views.PaymentDetailsView):
         from robokassa.forms import RobokassaForm
 
         #@login_required
-        def pay_with_robokassa(request):
-            form = RobokassaForm(initial={
+        #def pay_with_robokassa(request):
+        form = RobokassaForm(initial={
                    'OutSum': Decimal('10.00'),
-                   'InvId':order_number,
-                   'Desc': order_number,
+                   'InvId':58,
+                   'Desc' : u'Холодильник "Бирюса"',
                    'Email': request.user.email,
                    # 'IncCurrLabel': '',
                    # 'Culture': 'ru'
                                  })
 
-            return render(request, 'pay/pay.html', {'form': form})
+        return render(request, 'pay/pay.html', {'form': form})
 
 
         """
@@ -54,7 +54,7 @@ class PaymentDetailsView(views.PaymentDetailsView):
         override this method to ensure they are valid before extracting their
         data into the submission dict and passing it onto `submit`.
         """
-        return self.submit(**self.build_submission())
+        #return self.submit(**self.build_submission())
 
 
 
