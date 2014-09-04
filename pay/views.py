@@ -28,7 +28,7 @@ def pay(request):
 
 def pay1(request):
     if request.method == 'POST': # If the form has been submitted...
-        # ContactForm was defined in the previous section
+
         form = RobokassaForm(request.POST) # A form bound to the POST data
         if form.is_valid():
               form.save(commit=True)

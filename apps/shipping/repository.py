@@ -12,14 +12,17 @@ class Repository(CoreRepository):
     """
 
     def get_methods(self):
-        return [ Free(), FixedPrice(D('210.00'), D('200.00'))]
+        return [Free(), FixedPrice(D('10.00'), D('200.00'))]
 
     def get_shipping_methods(self, user, basket, shipping_addr='RU',
                              request=None, **kwargs):
+
         methods = self.get_methods()
         return self.prime_methods(basket, methods)
+        shipping_addr=='RU'
 
     def find_by_code(self, code, basket):
         for method in self.get_methods():
             if code == method.code:
                 return self.prime_method(basket, method)
+

@@ -1,4 +1,15 @@
 {% extends "checkout/checkout.html" %}
+
+     {% load url from future %}
+
+{% load i18n %}
+{% load product_tags %}
+{% load form_tags %}
+{% load widget_tweaks %}
+
+{% load staticfiles %}
+
+
 {% load url from future %}
 {% load i18n %}
 
@@ -32,7 +43,12 @@
         <div class="form-actions clearfix">
             <div class="row-fluid">
                 <div class="span3 offset9">
-                     <button id='place-order' type="submit" class="btn btn-primary btn-large btn-block js-disable-on-click" data-loading-text="{% trans 'Submitting...' %}">{% trans "Place order" %}</button>
+
+
+
+
+
+                     <button id='place-order' type="submit" class="btn btn-primary  js-disable-on-click" data-loading-text="{% trans 'Submitting...' %}">{% trans "Place order" %}</button>
                 </div>
             </div>
         </div>
