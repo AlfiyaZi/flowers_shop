@@ -24,6 +24,15 @@ from oscar.apps.payment import models
 
 class PaymentDetailsView(views.PaymentDetailsView):
 
+    def get_context_data(self, **kwargs):
+        # Add bankcard form to the template context
+        ctx = super(PaymentDetailsView, self).get_context_data(**kwargs)
+        file = open("newfile.txt", "w")
+        file.write(str(ctx))
+        file.close()
+        print ctx
+        return ctx
+
 
     def handle_place_order_submission(self, request):
         from robokassa.forms import RobokassaForm
@@ -39,7 +48,7 @@ class PaymentDetailsView(views.PaymentDetailsView):
                    # 'Culture': 'ru'
                                  })
 
-        return render(request, 'pay/pay.html', {'form': form})
+        return render(request, 'checkout/preview.html', {'form': form})
 
 
         """
@@ -54,7 +63,7 @@ class PaymentDetailsView(views.PaymentDetailsView):
         override this method to ensure they are valid before extracting their
         data into the submission dict and passing it onto `submit`.
         """
-        #return self.submit(**self.build_submission())
+        return self.submit(**self.build_submission())
 
 
 

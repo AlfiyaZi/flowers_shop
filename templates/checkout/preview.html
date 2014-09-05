@@ -8,6 +8,14 @@
 {% load widget_tweaks %}
 
 {% load staticfiles %}
+{% load url from future %}
+
+{% load i18n %}
+{% load product_tags %}
+{% load form_tags %}
+{% load widget_tweaks %}
+
+{% load staticfiles %}
 
 
 {% load url from future %}
@@ -26,7 +34,7 @@
 {% endblock %}
 
 {% block place_order %}
-    <form method="post" action="{% url 'checkout:preview' %}" id="place-order-form">
+    <form method="post" action="{% url 'checkout:preview' %}" id="place_order_form">
         {% csrf_token %}
         <input type="hidden" name="action" value="place_order" />
 
@@ -37,18 +45,34 @@
             get re-submitted when the user confirms the order.
         {% endcomment %}
         <div style="display:none">
-            {% block hiddenforms %}{% endblock %}
+            {% block hiddenforms %}
+
+
+            {% block content %}
+    <form action="{{ form.target }}" method="POST">
+         {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+            {{ field.errors }}
+            <p>
+            {{ field.help_text }}</p>
+            {{ field |add_class:"form-control"  }}<br/>
+            {% endfor %}
+        <p><input type="submit" value="Купить"></p>
+    </form>
+{% endblock %}
+
+
+
+            {% endblock %}
         </div>
 
         <div class="form-actions clearfix">
             <div class="row-fluid">
                 <div class="span3 offset9">
-
-
-
-
-
-                     <button id='place-order' type="submit" class="btn btn-primary  js-disable-on-click" data-loading-text="{% trans 'Submitting...' %}">{% trans "Place order" %}</button>
+                     <button id='place-order' type="submit" class="btn btn-primary btn-large btn-block js-disable-on-click" data-loading-text="{% trans 'Submitting...' %}">{% trans "Place order" %}</button>
                 </div>
             </div>
         </div>

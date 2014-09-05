@@ -27,8 +27,8 @@
     </div>
     {% for method in methods %}
         <div class="basket-items">
-            <div class="row-fluid">
-                <div class="span8">
+            <div class="row">
+                <div class="col-md-8">
                     <h4>{{ method.name }}</h4>
                     {% if method.description %}
                         <p>{{ method.description|safe }}</p>

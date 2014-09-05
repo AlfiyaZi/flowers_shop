@@ -202,3 +202,19 @@ INFO 2014-09-04 14:00:14,559 views Order #100001: beginning submission process f
 INFO 2014-09-04 14:00:14,736 views Order #100001: payment successful, placing order
 INFO 2014-09-04 14:00:15,378 mixins Order #100001 - sending ORDER_PLACED messages
 INFO 2014-09-04 14:00:15,410 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-04 20:23:56,220 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-04 20:23:56,358 views Order #100001: payment successful, placing order
+INFO 2014-09-04 20:23:57,164 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-04 20:23:57,174 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-04 21:53:07,285 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-04 21:53:07,384 views Order #100001: payment successful, placing order
+INFO 2014-09-04 21:53:08,177 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-04 21:53:08,190 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-04 23:22:29,311 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-04 23:22:29,417 views Order #100001: payment successful, placing order
+INFO 2014-09-04 23:22:30,122 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-04 23:22:30,132 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-05 13:58:58,339 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-05 13:58:58,477 views Order #100001: payment successful, placing order
+INFO 2014-09-05 13:58:59,673 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-05 13:58:59,684 utils Sending email to alfiya79@gmail.com
