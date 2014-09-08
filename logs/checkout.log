@@ -218,3 +218,87 @@ INFO 2014-09-05 13:58:58,339 views Order #100001: beginning submission process f
 INFO 2014-09-05 13:58:58,477 views Order #100001: payment successful, placing order
 INFO 2014-09-05 13:58:59,673 mixins Order #100001 - sending ORDER_PLACED messages
 INFO 2014-09-05 13:58:59,684 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-06 18:01:26,948 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-06 18:01:27,012 views Order #100001: unhandled exception while taking payment (global name 'gateway' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 34, in handle_payment
+    reference = gateway.pre_auth(order_number, total.incl_tax, kwargs['bankcard'])
+NameError: global name 'gateway' is not defined
+INFO 2014-09-06 18:01:34,512 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-06 18:01:34,523 views Order #100001: unhandled exception while taking payment (global name 'gateway' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 34, in handle_payment
+    reference = gateway.pre_auth(order_number, total.incl_tax, kwargs['bankcard'])
+NameError: global name 'gateway' is not defined
+INFO 2014-09-06 20:21:46,200 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-06 20:21:46,292 views Order #100001: unhandled exception while taking payment (global name 'gateway' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 18, in handle_payment
+    reference = gateway.pre_auth(order_number, total.incl_tax, kwargs['bankcard'])
+NameError: global name 'gateway' is not defined
+INFO 2014-09-06 20:22:25,226 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-06 20:22:25,236 views Order #100001: unhandled exception while taking payment (global name 'gateway' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 18, in handle_payment
+    reference = gateway.pre_auth(order_number, total.incl_tax, kwargs['bankcard'])
+NameError: global name 'gateway' is not defined
+INFO 2014-09-06 21:29:14,404 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-06 21:29:14,420 views Order #100001: unhandled exception while taking payment (global name 'request' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 19, in handle_payment
+    robokassa_ref=facade.robokassa_redirect(request, basket_num, amount, **kwargs)
+NameError: global name 'request' is not defined
+INFO 2014-09-06 21:42:55,036 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-06 21:42:55,046 views Order #100001: unhandled exception while taking payment (global name 'request' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 177, in handle_payment
+    facade.robokassa_redirect(request, basket_num, amount, **kwargs)
+NameError: global name 'request' is not defined
+INFO 2014-09-06 21:48:17,447 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-06 21:48:17,457 views Order #100001: unhandled exception while taking payment (global name 'request' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 177, in handle_payment
+    facade.robokassa_redirect(request, basket_num, amount, **kwargs)
+NameError: global name 'request' is not defined
+INFO 2014-09-07 01:02:29,881 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-07 01:02:29,894 views Order #100001: payment successful, placing order
+INFO 2014-09-07 01:02:30,723 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-07 01:02:30,733 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-07 01:32:17,408 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-07 01:32:17,421 views Order #100001: payment successful, placing order
+INFO 2014-09-07 01:32:18,062 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-07 01:32:18,072 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-07 01:44:09,625 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-07 01:44:09,638 views Order #100001: payment successful, placing order
+INFO 2014-09-07 01:44:10,273 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-07 01:44:10,283 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-07 12:45:43,059 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-07 12:45:43,134 views Order #100001: payment successful, placing order
+INFO 2014-09-07 12:45:44,328 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-07 12:45:44,401 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-08 00:39:17,335 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-08 00:39:17,351 views Order #100001: payment successful, placing order
+INFO 2014-09-08 00:39:18,398 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-08 00:39:18,410 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-08 00:47:37,426 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-08 00:47:37,437 views Order #100001: payment successful, placing order
+INFO 2014-09-08 00:47:38,013 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-08 00:47:38,022 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-08 11:30:50,033 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-08 11:30:50,062 views Order #100001: payment successful, placing order
+INFO 2014-09-08 11:30:51,053 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-08 11:30:51,062 utils Sending email to alfiya79@gmail.com

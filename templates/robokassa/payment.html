@@ -1,0 +1,32 @@
+{% extends "checkout/checkout.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Pay now" %}{% endblock %}
+
+{% block checkout_nav %}
+    {% include 'checkout/nav.html' with step=4 %}
+{% endblock %}
+
+{% block place_order %}
+    <div class="row">
+        <div class="col-md-12">
+
+
+    <form action="{{ form.target }}" method="POST">
+         {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+            {{ field.errors }}
+            <p>
+            {{ field.help_text }}</p>
+            {{ field |add_class:"form-control"  }}<br/>
+            {% endfor %}
+        <p><input type="submit" value="Купить"></p>
+    </form>
+
+			{% endif %}
+        </div>
+    </div>
+{% endblock place_order %}
