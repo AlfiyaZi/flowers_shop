@@ -207,7 +207,7 @@ table { background: #fff; }
   padding: -8px 8px;
   margin-bottom: 20px;
   list-style: none;
-  background-color: #FCDADA;
+
   border-radius: 4px;
   color:#bbbbbb;
 
@@ -258,7 +258,7 @@ font-size: 14px;
 
 .header{
 	background: #fff;
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: 1px solid #fff;
 	/*border-bottom: 2px solid #eaeaea;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
 }

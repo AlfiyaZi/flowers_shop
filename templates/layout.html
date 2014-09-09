@@ -26,7 +26,7 @@
 									<!-- Contact number -->
 
 
-							<!--<span> <i class="fa fa-phone red"></i>+7(342)212-75-99</span>-->
+							<span> <i class="fa fa-phone red"></i>+7(342)212-75-99</span>
 			 					 </div>
 
 
@@ -39,7 +39,7 @@
                           {% include "partials/nav_accounts.html" %}
                          <div class="clearfix"></div>
 
-               {% include "partials/search.html" %}
+               <!--{% include "partials/search.html" %}-->
 
 
 
@@ -60,7 +60,7 @@
 							<a href="/">
 								<!-- Logo area -->
 								<div class="logo">
-									<img class="img-responsive" src="{% static "flowers/img/logo.png" %}">
+								<!--	<img class="img-responsive" src="{% static "flowers/img/logo.png" %}">-->
 
 								</div>
 							</a>
@@ -125,17 +125,17 @@
 
 
 <div class="container">
+
 <!-- end navigation -->
   <div class="page_inner">
 
-  {% block breadcrumbs %}{% endblock %}
-       {% block header %}
-
-
-                       {% block headertext %}{% endblock %}
-
+     {% block breadcrumbs %}{% endblock %}
+                {% block header %}
+                    <div class="page-header action">
+                        <h1>{% block headertext %}{% endblock %}</h1>
+                    </div>
                 {% endblock %}
-
+                {% include "partials/alert_messages.html" %}
                 {% block subnavigation %}{% endblock %}
                 <div class="content">
                     {% block subheader %}{% endblock subheader %}

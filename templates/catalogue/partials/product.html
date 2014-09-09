@@ -18,7 +18,7 @@
            {% block product_image %}
 								<figure>
 									<a class="item-hover" href="{{ product.get_absolute_url }}" >
-										<span class="overlay color2"></span>
+										<!--<span class="overlay color2"></span>-->
 
 										<span class="inner">
                                          <!-- <p class="hidden-sm hidden-xs">{{product.description|striptags}}</p>-->
@@ -46,9 +46,9 @@
 
 
 								</figure>
-								<div class="item-box-desc">
+								<div class="item-box-desc hidden-sm hidden-xs">
                                      {% block product_title %}
-                                         <h4 style="font-family: "Open Sans";">{{ product.get_title|truncatewords:4 }}</h4>
+                                         <h4>{{ product.get_title|truncatewords:4 }}</h4>
                                      {% endblock %}
 
 
