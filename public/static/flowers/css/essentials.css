@@ -774,56 +774,7 @@ span.progress-bar-tooltip:after {
 
 
 
-/** 12. Buttons
- **************************************************************** **/
-.btn, .btn:hover {
-	border: 0;
-
-	border:rgba(255,255,255,0) 1px solid;
-
-
-}
-
-.btn.notransition {
-	-webkit-transition: all 0s;
-	   -moz-transition: all 0s;
-		 -o-transition: all 0s;
-			transition: all 0s;
-}
-
-.btn:active,
-.btn:focus,
-.btn.active {
-	-webkit-box-shadow: none;
-	   -moz-box-shadow: none;
-			box-shadow: none;
-}
-
-.btn.disabled {
-	background-color: #999;
-	border: #bbb 2px solid;
-}
-
-.btn-default {
-	background:none !important;
-	border:#ddd 2px solid;
-	padding:8px 18px;
-}
-
-.btn[disabled] {
-	background-color:#999;
-	border:#bbb 2px solid;
-}
-
-.btn-lg,.btn-lg:hover {
-	padding: 12px 32px;
-}
-.btn-sm, .btn-sm:hover {
-	padding: 6px 16px;
-}
-.btn-xs, .btn-xs:hover {
-	padding: 3px 13px;
-}
+/
 
 
 

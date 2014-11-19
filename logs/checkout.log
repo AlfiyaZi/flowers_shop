@@ -302,3 +302,7 @@ INFO 2014-09-08 11:30:50,033 views Order #100001: beginning submission process f
 INFO 2014-09-08 11:30:50,062 views Order #100001: payment successful, placing order
 INFO 2014-09-08 11:30:51,053 mixins Order #100001 - sending ORDER_PLACED messages
 INFO 2014-09-08 11:30:51,062 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-18 15:51:39,802 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-18 15:51:39,930 views Order #100001: payment successful, placing order
+INFO 2014-09-18 15:51:40,792 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-18 15:51:40,851 utils Sending email to alfiya79@gmail.com

@@ -35,57 +35,56 @@
         </a>
 
     </div>
-<div class="container">
+
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
          {% block nav_dropdown %}
       <ul class="nav navbar-nav">
 
-
-    {% category_tree depth=2 as tree_categories %}
-  <li><a tabindex="-1" href="{% url 'catalogue:index' %}">Все</a></li>
-     {% if tree_categories %}
-        {% for tree_category, info in tree_categories %}
+        <li class="dropdown active  {% if expand_dropdown %}open{% endif %}">
+          <a href="#" class="dropdown-toggle" {% if not expand_dropdown %} data-toggle="dropdown"{% endif %}>
+                            {% trans "Browse store" %}
 
 
-          <li><a tabindex="-1" href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a></li>
+              <b class="caret"></b></a>
+          <ul class="dropdown-menu">
 
+       {% category_tree depth=2 as tree_categories %}
+                <li><a tabindex="-1" href="{% url 'catalogue:index' %}">{% trans "All products" %}</a></li>
+                            {% if tree_categories %}
+                                <li class="divider"></li>
+                                {% for tree_category, info in tree_categories %}
+                                    {% if info.has_children %}
+                                        <li class="dropdown-submenu">
+                                            <a tabindex="-1" href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a>
+                                            <ul class="dropdown-menu">
+                                            {% else %}
+                                                <li><a tabindex="-1" href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a></li>
+                                            {% endif %}
+
+                                            {% for close in info.num_to_close %}
+                                                </ul></li>
+                                            {% endfor %}
                                 {% endfor %}
                             {% endif %}
-
-      {% block nav_dropdown_extra_items %}
+                            <li class="divider"></li>
+                            {% block nav_dropdown_extra_items %}
                                 <li><a href="{% url 'offer:list' %}">{% trans "Offers" %}</a></li>
-
                             {% endblock %}
-
-
-                <!-- {% block header %}
-                    <div class="page-header">
-                        <h1>{% block headertext %}{% endblock %}</h1>
-                    </div>
-                {% endblock %}
-                {% include "partials/alert_messages.html" %}
-                {% block subnavigation %}{% endblock %}
-
-                    {% block subheader %}{% endblock subheader %}-->
-
-
-
-</ul>
-
+                        </ul>
+                    </li>
+                    {% block nav_extra %}
+                    {% endblock %}
+                </ul>
             {% endblock %}
 
     </div><!-- /.navbar-collapse -->
 
-</div>
+
   </div><!-- /.container-fluid -->
 
 
 
 
 </nav>
-
-
-
-
 

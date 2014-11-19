@@ -50,7 +50,8 @@
 
 body{
 
-background-color:#fff ;
+
+background: #ccc url('../img/crossword.png');
 
 
 
@@ -277,11 +278,11 @@ font-size: 14px;
 
 .header .header-contact span{
 	display: inline-block;
-	margin-top: 70px;
+	/*margin-top: 70px;*/
 	font-size: 20px;
 	font-weight:500;
-    margin-left:60%;
-	font-family: 'Open Sans Condensed', sans-serif;
+   /* margin-left:60%;*/
+	/*font-family: 'Open Sans Condensed', sans-serif;*/
 	color: #898989;
 }
 
@@ -350,12 +351,6 @@ font-size: 14px;
 
 .logo img {
 	display: inline-block; 
-	max-width: 75%;
-    margin-left:5px;
-
-	margin-top: -65px;
-
-	margin-bottom: 12px;
 
     
     
