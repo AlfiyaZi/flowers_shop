@@ -94,7 +94,7 @@ INSTALLED_APPS = [
     'portfolio',
     'robokassa',
     'pay',
-    'zinnia',
+    #'zinnia',
     'tagging',
    'feincms',
 

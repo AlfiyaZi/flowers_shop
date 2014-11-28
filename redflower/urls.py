@@ -41,7 +41,7 @@ urlpatterns = [
     url(r'^catalogue/', include(catalogue_app.urls)),
 
     url(r'^comments/', include('django.contrib.comments.urls')),
-   url(r'^blog/', include('zinnia.urls')),
+   #url(r'^blog/', include('zinnia.urls')),
 
     url(r'^dashboard/dashboard/catalogue/$',include(dashboard_app.urls)),
     url(r'^about/', include('about.urls')),
